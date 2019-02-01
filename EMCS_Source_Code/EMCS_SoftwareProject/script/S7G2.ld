@@ -10,7 +10,6 @@ MEMORY
   DATA_FLASH (rx)    : ORIGIN = 0x40100000, LENGTH = 0x0010000  /*  64K */
   QSPI_FLASH (rx)    : ORIGIN = 0x60000000, LENGTH = 0x4000000  /*  64M, Change in QSPI section below also */
   SDRAM (rwx)        : ORIGIN = 0x90000000, LENGTH = 0x2000000  /*  32M */
-  ID_CODES (rx)      : ORIGIN = 0x40120050, LENGTH = 0x10       /* 16 bytes */    
 }
 
 /* Library configurations */
@@ -68,6 +67,7 @@ SECTIONS
 		KEEP(*(.vectors))
 		KEEP(*(SORT_BY_NAME(.vector.*)))
 		__Vectors_End = .;
+		__Vectors_Size = __Vectors_End - __Vectors;
 		__end__ = .;
 
 		/* ROM Registers start at address 0x00000400 */
@@ -81,11 +81,13 @@ SECTIONS
 		__Vector_Info_Start = .;
 		KEEP(*(SORT_BY_NAME(.vector_info.*)))
 		__Vector_Info_End = .;
+		__Vector_Info_Size = __Vector_Info_End - __Vector_Info_Start;
 
 		/* Hardware lock lookup array. */
 		__Lock_Lookup_Start = .;
 		KEEP(*(SORT_BY_NAME(.hw_lock_lookup.*)))
 		__Lock_Lookup_End = .;
+		__Lock_Lookup_Size = __Lock_Lookup_End - __Lock_Lookup_Start;
 		
 		*(.text*)
 
@@ -127,10 +129,6 @@ SECTIONS
 
 		__ROM_End = .;
 	} > FLASH = 0xFF
-
-    __Vectors_Size = __Vectors_End - __Vectors;
-    __Vector_Info_Size = __Vector_Info_End - __Vector_Info_Start;
-    __Lock_Lookup_Size = __Lock_Lookup_End - __Lock_Lookup_Start;
 
 	.ARM.extab :
 	{
@@ -179,14 +177,6 @@ SECTIONS
 	*/
 
 	__etext = .;
-	
-	/* If DTC is used, put the DTC vector table at the start of SRAM.
-	   This avoids memory holes due to 1K alignment required by it. */
-	.ssp_dtc_vector_table (NOLOAD) : 
-	{
-		. = ORIGIN(RAM);
-		*(.ssp_dtc_vector_table)
-	} > RAM
 
 	/* Initialized data section. */
 	.data : AT (__etext)
@@ -228,6 +218,7 @@ SECTIONS
 		__Lock_Start = .;
 		KEEP(*(SORT_BY_NAME(.hw_lock*)))
 		__Lock_End = .;
+		__Lock_Size = __Lock_End - __Lock_Start;
 		
 		. = ALIGN(4);
 
@@ -235,8 +226,6 @@ SECTIONS
 		__data_end__ = .;
 
 	} > RAM
-
-    __Lock_Size = __Lock_End - __Lock_Start;
 
     /* QSPI_FLASH section to be downloaded via debugger */
     .qspi_flash :
@@ -291,24 +280,20 @@ SECTIONS
 		__HeapLimit = .;
 	} > RAM
 
-    /* Stacks are stored in this section. */
-    .stack_dummy (NOLOAD):
-    {
+	/* Stacks are stored in this section. */
+	.stack_dummy (NOLOAD):
+	{
         . = ALIGN(8);
-        __StackLimit = .;
-        /* Main stack */
-        KEEP(*(.stack))
-        __StackTop = .;
-        /* Thread stacks */
-        KEEP(*(.stack*))
-        __StackTopAll = .;
-    } > RAM
+	    __StackLimit = .;
+		KEEP(*(.stack*))
+		__StackTop = .;
+	} > RAM
 
-    PROVIDE(__stack = __StackTopAll);
+	PROVIDE(__stack = __StackTop);
 
-    /* This symbol represents the end of user allocated RAM. The RAM after this symbol can be used
-       at run time for things such as ThreadX memory pool allocations. */
-    __RAM_segment_used_end__ = ALIGN(__StackTopAll , 4);
+	/* This symbol represents the end of user allocated RAM. The RAM after this symbol can be used
+	   at run time for things such as ThreadX memory pool allocations. */
+	__RAM_segment_used_end__ = ALIGN(__StackTop , 4);
 
 	/* Data flash. */
 	.data_flash :
@@ -326,12 +311,4 @@ SECTIONS
         KEEP(*(.frame*))
         __SDRAM_End = .;
     } > SDRAM
-
-    .id_code_1 :
-    {
-        __ID_Codes_Start = .;
-        KEEP(*(.id_code_1*))
-        __ID_Codes_End = .;
-    } > ID_CODES
-
 }
