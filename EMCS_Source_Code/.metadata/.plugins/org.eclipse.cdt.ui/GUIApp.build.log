@@ -1,0 +1,39 @@
+14:50:25 **** Incremental Build of configuration Debug for project GUIApp ****
+make -j4 all 
+'Building file: ../src/gui/guia0_specifications.c'
+'Building file: ../src/guiapp_event_handlers.c'
+'Building file: ../src/main_thread_entry.c'
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\Synergy\e2studio_v6.2.1_ssp_v1.5.0\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\driver" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\bsp" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\driver\api" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\driver\instances" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\src" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\src\synergy_gen" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\framework" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\api" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\instances" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\tes" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\framework\el" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\el" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\src\framework\el\tx" -std=c99 -MMD -MP -MF"src/gui/guia0_specifications.d" -MT"src/gui/guia0_specifications.o" -c -o "src/gui/guia0_specifications.o" -x c "../src/gui/guia0_specifications.c"
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\Synergy\e2studio_v6.2.1_ssp_v1.5.0\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\driver" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\bsp" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\driver\api" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\driver\instances" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\src" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\src\synergy_gen" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\framework" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\api" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\instances" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\tes" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\framework\el" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\el" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\src\framework\el\tx" -std=c99 -MMD -MP -MF"src/guiapp_event_handlers.d" -MT"src/guiapp_event_handlers.o" -c -o "src/guiapp_event_handlers.o" -x c "../src/guiapp_event_handlers.c"
+'Invoking: Cross ARM C Compiler'
+C:\Renesas\Synergy\e2studio_v6.2.1_ssp_v1.5.0\eclipse\/../\Utilities\\/isdebuild arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -D_RENESAS_SYNERGY_ -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\bsp" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\driver" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\bsp" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\bsp\cmsis\Include" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\driver\api" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\driver\instances" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\src" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\src\synergy_gen" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\framework" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\api" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\instances" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\tes" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy_cfg\ssp_cfg\framework\el" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\inc\framework\el" -I"C:\Users\JPRMEXDI\e2_studio\workspace\GUIApp\synergy\ssp\src\framework\el\tx" -std=c99 -MMD -MP -MF"src/main_thread_entry.d" -MT"src/main_thread_entry.o" -c -o "src/main_thread_entry.o" -x c "../src/main_thread_entry.c"
+../src/guiapp_event_handlers.c:3:10: fatal error: 'gui/guiapp_resources.h' file not found
+#include "gui/guiapp_resources.h"
+         ^
+1 error generated.
+src/subdir.mk:24: recipe for target 'src/guiapp_event_handlers.o' failed
+make: *** [src/guiapp_event_handlers.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/main_thread_entry.c:5:10: fatal error: 'gui/guiapp_specifications.h' file not found
+#include "gui/guiapp_specifications.h"
+         ^
+1 error generated.
+make: *** [src/main_thread_entry.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main_thread_entry.o' failed
+../src/gui/guia0_specifications.c:18:23: error: 'window2' redeclared as different kind of symbol
+ WINDOW2_CONTROL_BLOCK window2;
+                       ^
+In file included from ../src/gui/guia0_specifications.c:16:0:
+../src/gui/guia0_specifications.h:187:6: note: previous declaration of 'window2' was here
+ UINT window2(GX_WINDOW *widget, GX_EVENT *event_ptr);
+      ^
+../src/gui/guia0_specifications.c:179:5: error: cannot convert to a pointer type
+     (UINT (*)(GX_WIDGET *, GX_EVENT *)) window2, /* event function override    */
+     ^
+src/gui/subdir.mk:21: recipe for target 'src/gui/guia0_specifications.o' failed
+make: *** [src/gui/guia0_specifications.o] Error 1
+
+14:50:27 Build Failed. 11 errors, 1 warnings. (took 1s.907ms)
+
