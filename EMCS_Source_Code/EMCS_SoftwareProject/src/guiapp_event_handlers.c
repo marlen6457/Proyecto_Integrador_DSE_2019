@@ -5,7 +5,7 @@
 
 #include "main_thread.h"
 
-static bool button_enabled = false;
+//static bool button_enabled = false;
 int contador=0;
 int contador2=0;
 int contador3=0;

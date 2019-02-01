@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy): 28. 1.2019   Time (hh:mm): 20:23                        */
+/*  Date (dd.mm.yyyy):  1. 2.2019   Time (hh:mm): 14:53                        */
 /*******************************************************************************/
 
 
@@ -375,7 +375,7 @@ GX_WINDOW_PROPERTIES window4_properties =
 GX_ICON_PROPERTIES window4_icon_3_properties =
 {
     GX_PIXELMAP_ID_BACKBUTTON,               /* normal pixelmap id             */
-    0                                        /* selected pixelmap id           */
+    GX_PIXELMAP_ID_BACKBUTTON                /* selected pixelmap id           */
 };
 
 GX_CONST GX_STUDIO_WIDGET window4_icon_3_define =
