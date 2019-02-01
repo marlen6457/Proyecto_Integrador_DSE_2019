@@ -6,7 +6,7 @@
 /*  site at www.expresslogic.com.                                              */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy): 28. 1.2019   Time (hh:mm): 20:23                        */
+/*  Date (dd.mm.yyyy):  1. 2.2019   Time (hh:mm): 14:53                        */
 /*******************************************************************************/
 
 
@@ -75,15 +75,13 @@
 #define GX_PIXELMAP_ID_BACKBUTTON 5
 #define GX_PIXELMAP_ID_BLACKUPARROW 6
 #define GX_PIXELMAP_ID_ICON_MORE5 7
-#define GX_PIXELMAP_ID_MENU 8
-#define GX_PIXELMAP_ID_MENU2 9
-#define GX_PIXELMAP_ID_RES7 10
-#define GX_PIXELMAP_ID_RES8 11
-#define GX_PIXELMAP_ID_WINDOW3 12
-#define GX_PIXELMAP_ID_WINDOW4 13
-#define GX_PIXELMAP_ID_WINDOW5 14
-#define GX_PIXELMAP_ID_WINDOW6 15
-#define DISPLAY_1_PIXELMAP_TABLE_SIZE 16
+#define GX_PIXELMAP_ID_MENU2 8
+#define GX_PIXELMAP_ID_RES7 9
+#define GX_PIXELMAP_ID_WINDOW3 10
+#define GX_PIXELMAP_ID_WINDOW4 11
+#define GX_PIXELMAP_ID_WINDOW5 12
+#define GX_PIXELMAP_ID_WINDOW6 13
+#define DISPLAY_1_PIXELMAP_TABLE_SIZE 14
 
 /* String Ids                                                                  */
 
