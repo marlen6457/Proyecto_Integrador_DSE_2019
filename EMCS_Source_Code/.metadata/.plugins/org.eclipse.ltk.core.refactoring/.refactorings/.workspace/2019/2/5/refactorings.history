@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;EMCS_SoftwareProject/guix_studio/guia0.gxp&apos;" deleteContents="false" description="Delete resource &apos;EMCS_SoftwareProject/guix_studio/guia0.gxp&apos;" element1="/EMCS_SoftwareProject/guix_studio/guia0.gxp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1549045274609"/>
-</session>
