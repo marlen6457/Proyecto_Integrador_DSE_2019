@@ -1,52 +1,227 @@
-<rss version="2.0">
-<channel>
-<title>e2 studio 6 Release Notes</title>
-<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenote.htm</link>
-<language>en</language>
-<description>e2 studio Release Notes</description>
-<item>
-<title>e2 studio 6.3.0</title>
-<guid isPermaLink="false">
-http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.3.0/releasenote_6.3.0.pdf
-</guid>
-<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.3.0/releasenote_6.3.0.pdf</link>
-<description>
-<div>e2 studio 6.3.0<a href="http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.3.0/releasenote_6.3.0.pdf">Release Notes</a></div>
-</description>
-<pubDate>Monday, 21 May 2018 10:00:00 +0000</pubDate>
-</item>
-<item>
-<title>e2 studio 6.2.0</title>
-<guid isPermaLink="false">
-http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.2.0/releasenote_6.2.0.pdf
-</guid>
-<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.2.0/releasenote_6.2.0.pdf</link>
-<description>
-<div>e2 studio 6.2.0<a href="http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.2.0/releasenote_6.2.0.pdf">Release Notes</a></div>
-</description>
-<pubDate>Monday, 22 Jan 2018 10:00:00 +0000</pubDate>
-</item>
-<item>
-<title>e2 studio 6.1.0</title>
-<guid isPermaLink="false">
-http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.1.0/releasenote_6.1.0.pdf
-</guid>
-<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.1.0/releasenote_6.1.0.pdf</link>
-<description>
-<div>e2 studio 6.1.0<a href="http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.1.0/releasenote_6.1.0.pdf">Release Notes</a></div>
-</description>
-<pubDate>Wednesday, 18 Oct 2017 10:00:00 +0000</pubDate>
-</item>
-<item>
-<title>e2 studio 6.0.0</title>
-<guid isPermaLink="false">
-http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.0.0/releasenote_6.0.0.pdf
-</guid>
-<link>http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.0.0/releasenote_6.0.0.pdf</link>
-<description>
-<div>e2 studio 6.0.0<a href="http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenotes/6.0.0/releasenote_6.0.0.pdf">Release Notes</a></div>
-</description>
-<pubDate>Friday, 04 Aug 2017 13:00:00 +0000</pubDate>
-</item>
-</channel>
-</rss>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<meta name="viewport" content="initial-scale=1.0">
+<title>User Identification Portal</title>
+<style>
+	html, body{
+		height: 99%;
+	}
+	body {
+		color: #111;
+		font-family: Verdana,Arial,Helvetica,sans-serif;
+		background-color: #004F7A;
+		background-repeat: no-repeat;
+		height: 1080px;
+		vertical-align: middle;
+	}
+	#activearea {
+		border-width: 2px;
+		border-color: #c2c6cA;
+		border-style: solid;
+		border-radius: 15px;
+		background-color: #ffffff;
+		padding: 20px;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#heading {
+		font-size: 1.1em;
+		font-weight: bold;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	#desc {
+		font-size: 1em;
+		margin: 15px;
+		max-width: 400px;
+		text-align: left;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	form td span {
+		font-size: 1em;
+		font-weight: bold;
+	}
+	#formtable {
+		height: 100%;
+		width: 100%;
+	}
+	#taLogin {
+		width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.buttonFixed {
+		font-size: 1em;
+	}
+	.msg {
+		background-color: #ffff99;
+		border-width: 2px;
+		border-color: #ff0000;
+		border-style: solid;
+		border-radius: 5px;
+		margin-top: 0.5em;
+		padding: 0.5em;
+		max-height: 150px;
+		height: expression( this.scrollHeight > 150 ? "150px" : "auto" ); /* sets max-height for IE */
+		overflow: auto;
+		font-size: 1em;
+	}
+</style>
+</head>
+
+
+<body onload="loadPage();">
+<table id="formtable">
+<tr><td>
+	<div id="activearea">
+
+<svg width="137" height="46" version="1.1" viewBox="0 0 137 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<image width="137" height="46" preserveAspectRatio="none" xlink:href="data:image/png;base64,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 QmCC "/>
+</svg>
+
+<img src="https://image.ibb.co/dgXPOz/icono_llave.png" width="80" height="40" HSPACE= "1" VSPACE= "5" align = "right"/>
+
+	    		<div id="heading"><br></br>Portal de autenticación</div>
+		<div id="desc" align="center">Para poder acceder a la red segura de MABE es necesario que te autentiques. 
+<p>Por favor ingresa tu usuario y contraseña.</p></div>
+		<div id="formdiv">
+            <form name="login_form" id="login_form" method="post">
+<input type="hidden" name="inputStr" value="">
+<input type="hidden" name="escapeUser" value="">
+<input type="hidden" name="preauthid" value="">
+<div id="taLogin">
+<table>
+ <tr id="dUserName">
+ <td id="userTitle">User</td>
+ <td>
+   <input type="text" id="user" name="user" size="19">
+ </td>
+ </tr>
+ <tr>
+   <td id="passwdTitle">Password</td>
+ <td>
+   <div id="dInputStr" style="display: none;">
+   <br>
+   </div>
+  <input type="password" maxlength="255" size="19" id="passwd" name="passwd">
+ </td>
+ </tr>
+ <tr>
+  <td id="buttonOffset"></td>
+  <td>
+   <input class="buttonFixed" type="submit" id="submit" name="ok" value="Login">
+  </td>
+  </tr>
+</table>
+</div>
+<div id="dError" class="msg" style="display:none"></div>
+</form>
+<!--[if IE]>
+    <script type="text/javascript">
+        (function() {
+            var baseTag = document.getElementsByTagName('base')[0];
+            if (!(/^http/i).test(baseTag.href)) { // in case browser already translate to absolute path
+                baseTag.href = location.protocol + '//' +  location.host +  baseTag.href;
+            }
+            baseTag.href = baseTag.href; // IE9 not correctly loading resources issue.
+        })();
+    </script>
+<![endif]-->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+<![endif]-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+ var username = "";
+ var errMsg = "";
+ var respStatus = "";
+ var respMsg = "";
+ var authEnforcedMsg = " ";
+ var privatebrowsing = "";
+ function submitClicked() {
+  $('#dError').html('');
+  $('#dError').hide();
+  $('#formdiv').css('visibility', 'hidden');
+  var thisForm = document.getElementById('login_form');
+  thisForm.inputStr.value = "";
+  thisForm.preauthid.value = "";
+  thisForm.escapeUser.value = thisForm.user.value.replace(/\\/g, "\\\\");
+ }
+ function onClickHandler() {
+  submitClicked();
+ }
+ $(document).ready(function() {
+   $('#user').val(username);
+   if ($('#user').val() == '') {
+     $('#user').focus();
+   }
+   $('#dError').hide();
+   if (respStatus == 'Error') {
+      if (respMsg != '') {
+       errMsg += '<br>';
+       errMsg += '<li>' + respMsg + '</li>';
+      }
+   } else if (respStatus == 'Challenge') {
+      $('#dUserName, #passwdTitle, #buttonOffset').hide();
+      $('#dInputStr').show();
+      $('#dInputStr').html(respMsg);
+   }
+   if (errMsg != '') {
+      $('#dError').show();
+      $('#dError').html(errMsg);
+   }
+    if (privatebrowsing != '') {
+      $('#dError').show();
+      $('#dError').html(errMsg+ '<br>' + privatebrowsing);
+   }
+   if (authEnforcedMsg != '') {
+      $('#authEnforcedMsg').html(authEnforcedMsg);
+   }
+   $('#submit').attr('disabled', true);
+   $('#user').focus();
+   $('#login_form').bind('keyup click', function() {
+   if (!$('#user').val() || !$('#passwd').val()) {
+       $('#submit').attr('disabled', true);
+   } else {
+       $('#submit').attr('disabled', false);
+       $('#dError').hide();
+   }
+   });
+   $('#login_form').submit(function() {
+           submitClicked();
+   });
+   });
+   $(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload();
+        }
+   });
+   if(typeof(Storage) != "undefined") {
+       var orig_url = "http://www2.renesas.eu/_custom/software/ree_eclipse/e2studio6/docs/releasenote.xml";
+       try { 
+        sessionStorage.setItem ("isoffline", 0); 
+        if(orig_url != "")
+           sessionStorage.setItem("origurl", orig_url); 
+       } catch(e) {
+            privatebrowsing = "This page is not compatible in private browsing.                Please turn off private browsing and reload this page";
+       }
+    }
+</script>
+
+		</div>
+	</div>
+</td></tr>
+</table>
+</body>
+</body>
+</html> 

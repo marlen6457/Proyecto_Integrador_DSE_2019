@@ -1,3 +1,6 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=4d20741f740c4ded0333c4561089f5f30eda7a47
 Current.DocList.AN.Count=0
 Current.DocList.AN.Filter.IssueDate=
 Current.DocList.AN.Filter.IssueDate.ComparisonType=CMPTYPE_LATER
@@ -92,5 +95,5 @@ RssMessageHistory.Site001.RssSite=http\://tool-support.renesas.com/autoupdate/su
 RssMessageHistory.Site002.RssMessages.Count=0
 RssMessageHistory.Site002.RssSite=http\://tool-support.renesas.com/autoupdate/support/smartbrowser/en-us/RenesasNews/rss.xml
 RssRegisteredSite.IsOpenedTopSite=true
-RssRegisteredSite.LastChecking=1549477724334
+RssRegisteredSite.LastChecking=1549478872499
 eclipse.preferences.version=1
