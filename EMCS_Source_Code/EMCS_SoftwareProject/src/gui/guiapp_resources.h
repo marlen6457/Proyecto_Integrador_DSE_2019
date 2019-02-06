@@ -6,7 +6,7 @@
 /*  site at www.expresslogic.com.                                              */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  1. 2.2019   Time (hh:mm): 14:53                        */
+/*  Date (dd.mm.yyyy):  6. 2.2019   Time (hh:mm): 11:44                        */
 /*******************************************************************************/
 
 
@@ -76,52 +76,62 @@
 #define GX_PIXELMAP_ID_BLACKUPARROW 6
 #define GX_PIXELMAP_ID_ICON_MORE5 7
 #define GX_PIXELMAP_ID_MENU2 8
-#define GX_PIXELMAP_ID_RES7 9
-#define GX_PIXELMAP_ID_WINDOW3 10
-#define GX_PIXELMAP_ID_WINDOW4 11
-#define GX_PIXELMAP_ID_WINDOW5 12
-#define GX_PIXELMAP_ID_WINDOW6 13
-#define DISPLAY_1_PIXELMAP_TABLE_SIZE 14
+#define GX_PIXELMAP_ID_REFRESH 9
+#define GX_PIXELMAP_ID_RES7 10
+#define GX_PIXELMAP_ID_WINDOW3 11
+#define GX_PIXELMAP_ID_WINDOW4 12
+#define GX_PIXELMAP_ID_WINDOW5 13
+#define GX_PIXELMAP_ID_WINDOW6 14
+#define DISPLAY_1_PIXELMAP_TABLE_SIZE 15
 
 /* String Ids                                                                  */
 
 #define GX_STRING_ID_STRING_1 1
 #define GX_STRING_ID_STRING_2 2
 #define GX_STRING_ID_STRING_3 3
-#define GX_STRING_ID_ONE 4
-#define GX_STRING_ID_STRING_4 5
-#define GX_STRING_ID_STRING_5 6
-#define GX_STRING_ID_STRING_6 7
-#define GX_STRING_ID_STRING_7 8
-#define GX_STRING_ID_TWO 9
-#define GX_STRING_ID_STRING_8 10
-#define GX_STRING_ID_THREE 11
-#define GX_STRING_ID_STRING_9 12
-#define GX_STRING_ID_STRING_10 13
-#define GX_STRING_ID_STRING_11 14
-#define GX_STRING_ID_MON1 15
-#define GX_STRING_ID_MON2 16
-#define GX_STRING_ID_MON3 17
-#define GX_STRING_ID_MON4 18
-#define GX_STRING_ID_MON5 19
-#define GX_STRING_ID_MON6 20
-#define GX_STRING_ID_MON7 21
-#define GX_STRING_ID_MON8 22
-#define GX_STRING_ID_MON9 23
-#define GX_STRING_ID_MON10 24
-#define GX_STRING_ID_MON11 25
-#define GX_STRING_ID_MON12 26
-#define GX_STRING_ID_STRING_12 27
-#define GX_STRING_ID_DAY1 28
-#define GX_STRING_ID_DAY2 29
-#define GX_STRING_ID_DAY3 30
-#define GX_STRING_ID_DAY4 31
-#define GX_STRING_ID_DAY5 32
-#define GX_STRING_ID_DAY6 33
-#define GX_STRING_ID_DAY7 34
-#define GX_STRING_ID_YEAR1 35
-#define GX_STRING_ID_YEAR2 36
-#define GX_STRING_ID_YEAR3 37
-#define DISPLAY_1_STRING_TABLE_SIZE 38
+#define GX_STRING_ID_STRING_4 4
+#define GX_STRING_ID_STRING_5 5
+#define GX_STRING_ID_STRING_6 6
+#define GX_STRING_ID_STRING_7 7
+#define GX_STRING_ID_STRING_8 8
+#define GX_STRING_ID_STRING_9 9
+#define GX_STRING_ID_STRING_10 10
+#define GX_STRING_ID_STRING_11 11
+#define GX_STRING_ID_MON1 12
+#define GX_STRING_ID_MON2 13
+#define GX_STRING_ID_MON3 14
+#define GX_STRING_ID_MON4 15
+#define GX_STRING_ID_MON5 16
+#define GX_STRING_ID_MON6 17
+#define GX_STRING_ID_MON7 18
+#define GX_STRING_ID_MON8 19
+#define GX_STRING_ID_MON9 20
+#define GX_STRING_ID_MON10 21
+#define GX_STRING_ID_MON11 22
+#define GX_STRING_ID_MON12 23
+#define GX_STRING_ID_STRING_12 24
+#define GX_STRING_ID_DAY1 25
+#define GX_STRING_ID_DAY2 26
+#define GX_STRING_ID_DAY3 27
+#define GX_STRING_ID_DAY4 28
+#define GX_STRING_ID_DAY5 29
+#define GX_STRING_ID_DAY6 30
+#define GX_STRING_ID_DAY7 31
+#define GX_STRING_ID_YEAR1 32
+#define GX_STRING_ID_YEAR2 33
+#define GX_STRING_ID_YEAR3 34
+#define GX_STRING_ID_ONE 35
+#define GX_STRING_ID_TWO 36
+#define GX_STRING_ID_THREE 37
+#define GX_STRING_ID_FOUR 38
+#define GX_STRING_ID_FIVE 39
+#define GX_STRING_ID_SIX 40
+#define GX_STRING_ID_SEVEN 41
+#define GX_STRING_ID_EIGHT 42
+#define GX_STRING_ID_NINE 43
+#define GX_STRING_ID_ZERO 44
+#define GX_STRING_ID_STRING_13 45
+#define GX_STRING_ID_STRING_14 46
+#define DISPLAY_1_STRING_TABLE_SIZE 47
 
 #endif                                       /* sentry                         */

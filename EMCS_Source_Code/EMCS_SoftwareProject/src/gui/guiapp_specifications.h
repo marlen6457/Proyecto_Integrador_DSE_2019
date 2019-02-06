@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  1. 2.2019   Time (hh:mm): 14:53                        */
+/*  Date (dd.mm.yyyy):  6. 2.2019   Time (hh:mm): 11:44                        */
 /*******************************************************************************/
 
 
@@ -31,16 +31,20 @@ extern   "C" {
 #define ID_UP_YEAR 7
 #define ID_BACK_W5 8
 #define ID_BACK_W4 9
-#define ID_MIN 10
+#define ID_CEN 10
 #define ID_BACK_W3 11
-#define ID_WINDOW2 12
-#define ID_BTN_DUTY 13
-#define ID_BTN_SPD 14
-#define ID_BTN_CTS 15
-#define ID_BACK_BTN 16
-#define ID_BTN_CAL 17
-#define ID_WINDOW1 18
-#define ID_ICON_MORE 19
+#define ID_RES 12
+#define ID_DEC 13
+#define ID_UNITS 14
+#define ID_REFRESH 15
+#define ID_WINDOW2 16
+#define ID_BTN_DUTY 17
+#define ID_BTN_SPD 18
+#define ID_BTN_CTS 19
+#define ID_BACK_BTN 20
+#define ID_BTN_CAL 21
+#define ID_WINDOW1 22
+#define ID_ICON_MORE 23
 
 
 /* Declare properties structures for each utilized widget type                 */
@@ -132,6 +136,10 @@ typedef struct WINDOW3_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
     GX_ICON window3_icon_2;
+    GX_PROMPT window3_prompt_90;
+    GX_PROMPT window3_prompt_90_1;
+    GX_PROMPT window3_prompt_90_2;
+    GX_ICON window3_icon_7;
 } WINDOW3_CONTROL_BLOCK;
 
 typedef struct WINDOW2_CONTROL_BLOCK_STRUCT

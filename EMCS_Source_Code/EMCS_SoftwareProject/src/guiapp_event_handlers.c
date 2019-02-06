@@ -9,7 +9,9 @@
 int contador=0;
 int contador2=0;
 int contador3=0;
-
+int adc_value=984;
+int hundreds,tens,units=0;
+int counter_aux=0;
 
 
 extern GX_WINDOW_ROOT * p_window_root;
@@ -74,6 +76,7 @@ UINT window2_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
     return result;
 }
 
+
 UINT window3_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
     UINT result = gx_window_event_process(widget, event_ptr);
@@ -83,31 +86,172 @@ UINT window3_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
         case GX_SIGNAL(ID_BACK_W3, GX_EVENT_CLICKED):
                 show_window((GX_WINDOW*)&window2, (GX_WIDGET*)widget, true);
                 break;
+//------------------------
+                case GX_SIGNAL(ID_REFRESH, GX_EVENT_CLICKED):
+                               // contador=contador+1;
+                                //if(contador==1){
+                                  //      update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_ONE);
 
-       // case GX_SIGNAL(ID_ADD, GX_EVENT_CLICKED):
-         //       contador=contador+1;
-           //     if(contador==1){
-             //           update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_ONE);
+                                            //  }
+                               // if(contador==2){
+                                 //        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_TWO);
 
-               //               }
-                //if(contador==2){
-                  //      update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_TWO);
+                                   //                                           }
+                                //if(contador>=8){
+                                  //                                  contador=0;
+                                    //                            }
 
-                    //       }
-                //break;
+                            //    break;
+//---------------------------------------------
+                                tens=(adc_value%100)/10;
 
-        //case GX_SIGNAL(ID_MIN, GX_EVENT_CLICKED):
-          //                      contador=contador-1;
-            //                      update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_ONE);
+                                    switch(tens)
+                                    {
+                                     case 0:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_ZERO);
+                                         break;
+
+                                     case 1:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_ONE);
+                                         break;
+
+                                     case 2:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_TWO);
+                                         break;
+
+                                     case 3:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_THREE);
+                                         break;
+
+                                     case 4:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_FOUR);
+                                         break;
+
+                                     case 5:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_FIVE);
+                                         break;
+
+                                     case 6:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_SIX);
+                                         break;
+
+                                     case 7:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_SEVEN);
+                                         break;
+
+                                     case 8:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_EIGHT);
+                                         break;
+
+                                     case 9:
+                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_NINE);
+                                         break;
+
+                                     }
 
 
-              //         break;
+                                hundreds=adc_value/100;
+
+
+
+
+                                switch(hundreds)
+                                {
+                                    case 0:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_ZERO);
+                                        break;
+                                    case 1:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_ONE);
+                                        break;
+
+                                    case 2:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_TWO);
+                                        break;
+
+                                    case 3:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_THREE);
+                                        break;
+
+                                    case 4:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_FOUR);
+                                        break;
+                                    case 5:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_FIVE);
+                                        break;
+
+                                    case 6:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_SIX);
+                                        break;
+
+                                    case 7:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_SEVEN);
+                                        break;
+
+                                    case 8:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_EIGHT);
+                                        break;
+
+                                    case 9:
+                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_NINE);
+                                        break;
+
+                                }
+
+                                units=adc_value%10;
+
+
+                                switch(units)
+                                {
+                                    case 0:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_ZERO);
+                                        break;
+                                    case 1:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_ONE);
+                                        break;
+
+                                    case 2:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_TWO);
+                                        break;
+
+                                    case 3:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_THREE);
+                                        break;
+
+                                    case 4:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_FOUR);
+                                        break;
+                                    case 5:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_FIVE);
+                                        break;
+
+                                    case 6:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_SIX);
+                                        break;
+
+                                    case 7:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_SEVEN);
+                                        break;
+
+                                    case 8:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_EIGHT);
+                                        break;
+
+                                    case 9:
+                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_NINE);
+                                        break;
+
+                                }
+
+
+                                break;
 
 
 
 
 
+//-----------------------------------------------------------------------
 
+//-----------------------------
         default:
             result = gx_window_event_process(widget, event_ptr);
             break;
@@ -116,6 +260,8 @@ UINT window3_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 
     return result;
 }
+
+
 
 UINT window4_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
@@ -168,6 +314,7 @@ UINT window6_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
                 show_window((GX_WINDOW*)&window2, (GX_WIDGET*)widget, true);
                 break;
 //------------------------
+
                 case GX_SIGNAL(ID_UP_DAY, GX_EVENT_CLICKED):
                                 contador=contador+1;
                                 if(contador==1){
@@ -336,4 +483,14 @@ static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_
         gx_prompt_text_id_set(p_prompt, string_id);
     }
 }
+
+
+
+
+
+
+
+
+
+
 
