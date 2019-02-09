@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  6. 2.2019   Time (hh:mm): 15:21                        */
+/*  Date (dd.mm.yyyy):  8. 2.2019   Time (hh:mm): 22:02                        */
 /*******************************************************************************/
 
 
@@ -37,14 +37,15 @@ extern   "C" {
 #define ID_DEC 13
 #define ID_UNITS 14
 #define ID_REFRESH 15
-#define ID_WINDOW2 16
-#define ID_BTN_DUTY 17
-#define ID_BTN_SPD 18
-#define ID_BTN_CTS 19
-#define ID_BACK_BTN 20
-#define ID_BTN_CAL 21
-#define ID_WINDOW1 22
-#define ID_ICON_MORE 23
+#define ID_CONTS 16
+#define ID_WINDOW2 17
+#define ID_BTN_DUTY 18
+#define ID_BTN_SPD 19
+#define ID_BTN_CTS 20
+#define ID_BACK_BTN 21
+#define ID_BTN_CAL 22
+#define ID_WINDOW1 23
+#define ID_ICON_MORE 24
 
 
 /* Declare properties structures for each utilized widget type                 */
@@ -105,6 +106,16 @@ typedef struct
     GX_RESOURCE_ID wallpaper_id;
 } GX_WINDOW_PROPERTIES;
 
+typedef struct
+{
+    GX_RESOURCE_ID string_id;
+    GX_RESOURCE_ID font_id;
+    GX_RESOURCE_ID normal_text_color_id;
+    GX_RESOURCE_ID selected_text_color_id;
+    GX_BYTE        whitespace;
+    GX_BYTE        line_space;
+} GX_ML_TEXT_VIEW_PROPERTIES;
+
 
 /* Declare top-level control blocks                                            */
 
@@ -130,6 +141,7 @@ typedef struct WINDOW4_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
     GX_ICON window4_icon_3;
+    GX_MULTI_LINE_TEXT_VIEW window4_text_view;
 } WINDOW4_CONTROL_BLOCK;
 
 typedef struct WINDOW3_CONTROL_BLOCK_STRUCT
@@ -140,6 +152,7 @@ typedef struct WINDOW3_CONTROL_BLOCK_STRUCT
     GX_PROMPT window3_prompt;
     GX_PROMPT window3_prompt_1;
     GX_ICON window3_icon_7;
+    GX_PROMPT window3_prompt_3;
 } WINDOW3_CONTROL_BLOCK;
 
 typedef struct WINDOW2_CONTROL_BLOCK_STRUCT
@@ -156,6 +169,9 @@ typedef struct WINDOW1_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
     GX_ICON window1_icon;
+    GX_PROMPT window1_prompt;
+    GX_PROMPT window1_prompt_1;
+    GX_PROMPT window1_prompt_4;
 } WINDOW1_CONTROL_BLOCK;
 
 
@@ -267,6 +283,7 @@ UINT gx_studio_text_button_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *co
 UINT gx_studio_icon_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 UINT gx_studio_prompt_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 UINT gx_studio_window_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
+UINT gx_studio_multi_line_text_view_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 GX_WIDGET *gx_studio_widget_create(GX_BYTE *storage, GX_CONST GX_STUDIO_WIDGET *definition, GX_WIDGET *parent);
 UINT gx_studio_named_widget_create(char *name, GX_WIDGET *parent, GX_WIDGET **new_widget);
 UINT gx_studio_display_configure(USHORT display, UINT (*driver)(GX_DISPLAY *), USHORT language, USHORT theme, GX_WINDOW_ROOT **return_root);

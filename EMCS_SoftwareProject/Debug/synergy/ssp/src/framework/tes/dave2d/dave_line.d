@@ -1,13 +1,13 @@
 synergy/ssp/src/framework/tes/dave2d/dave_line.o: ../synergy/ssp/src/framework/tes/dave2d/dave_line.c \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_types.h \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_errorcodes.h \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_base.h \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_math.h \
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_types.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_errorcodes.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_base.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_math.h \
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h \
 ../synergy/ssp/src/framework/tes/dave2d/dave_intern.h \
 ../synergy/ssp/src/framework/tes/dave2d/dave_registermap.h \
 ../synergy/ssp/src/framework/tes/dave2d/dave_intern.h \
@@ -32,23 +32,23 @@ C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source
 ../synergy/ssp/src/framework/tes/dave2d/dave_curve.h \
 ../synergy/ssp/src/framework/tes/dave2d/dave_texture.h
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_types.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_types.h:
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_errorcodes.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_errorcodes.h:
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_base.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_base.h:
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_math.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes/dave_math.h:
 
-C:\\Users\\JPRMEXDI\\Documents\\Repository\\Proyecto_v2\\project_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
+C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_SoftwareProject\\synergy\\ssp\\inc\\framework\\tes\\dave_driver.h:
 
 ../synergy/ssp/src/framework/tes/dave2d/dave_intern.h:
 
