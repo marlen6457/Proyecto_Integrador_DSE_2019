@@ -2,6 +2,7 @@
 
 #include "gui/guiapp_resources.h"
 #include "gui/guiapp_specifications.h"
+#include "Ram.h"
 
 #include "main_thread.h"
 
@@ -18,6 +19,8 @@ extern GX_WINDOW_ROOT * p_window_root;
 
 static UINT show_window(GX_WINDOW * p_new, GX_WIDGET * p_widget, bool detach_old);
 static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_id);
+static void update_text(GX_WIDGET * p_widget, GX_RESOURCE_ID id, char * p_text);
+
 
 UINT window1_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
@@ -473,6 +476,22 @@ static UINT show_window(GX_WINDOW * p_new, GX_WIDGET * p_widget, bool detach_old
     return err;
 }
 
+static void update_text(GX_WIDGET * p_widget, GX_RESOURCE_ID id, char * p_text)
+{
+    GX_PROMPT * p_prompt = NULL;
+
+    UINT err = gx_widget_find(p_widget, (USHORT)id, GX_SEARCH_DEPTH_INFINITE, (GX_WIDGET **) &p_prompt);
+    if (GX_SUCCESS == err)
+    {
+        err = gx_prompt_text_set(p_prompt, p_text);
+        if (GX_SUCCESS != err) {
+            while(1);
+        }
+
+    } else {
+        while(1);
+    }
+}
 static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_id)
 {
     GX_PROMPT * p_prompt = NULL;

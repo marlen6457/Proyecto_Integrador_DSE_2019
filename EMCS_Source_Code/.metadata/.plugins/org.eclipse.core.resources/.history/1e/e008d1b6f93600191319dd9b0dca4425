@@ -1,0 +1,31 @@
+#include "adc_thread.h"
+#include "Ram.h"
+//#include <stdio.h>
+
+/* Control Thread entry function */
+void control_thread_entry(void)
+{
+    SR_InitRam();
+
+
+    while (1)
+    {
+        //********ADC & PWM ***************
+        g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);
+
+        u16ADC_FilterdData = (u16ADC_Data + (C_FILTER_ORDER-1) * u16ADC_FilterdData) / C_FILTER_ORDER;
+        if(u16ADC_Data > 512)
+        {
+            g_ioport.p_api->pinWrite(IOPORT_PORT_06_PIN_00, IOPORT_LEVEL_HIGH);
+        }
+        else
+        {
+            g_ioport.p_api->pinWrite(IOPORT_PORT_06_PIN_00, IOPORT_LEVEL_LOW);
+        }
+
+        U8DutyCycle = (uint8_t)(u16ADC_Data * 100/4095);
+       // g_timer1.p_api->dutyCycleSet(g_timer1.p_ctrl, U8DutyCycle, TIMER_PWM_UNIT_PERCENT, 0);
+
+        tx_thread_sleep (1);
+    }
+}
