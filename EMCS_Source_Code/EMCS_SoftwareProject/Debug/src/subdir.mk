@@ -4,16 +4,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/Ram.c \
+../src/adc_thread_entry.c \
 ../src/guiapp_event_handlers.c \
 ../src/hal_entry.c \
 ../src/main_thread_entry.c 
 
 OBJS += \
+./src/Ram.o \
+./src/adc_thread_entry.o \
 ./src/guiapp_event_handlers.o \
 ./src/hal_entry.o \
 ./src/main_thread_entry.o 
 
 C_DEPS += \
+./src/Ram.d \
+./src/adc_thread_entry.d \
 ./src/guiapp_event_handlers.d \
 ./src/hal_entry.d \
 ./src/main_thread_entry.d 

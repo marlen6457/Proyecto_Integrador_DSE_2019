@@ -1,11 +1,11 @@
-16:10:32 **** Incremental Build of configuration Debug for project EMCS_SoftwareProject ****
+17:44:56 **** Incremental Build of configuration Debug for project EMCS_SoftwareProject ****
 make -j12 all 
 'Invoking: Cross ARM GNU Print Size'
 arm-none-eabi-size --format=berkeley "EMCS_SoftwareProject.elf"
    text	   data	    bss	    dec	    hex	filename
- 584212	   2492	 473648	1060352	 102e00	EMCS_SoftwareProject.elf
+ 588032	   2492	 474928	1065452	 1041ec	EMCS_SoftwareProject.elf
 'Finished building: EMCS_SoftwareProject.siz'
 ' '
 
-16:10:33 Build Finished. 0 errors, 0 warnings. (took 881ms)
+17:44:57 Build Finished. 0 errors, 0 warnings. (took 932ms)
 

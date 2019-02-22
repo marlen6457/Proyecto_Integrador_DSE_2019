@@ -52,7 +52,7 @@ src/guiapp_event_handlers.o: ../src/guiapp_event_handlers.c \
  d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\src\bsp\mcu\all\bsp_error_checking.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_port.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/gx_user.h \
- ../src/gui/guiapp_specifications.h \
+ ../src/gui/guiapp_specifications.h ../src/Ram.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/main_thread.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_api.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/hal_data.h \
@@ -204,6 +204,8 @@ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject
 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/gx_user.h:
 
 ../src/gui/guiapp_specifications.h:
+
+../src/Ram.h:
 
 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/main_thread.h:
 
