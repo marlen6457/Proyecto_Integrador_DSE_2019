@@ -195,7 +195,7 @@ UINT window3_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
     UINT result = gx_window_event_process(widget, event_ptr);
 
-
+    static ioport_level_t level1 = IOPORT_LEVEL_HIGH;
 
 
 
@@ -230,6 +230,22 @@ UINT window3_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 
                             //    break;
 //---------------------------------------------
+
+
+
+                        /* Determine the next state of the LEDs */
+                        if(IOPORT_LEVEL_LOW == level1)
+                          {
+                             level1 = IOPORT_LEVEL_HIGH;
+                          }
+                        else
+                          {
+                             level1 = IOPORT_LEVEL_LOW;
+                          }
+
+                        g_ioport.p_api->pinWrite(IOPORT_PORT_06_PIN_02, level1);
+
+
                                 tens=(adc_value%100)/10;
 
                                     switch(tens)
