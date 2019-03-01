@@ -3,35 +3,7 @@
   <v1:deviceSetting id="renesas.s7g2_fc" pattern="R7FS7G27******FC">
     <v1:packageSetting id="renesas.176lqfp"/>
   </v1:deviceSetting>
-  <v1:configSetting configurationId="p110.gpio_mode" altId="p110.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="debug0.tck" altId="debug0.tck.p300">
-    <v1:connectionSetting altId="p300.debug0.tck"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="debug0.tms" altId="debug0.tms.p108">
-    <v1:connectionSetting altId="p108.debug0.tms"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="debug0.tdi" altId="debug0.tdi.p110">
-    <v1:connectionSetting altId="p110.debug0.tdi"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p300" altId="p300.debug0.tck">
-    <v1:connectionSetting altId="debug0.tck.p300"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p110" altId="p110.debug0.tdi">
-    <v1:connectionSetting altId="debug0.tdi.p110"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p109.gpio_mode" altId="p109.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="debug0.tdo" altId="debug0.tdo.p109">
-    <v1:connectionSetting altId="p109.debug0.tdo"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="debug0.mode" altId="debug0.mode.jtag"/>
-  <v1:configSetting configurationId="p109" altId="p109.debug0.tdo">
-    <v1:connectionSetting altId="debug0.tdo.p109"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p108.gpio_mode" altId="p108.gpio_mode.gpio_mode_peripheral"/>
-  <v1:configSetting configurationId="p108" altId="p108.debug0.tms">
-    <v1:connectionSetting altId="debug0.tms.p108"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p300.gpio_mode" altId="p300.gpio_mode.gpio_mode_peripheral"/>
+  <v1:configSetting configurationId="debug0.mode" altId="debug0.mode.disabled"/>
   <v1:configSetting configurationId="etherc1.rmii.rxd1" altId="etherc1.rmii.rxd1.p703">
     <v1:connectionSetting altId="p703.etherc1.rmii.rxd1"/>
   </v1:configSetting>
@@ -266,9 +238,7 @@
   <v1:configSetting configurationId="glcdc0.lcd_data13" altId="glcdc0.lcd_data13.p907">
     <v1:connectionSetting altId="p907.glcdc0.lcd_data13"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="etherc1.rmii.txd_en" altId="etherc1.rmii.txd_en.p405">
-    <v1:connectionSetting altId="p405.etherc1.rmii.txd_en"/>
-  </v1:configSetting>
+  <v1:configSetting configurationId="etherc1.rmii.txd_en" altId="etherc1.rmii.txd_en.none"/>
   <v1:configSetting configurationId="glcdc0.lcd_tcon1" altId="glcdc0.lcd_tcon1.p314">
     <v1:connectionSetting altId="p314.glcdc0.lcd_tcon1"/>
   </v1:configSetting>
@@ -290,9 +260,6 @@
   </v1:configSetting>
   <v1:configSetting configurationId="p406" altId="p406.etherc1.rmii.txd1">
     <v1:connectionSetting altId="etherc1.rmii.txd1.p406"/>
-  </v1:configSetting>
-  <v1:configSetting configurationId="p405" altId="p405.etherc1.rmii.txd_en">
-    <v1:connectionSetting altId="etherc1.rmii.txd_en.p405"/>
   </v1:configSetting>
   <v1:configSetting configurationId="p505.gpio_mode" altId="p505.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p404" altId="p404.etherc1.rmii.mdio">
@@ -596,7 +563,6 @@
   <v1:configSetting configurationId="p008" altId="p008.adc0.an03">
     <v1:connectionSetting altId="adc0.an03.p008"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p405.gpio_mode" altId="p405.gpio_mode.gpio_mode_peripheral"/>
   <v1:configSetting configurationId="p806" altId="p806.output.low"/>
   <v1:configSetting configurationId="p804" altId="p804.glcdc0.lcd_data00">
     <v1:connectionSetting altId="glcdc0.lcd_data00.p804"/>
@@ -611,7 +577,6 @@
   <v1:propertySetting propertyId="p801.symbolic_name" value="GPIO14"/>
   <v1:propertySetting propertyId="p015.symbolic_name" value="GPIO18"/>
   <v1:propertySetting propertyId="p303.symbolic_name" value="GPIO39"/>
-  <v1:propertySetting propertyId="p704.symbolic_name" value="Ethernet_Controller_1_RMII_RMII1_RX_ER"/>
   <v1:propertySetting propertyId="p206.symbolic_name" value="Cap_Touch_Sensing_Unit_TS01"/>
   <v1:propertySetting propertyId="p606.symbolic_name" value="GLCD_Controller__Pin_Option_B_LCD_DATA03_B"/>
   <v1:propertySetting propertyId="p700.symbolic_name" value="Ethernet_Controller_1_RMII_RMII1_TXD0"/>
@@ -631,7 +596,6 @@
   <v1:propertySetting propertyId="pa01.symbolic_name" value="GLCD_Controller__Pin_Option_B_LCD_DATA06_B"/>
   <v1:propertySetting propertyId="pb00.symbolic_name" value="USB_High_Speed_USBHS_VBUSEN"/>
   <v1:propertySetting propertyId="p014.symbolic_name" value="GPIO19"/>
-  <v1:propertySetting propertyId="p109.symbolic_name" value="JTAG_TDO"/>
   <v1:propertySetting propertyId="p607.symbolic_name" value="GLCD_Controller__Pin_Option_B_LCD_DATA04_B"/>
   <v1:propertySetting propertyId="p202.symbolic_name" value="SCI2_SCK2"/>
   <v1:propertySetting propertyId="p107.symbolic_name" value="GPIO12"/>
@@ -657,7 +621,6 @@
   <v1:propertySetting propertyId="p507.symbolic_name" value="GPIO17"/>
   <v1:propertySetting propertyId="pa00.symbolic_name" value="GLCD_Controller__Pin_Option_B_LCD_DATA05_B"/>
   <v1:propertySetting propertyId="p414.symbolic_name" value="Cap_Touch_Sensing_Unit_TS10"/>
-  <v1:propertySetting propertyId="p110.symbolic_name" value="JTAG_TDI"/>
   <v1:propertySetting propertyId="p204.symbolic_name" value="Cap_Touch_Sensing_Unit_TS00"/>
   <v1:propertySetting propertyId="p702.symbolic_name" value="Ethernet_Controller_1_RMII_RMII1_RXD0"/>
   <v1:propertySetting propertyId="p605.symbolic_name" value="GPIO1"/>
@@ -672,7 +635,6 @@
   <v1:propertySetting propertyId="p406.symbolic_name" value="Ethernet_Controller_1_RMII_RMII1_TXD1"/>
   <v1:propertySetting propertyId="p403.symbolic_name" value="Ethernet_Controller_1_RMII_ET1_MDC"/>
   <v1:propertySetting propertyId="p613.symbolic_name" value="GPIO37"/>
-  <v1:propertySetting propertyId="p405.symbolic_name" value="Ethernet_Controller_1_RMII_RMII1_TXD_EN"/>
   <v1:propertySetting propertyId="p901.symbolic_name" value="GLCD_Controller__Pin_Option_B_LCD_DATA15_B"/>
   <v1:propertySetting propertyId="p905.symbolic_name" value="GLCD_Controller__Pin_Option_B_LCD_DATA11_B"/>
   <v1:propertySetting propertyId="p308.symbolic_name" value="GPIO35"/>
@@ -680,7 +642,6 @@
   <v1:propertySetting propertyId="p306.symbolic_name" value="SCI6_SCK6"/>
   <v1:propertySetting propertyId="p401.symbolic_name" value="CAN0_CTX0"/>
   <v1:propertySetting propertyId="p802.symbolic_name" value="GLCD_Controller__Pin_Option_B_LCD_DATA02_B"/>
-  <v1:propertySetting propertyId="p300.symbolic_name" value="JTAG_TCK"/>
   <v1:propertySetting propertyId="p800.symbolic_name" value="GPIO13"/>
   <v1:propertySetting propertyId="p302.symbolic_name" value="SCI2_TXD2_SDA2_MOSI2"/>
   <v1:propertySetting propertyId="p304.symbolic_name" value="SCI6_RXD6_SCL6_MISO6"/>
@@ -691,7 +652,6 @@
   <v1:propertySetting propertyId="p701.symbolic_name" value="Ethernet_Controller_1_RMII_REF50CK1"/>
   <v1:propertySetting propertyId="p608.symbolic_name" value="GPIO7"/>
   <v1:propertySetting propertyId="p413.symbolic_name" value="GPIO15"/>
-  <v1:propertySetting propertyId="p108.symbolic_name" value="JTAG_TMS"/>
   <v1:propertySetting propertyId="pb01.symbolic_name" value="USB_High_Speed_USBHS_VBUS"/>
   <v1:propertySetting propertyId="p203.symbolic_name" value="GPIO21"/>
   <v1:propertySetting propertyId="p314.symbolic_name" value="GLCD_Controller__Pin_Option_B_LCD_TCON1_B"/>
@@ -916,4 +876,15 @@
   <v1:configSetting configurationId="usbdp" altId="usbdp.usbfs0.usbdp">
     <v1:connectionSetting altId="usbfs0.usbdp.usbdp"/>
   </v1:configSetting>
+  <v1:configSetting configurationId="gpt0.mode" altId="gpt0.mode.disabled"/>
+  <v1:configSetting configurationId="gpt0.pairing" altId="gpt0.pairing.free"/>
+  <v1:configSetting configurationId="gpt1.gtioca" altId="gpt1.gtioca.p405">
+    <v1:connectionSetting altId="p405.gpt1.gtioca"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="gpt1.mode" altId="gpt1.mode.gtiocaorgtiocb.free"/>
+  <v1:configSetting configurationId="p704.gpio_drivecapacity" altId="p704.gpio_speed.gpio_speed_high"/>
+  <v1:configSetting configurationId="p405" altId="p405.gpt1.gtioca">
+    <v1:connectionSetting altId="gpt1.gtioca.p405"/>
+  </v1:configSetting>
+  <v1:configSetting configurationId="p405.gpio_mode" altId="p405.gpio_mode.gpio_mode_peripheral"/>
 </v1:pinSettings>

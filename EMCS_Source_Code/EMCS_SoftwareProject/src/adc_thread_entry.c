@@ -25,9 +25,6 @@ void adc_thread_entry(void)
             g_ioport.p_api->pinWrite(IOPORT_PORT_06_PIN_00, IOPORT_LEVEL_LOW);
         }
 
-        U8DutyCycle = (uint8_t)(u16ADC_Data * 100/4095);
-       // g_timer1.p_api->dutyCycleSet(g_timer1.p_ctrl, U8DutyCycle, TIMER_PWM_UNIT_PERCENT, 0);
-
         tx_thread_sleep (10);
     }
 }

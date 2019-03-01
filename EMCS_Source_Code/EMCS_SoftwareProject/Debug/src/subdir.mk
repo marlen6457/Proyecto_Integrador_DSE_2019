@@ -8,21 +8,24 @@ C_SRCS += \
 ../src/adc_thread_entry.c \
 ../src/guiapp_event_handlers.c \
 ../src/hal_entry.c \
-../src/main_thread_entry.c 
+../src/main_thread_entry.c \
+../src/pwm_thread_entry.c 
 
 OBJS += \
 ./src/Ram.o \
 ./src/adc_thread_entry.o \
 ./src/guiapp_event_handlers.o \
 ./src/hal_entry.o \
-./src/main_thread_entry.o 
+./src/main_thread_entry.o \
+./src/pwm_thread_entry.o 
 
 C_DEPS += \
 ./src/Ram.d \
 ./src/adc_thread_entry.d \
 ./src/guiapp_event_handlers.d \
 ./src/hal_entry.d \
-./src/main_thread_entry.d 
+./src/main_thread_entry.d \
+./src/pwm_thread_entry.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

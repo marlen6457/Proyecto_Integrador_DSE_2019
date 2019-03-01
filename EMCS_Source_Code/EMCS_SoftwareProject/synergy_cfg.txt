@@ -88,9 +88,9 @@ Synergy Configuration
       P105 127 SCI8_TXD_MOSI SCI8_TXD8_SDA8_MOSI8 Low None "Peripheral mode" CMOS None "BUS0: D5_DQ5; GLCDC0: LCD_TCON3; IRQ0: IRQ00; KINT0: KRM5; POEG0: GTETRG; SCI8: SDA; SCI8: TXD_MOSI; SPI0: SSL2" 
       P106 126 SCI8_SCK SCI8_SCK8 Low - "Peripheral mode" CMOS None "BUS0: D6_DQ6; GLCDC0: LCD_DATA00; GPT8: GTIOCB; KINT0: KRM6; SCI8: SCK; SPI0: SSL3" 
       P107 125 GPIO GPIO12 Medium - "Output mode (Initial Low)" CMOS None "BUS0: D7_DQ7; GLCDC0: LCD_DATA01; GPT8: GTIOCA; KINT0: KRM7; SCI8: CTS_RTS_SS" 
-      P108 89 DEBUG0_TMS JTAG_TMS Low - "Peripheral mode" CMOS None "DEBUG0: SWDIO; DEBUG0: TMS; GPT0: GTIOCB; SCI9: CTS_RTS_SS; SPI1: SSL0" 
-      P109 90 DEBUG0_TDO JTAG_TDO Low - "Peripheral mode" CMOS None "CAN1: CTX; CGC0: CLKOUT; DEBUG0: SWO; DEBUG0: TDO; GPT1: GTIOCA; OPS0: GTOVUP; SCI9: SDA; SCI9: TXD_MOSI; SPI1: MOSI" 
-      P110 91 DEBUG0_TDI JTAG_TDI Low None "Peripheral mode" CMOS None "CAN1: CRX; CMP0: VCOUT; DEBUG0: TDI; GPT1: GTIOCB; IRQ0: IRQ03; OPS0: GTOVLO; SCI2: CTS_RTS_SS; SCI9: RXD_MISO; SCI9: SCL; SPI1: MISO" 
+      P108 89 - - - - Disabled - - "DEBUG0: SWDIO; DEBUG0: TMS; GPT0: GTIOCB; SCI9: CTS_RTS_SS; SPI1: SSL0" 
+      P109 90 - - - - Disabled - - "CAN1: CTX; CGC0: CLKOUT; DEBUG0: SWO; DEBUG0: TDO; GPT1: GTIOCA; OPS0: GTOVUP; SCI9: SDA; SCI9: TXD_MOSI; SPI1: MOSI" 
+      P110 91 - - - - Disabled - - "CAN1: CRX; CMP0: VCOUT; DEBUG0: TDI; GPT1: GTIOCB; IRQ0: IRQ03; OPS0: GTOVLO; SCI2: CTS_RTS_SS; SCI9: RXD_MISO; SCI9: SCL; SPI1: MISO" 
       P111 92 GPIO GPIO4 - IRQ4 "Input mode" - None "BUS0: A05; GLCDC0: LCD_DATA12; GPT3: GTIOCA; IRQ0: IRQ04; SCI2: SCK; SCI9: SCK; SPI1: RSPCK" 
       P112 93 GPIO GPIO5 - - "Input mode" - None "BUS0: A04; GLCDC0: LCD_DATA11; GPT3: GTIOCB; SCI2: SDA; SCI2: TXD_MOSI; SSI0: SSISCK" 
       P113 94 GPIO GPIO6 Medium - "Output mode (Initial Low)" CMOS None "BUS0: A03; GLCDC0: LCD_DATA10; SCI2: RXD_MISO; SCI2: SCL; SSI0: SSIWS" 
@@ -106,7 +106,7 @@ Synergy Configuration
       P207 49 CTSU0_TS02 Cap_Touch_Sensing_Unit_TS02 Low - "Peripheral mode" CMOS None "BUS0: A17; CTSU0: TS02; SPI1: SSL2" 
       P212 24 - - - - Disabled - - "AGT1: AGTEE; CGC0: EXTAL; IRQ0: IRQ03; POEG3: GTETRG; SCI1: RXD_MISO; SCI1: SCL" 
       P213 23 - - - - Disabled - - "ADC1: ADTRG; CGC0: XTAL; IRQ0: IRQ02; POEG2: GTETRG; SCI1: SDA; SCI1: TXD_MOSI" 
-      P300 88 DEBUG0_TCK JTAG_TCK Low - "Peripheral mode" CMOS None "DEBUG0: SWCLK; DEBUG0: TCK; GPT0: GTIOCA; SPI1: SSL1" 
+      P300 88 - - - - Disabled - - "DEBUG0: SWCLK; DEBUG0: TCK; GPT0: GTIOCA; SPI1: SSL1" 
       P301 87 SCI2_RXD_MISO SCI2_RXD2_SCL2_MISO2 Low None "Peripheral mode" CMOS None "BUS0: A06; GLCDC0: LCD_DATA13; GPT4: GTIOCB; IRQ0: IRQ06; OPS0: GTOULO; SCI2: RXD_MISO; SCI2: SCL; SPI1: SSL2" 
       P302 86 SCI2_TXD_MOSI SCI2_TXD2_SDA2_MOSI2 Low None "Peripheral mode" CMOS None "BUS0: A07; GLCDC0: LCD_DATA14; GPT4: GTIOCA; IRQ0: IRQ05; OPS0: GTOUUP; SCI2: SDA; SCI2: TXD_MOSI; SPI1: SSL3" 
       P303 85 GPIO GPIO39 - - "Input mode" - None "BUS0: A08; GLCDC0: LCD_DATA15; GPT7: GTIOCB" 
@@ -127,7 +127,7 @@ Synergy Configuration
       P402 3 CAN0_CRX CAN0_CRX0 Low None "Peripheral mode" CMOS None "AGT0: AGTIO; AGT1: AGTIO; CAN0: CRX; ETHERC0: MDIO; IRQ0: IRQ04; RTC0: RTCIC0; SCI7: RXD_MISO; SCI7: SCL" 
       P403 4 RMII_MDC Ethernet_Controller_1_RMII_ET1_MDC Low - "Peripheral mode" CMOS None "AGT0: AGTIO; AGT1: AGTIO; ETHERC1: MDC; GPT3: GTIOCA; PDC0: PIXD7; RTC0: RTCIC1; SCI7: CTS_RTS_SS; SSI0: SSISCK" 
       P404 5 RMII_MDIO Ethernet_Controller_1_RMII_ET1_MDIO Low - "Peripheral mode" CMOS None "ETHERC1: MDIO; GPT3: GTIOCB; PDC0: PIXD6; RTC0: RTCIC2; SSI0: SSIWS" 
-      P405 6 RMII_TXD_EN Ethernet_Controller_1_RMII_RMII1_TXD_EN Low - "Peripheral mode" CMOS None "ETHERC1: TXD_EN; GPT1: GTIOCA; PDC0: PIXD5; SSI0: SSITXD" 
+      P405 6 GPT1_GTIOCA - Low - "Peripheral mode" CMOS None "ETHERC1: TXD_EN; GPT1: GTIOCA; PDC0: PIXD5; SSI0: SSITXD" 
       P406 7 RMII_TXD1 Ethernet_Controller_1_RMII_RMII1_TXD1 Low - "Peripheral mode" CMOS None "ETHERC1: TXD1; GPT1: GTIOCB; PDC0: PIXD4; SSI0: SSIRXD" 
       P407 44 USBFS0_VBUS USB_Full_Speed_USB0_VBUS Low - "Peripheral mode" CMOS None "ADC0: ADTRG; CTSU0: TS03; ETHERC0: EXOUT; IIC0: SDA; RTC0: RTCOUT; SCI4: CTS_RTS_SS; SPI1: SSL3; USBFS0: VBUS" 
       P408 43 CTSU0_TS04 Cap_Touch_Sensing_Unit_TS04 Low None "Peripheral mode" CMOS None "CTSU0: TS04; ETHERC0: CRS_DV; GPT10: GTIOCB; IRQ0: IRQ07; OPS0: GTOWLO; SCI3: RXD_MISO; SCI3: SCL; USBFS0: ID; USBHS0: ID" 
@@ -169,7 +169,7 @@ Synergy Configuration
       P701 9 RMII_REF50CK Ethernet_Controller_1_RMII_REF50CK1 Low - "Peripheral mode" CMOS None "ETHERC1: REF50CK; GPT5: GTIOCB; PDC0: PIXD2" 
       P702 10 RMII_RXD0 Ethernet_Controller_1_RMII_RMII1_RXD0 Low - "Peripheral mode" CMOS None "ETHERC1: RXD0; GPT6: GTIOCA; PDC0: PIXD1" 
       P703 11 RMII_RXD1 Ethernet_Controller_1_RMII_RMII1_RXD1 Low - "Peripheral mode" CMOS None "ETHERC1: RXD1; GPT6: GTIOCB; PDC0: PIXD0" 
-      P704 12 RMII_RX_ER Ethernet_Controller_1_RMII_RMII1_RX_ER Low - "Peripheral mode" CMOS None "ETHERC1: RX_ER; PDC0: HSYNC" 
+      P704 12 RMII_RX_ER - High - "Peripheral mode" CMOS None "ETHERC1: RX_ER; PDC0: HSYNC" 
       P705 13 RMII_CRS_DV Ethernet_Controller_1_RMII_RMII1_CRS_DV Low - "Peripheral mode" CMOS None "ETHERC1: CRS_DV; PDC0: PIXCLK" 
       P706 14 SCI3_RXD_MISO SCI3_RXD3_SCL3_MISO3 Low None "Peripheral mode" CMOS None "IRQ0: IRQ07; SCI3: RXD_MISO; SCI3: SCL; USBHS0: OVRCURB" 
       P707 15 SCI3_TXD_MOSI SCI3_TXD3_SDA3_MOSI3 Low None "Peripheral mode" CMOS None "IRQ0: IRQ08; SCI3: SDA; SCI3: TXD_MOSI; USBHS0: OVRCURA" 
@@ -309,6 +309,9 @@ Synergy Configuration
   Module "JPEG Common"
   Module "ADC Driver on r_adc"
     Parameter Checking: Enabled
+    
+  Module "Timer Driver on r_gpt"
+    Parameter Checking: Default (BSP)
     
   HAL
     Instance "g_ioport I/O Port Driver on r_ioport"
@@ -741,6 +744,31 @@ Synergy Configuration
       Callback: NULL
       Scan End Interrupt Priority: Disabled
       Scan End Group B Interrupt Priority: Disabled
+      
+  Thread "PWM Thread"
+    Symbol: pwm_thread
+    Name: PWM Thread
+    Stack size (bytes): 1024
+    Priority: 9
+    Auto start: Enabled
+    Time slicing interval (ticks): 1
+    
+    Instance "g_timer Timer Driver on r_gpt"
+      Name: g_timer
+      Channel: 1
+      Mode: PWM
+      Duty Cycle Range (only applicable in PWM mode): Shortest: 2 PCLK, Longest: (Period - 1) PCLK
+      Period Value: 10
+      Period Unit: Milliseconds
+      Duty Cycle Value: 25
+      Duty Cycle Unit: Unit Raw Counts
+      Auto Start: True
+      GTIOCA Output Enabled: True
+      GTIOCA Stop Level: Pin Level Low
+      GTIOCB Output Enabled: False
+      GTIOCB Stop Level: Pin Level Low
+      Callback: NULL
+      Overflow Interrupt Priority: Disabled
       
   Messaging
     Subscriber "Main Thread" 0 0
