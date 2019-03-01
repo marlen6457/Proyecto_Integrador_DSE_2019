@@ -15,5 +15,5 @@ RssMessageHistory.Site001.RssSite=http\://tool-support.renesas.com/autoupdate/su
 RssMessageHistory.Site002.RssMessages.Count=0
 RssMessageHistory.Site002.RssSite=http\://tool-support.renesas.com/autoupdate/support/smartbrowser/en-us/RenesasNews/rss.xml
 RssRegisteredSite.IsOpenedTopSite=true
-RssRegisteredSite.LastChecking=1551466004854
+RssRegisteredSite.LastChecking=1551475591873
 eclipse.preferences.version=1
