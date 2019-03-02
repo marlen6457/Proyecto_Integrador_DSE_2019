@@ -229,7 +229,7 @@ IRQ0: IRQ02
 POEG2: GTETRG
 SCI1: SDA
 SCI1: TXD_MOSI"
-"P300","88","","","","","Disabled","","","DEBUG0: SWCLK
+"P300","88","GPT0_GTIOCA","","Low","","Peripheral mode","CMOS","None","DEBUG0: SWCLK
 DEBUG0: TCK
 GPT0: GTIOCA
 SPI1: SSL1"
@@ -457,14 +457,14 @@ SDHI1: CD"
 "P507","147","GPIO","GPIO17","","","Input mode","","None","ADC1: AN19
 SCI5: CTS_RTS_SS
 SDHI1: WP"
-"P511","176","","","","","Disabled","","","CAN1: CRX
+"P511","176","IIC2_SDA","","","None","Peripheral mode","CMOS","None","CAN1: CRX
 GPT0: GTIOCB
 IIC2: SDA
 IRQ0: IRQ15
 PDC0: PCKO
 SCI4: RXD_MISO
 SCI4: SCL"
-"P512","175","GPT0_GTIOCA","","","None","Peripheral mode","CMOS","None","CAN1: CTX
+"P512","175","IIC2_SCL","","","None","Peripheral mode","CMOS","None","CAN1: CTX
 GPT0: GTIOCA
 IIC2: SCL
 IRQ0: IRQ14

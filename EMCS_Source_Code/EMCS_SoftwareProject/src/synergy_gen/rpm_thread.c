@@ -23,7 +23,7 @@ static const input_capture_cfg_t g_input_capture_cfg =
           INPUT_CAPTURE_REPETITION_PERIODIC,
   .autostart = true, .p_callback = SR_InputCapture_CallBack, .p_context = &g_input_capture, .p_extend =
           &g_input_capture_extend,
-  .capture_irq_ipl = (9), .overflow_irq_ipl = (9), };
+  .capture_irq_ipl = (8), .overflow_irq_ipl = (8), };
 /* Instance structure to use this module. */
 const input_capture_instance_t g_input_capture =
 { .p_ctrl = &g_input_capture_ctrl, .p_cfg = &g_input_capture_cfg, .p_api = &g_input_capture_on_gpt };

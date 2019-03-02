@@ -121,6 +121,10 @@ const ioport_pin_cfg_t g_bsp_pin_cfg_data[] = {
 		.pin_cfg = (IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_CTSU),
 	},
 	{
+		.pin = IOPORT_PORT_03_PIN_00,
+		.pin_cfg = (IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_GPT1),
+	},
+	{
 		.pin = IOPORT_PORT_03_PIN_01,
 		.pin_cfg = (IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_SCI0_2_4_6_8),
 	},
@@ -265,8 +269,12 @@ const ioport_pin_cfg_t g_bsp_pin_cfg_data[] = {
 		.pin_cfg = (IOPORT_CFG_PORT_DIRECTION_INPUT),
 	},
 	{
+		.pin = IOPORT_PORT_05_PIN_11,
+		.pin_cfg = (IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_RIIC),
+	},
+	{
 		.pin = IOPORT_PORT_05_PIN_12,
-		.pin_cfg = (IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_GPT1),
+		.pin_cfg = (IOPORT_CFG_PERIPHERAL_PIN | IOPORT_PERIPHERAL_RIIC),
 	},
 	{
 		.pin = IOPORT_PORT_06_PIN_00,

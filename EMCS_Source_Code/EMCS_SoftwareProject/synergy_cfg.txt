@@ -106,7 +106,7 @@ Synergy Configuration
       P207 49 CTSU0_TS02 Cap_Touch_Sensing_Unit_TS02 Low - "Peripheral mode" CMOS None "BUS0: A17; CTSU0: TS02; SPI1: SSL2" 
       P212 24 - - - - Disabled - - "AGT1: AGTEE; CGC0: EXTAL; IRQ0: IRQ03; POEG3: GTETRG; SCI1: RXD_MISO; SCI1: SCL" 
       P213 23 - - - - Disabled - - "ADC1: ADTRG; CGC0: XTAL; IRQ0: IRQ02; POEG2: GTETRG; SCI1: SDA; SCI1: TXD_MOSI" 
-      P300 88 - - - - Disabled - - "DEBUG0: SWCLK; DEBUG0: TCK; GPT0: GTIOCA; SPI1: SSL1" 
+      P300 88 GPT0_GTIOCA - Low - "Peripheral mode" CMOS None "DEBUG0: SWCLK; DEBUG0: TCK; GPT0: GTIOCA; SPI1: SSL1" 
       P301 87 SCI2_RXD_MISO SCI2_RXD2_SCL2_MISO2 Low None "Peripheral mode" CMOS None "BUS0: A06; GLCDC0: LCD_DATA13; GPT4: GTIOCB; IRQ0: IRQ06; OPS0: GTOULO; SCI2: RXD_MISO; SCI2: SCL; SPI1: SSL2" 
       P302 86 SCI2_TXD_MOSI SCI2_TXD2_SDA2_MOSI2 Low None "Peripheral mode" CMOS None "BUS0: A07; GLCDC0: LCD_DATA14; GPT4: GTIOCA; IRQ0: IRQ05; OPS0: GTOUUP; SCI2: SDA; SCI2: TXD_MOSI; SPI1: SSL3" 
       P303 85 GPIO GPIO39 - - "Input mode" - None "BUS0: A08; GLCDC0: LCD_DATA15; GPT7: GTIOCB" 
@@ -146,8 +146,8 @@ Synergy Configuration
       P505 145 QSPI0_QIO3 Quad_SPI_QIO3 Low None "Peripheral mode" CMOS None "ADC1: AN18; GPT13: GTIOCB; IRQ0: IRQ14; QSPI0: QIO3; SCI6: RXD_MISO; SCI6: SCL; SDHI1: DAT3" 
       P506 146 GPIO GPIO16 - None "Input mode" - None "ADC0: AN19; IRQ0: IRQ15; SCI6: SDA; SCI6: TXD_MOSI; SDHI1: CD" 
       P507 147 GPIO GPIO17 - - "Input mode" - None "ADC1: AN19; SCI5: CTS_RTS_SS; SDHI1: WP" 
-      P511 176 - - - - Disabled - - "CAN1: CRX; GPT0: GTIOCB; IIC2: SDA; IRQ0: IRQ15; PDC0: PCKO; SCI4: RXD_MISO; SCI4: SCL" 
-      P512 175 GPT0_GTIOCA - - None "Peripheral mode" CMOS None "CAN1: CTX; GPT0: GTIOCA; IIC2: SCL; IRQ0: IRQ14; PDC0: VSYNC; SCI4: SDA; SCI4: TXD_MOSI" 
+      P511 176 IIC2_SDA - - None "Peripheral mode" CMOS None "CAN1: CRX; GPT0: GTIOCB; IIC2: SDA; IRQ0: IRQ15; PDC0: PCKO; SCI4: RXD_MISO; SCI4: SCL" 
+      P512 175 IIC2_SCL - - None "Peripheral mode" CMOS None "CAN1: CTX; GPT0: GTIOCA; IIC2: SCL; IRQ0: IRQ14; PDC0: VSYNC; SCI4: SDA; SCI4: TXD_MOSI" 
       P513 174 - - - - Disabled - - "GLCDC0: LCD_DATA16" 
       P600 122 GPIO GPIO11 Medium - "Output mode (Initial Low)" CMOS None "BUS0: RD; GLCDC0: LCD_DATA02" 
       P601 121 GPIO GPIO9 Medium - "Output mode (Initial Low)" CMOS None "BUS0: WR_WR0_DQM0; GLCDC0: LCD_DATA03" 
@@ -794,8 +794,8 @@ Synergy Configuration
       Clock Divider: PCLK/1
       Input Capture Enable Level: None
       Input Capture Enable Filter: None (No filtering)
-      Capture Interrupt Priority: Priority 9
-      Overflow Interrupt Priority: Priority 9
+      Capture Interrupt Priority: Priority 8
+      Overflow Interrupt Priority: Priority 8
       
   Messaging
     Subscriber "Main Thread" 0 0
