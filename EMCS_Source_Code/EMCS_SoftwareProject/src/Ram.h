@@ -43,6 +43,9 @@ union   Ubyte_def
 
 #define C_FILTER_ORDER  15
 
+/* Definition Input Capture*/
+#define BIT_32 (0x100000000U)               // MAX COUNTS
+#define TIMER_NANOSECOND (1000000000U)          //DESIRED UNITS
 
 //--------------------------------------------------------------------
 //             Global Variable
@@ -57,6 +60,10 @@ extern uint8_t U8DutyCycle;
 
 extern char value;
 extern char g_value [5];
+
+extern uint64_t capture_overflow;
+extern uint32_t capture_counter;
+extern uint64_t time_captured;
 
 
 
