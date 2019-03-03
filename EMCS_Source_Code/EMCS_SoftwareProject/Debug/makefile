@@ -59,33 +59,33 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_FLASH += \
-EMCS_SoftwareProject.srec \
+GUIApp.srec \
 
 SECONDARY_SIZE += \
-EMCS_SoftwareProject.siz \
+GUIApp.siz \
 
 
 # All Target
-all: EMCS_SoftwareProject.elf secondary-outputs
+all: GUIApp.elf secondary-outputs
 
 # Tool invocations
-EMCS_SoftwareProject.elf: $(OBJS) $(USER_OBJS)
+GUIApp.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C Linker'
-	$(file > EMCS_SoftwareProject.elf.in,-mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -T "D:\\Documentos\\Proyecto_Integrador_DSE_2019\\EMCS_Source_Code\\EMCS_SoftwareProject\\script\\S7G2.ld" -Xlinker --gc-sections -L "D:\\Documentos\\Proyecto_Integrador_DSE_2019\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\src\\framework\\el\\gx\\cm4_gcc" -L "D:\\Documentos\\Proyecto_Integrador_DSE_2019\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\src\\framework\\el\\tx\\cm4_gcc" -L "D:\\Documentos\\Proyecto_Integrador_DSE_2019\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\src\\bsp\\cmsis\\DSP_Lib\\cm4_gcc" -Wl,-Map,"EMCS_SoftwareProject.map" --specs=rdimon.specs -o "EMCS_SoftwareProject.elf" -Wl,--start-group $(OBJS) $(USER_OBJS) $(LIBS) -Wl,--end-group)
-	arm-none-eabi-gcc @"EMCS_SoftwareProject.elf.in"
+	$(file > GUIApp.elf.in,-mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized -Wall -Wextra -Wmissing-declarations -Wconversion -Wpointer-arith -Wshadow -Wlogical-op -Waggregate-return -Wfloat-equal  -g3 -T "C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\script\\S7G2.ld" -Xlinker --gc-sections -L "C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\src\\framework\\el\\gx\\cm4_gcc" -L "C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\src\\framework\\el\\tx\\cm4_gcc" -L "C:\\Users\\JPRMEXDI\\Documents\\Repository\\project_git\\Proyecto_Integrador_DSE_2019_v2\\EMCS_Source_Code\\EMCS_SoftwareProject\\synergy\\ssp\\src\\bsp\\cmsis\\DSP_Lib\\cm4_gcc" -Wl,-Map,"GUIApp.map" --specs=rdimon.specs -o "GUIApp.elf" -Wl,--start-group $(OBJS) $(USER_OBJS) $(LIBS) -Wl,--end-group)
+	arm-none-eabi-gcc @"GUIApp.elf.in"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-EMCS_SoftwareProject.srec: EMCS_SoftwareProject.elf
+GUIApp.srec: GUIApp.elf
 	@echo 'Invoking: Cross ARM GNU Create Flash Image'
-	arm-none-eabi-objcopy -O srec "EMCS_SoftwareProject.elf"  "EMCS_SoftwareProject.srec"
+	arm-none-eabi-objcopy -O srec "GUIApp.elf"  "GUIApp.srec"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-EMCS_SoftwareProject.siz: EMCS_SoftwareProject.elf
+GUIApp.siz: GUIApp.elf
 	@echo 'Invoking: Cross ARM GNU Print Size'
-	arm-none-eabi-size --format=berkeley "EMCS_SoftwareProject.elf"
+	arm-none-eabi-size --format=berkeley "GUIApp.elf"
 	@echo 'Finished building: $@'
 	@echo ' '
 
@@ -121,7 +121,7 @@ ifneq ($(strip $(C_DEPS)),)
 	-@ xargs -s 6000 -t -a clean_C_DEPS.tmp $(RM)
 	-@$(RM) clean_C_DEPS.tmp
 endif
-	-$(RM)  EMCS_SoftwareProject.elf
+	-$(RM)  GUIApp.elf
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_SIZE)

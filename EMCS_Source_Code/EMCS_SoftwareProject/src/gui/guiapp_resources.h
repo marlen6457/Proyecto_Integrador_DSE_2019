@@ -6,7 +6,7 @@
 /*  site at www.expresslogic.com.                                              */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  6. 2.2019   Time (hh:mm): 15:21                        */
+/*  Date (dd.mm.yyyy):  2. 3.2019   Time (hh:mm): 19:54                        */
 /*******************************************************************************/
 
 
@@ -74,15 +74,19 @@
 #define GX_PIXELMAP_ID_CHECKBOX_OFF 4
 #define GX_PIXELMAP_ID_BACKBUTTON 5
 #define GX_PIXELMAP_ID_BLACKUPARROW 6
-#define GX_PIXELMAP_ID_ICON_MORE5 7
-#define GX_PIXELMAP_ID_MENU2 8
-#define GX_PIXELMAP_ID_REFRESH 9
-#define GX_PIXELMAP_ID_RES7 10
-#define GX_PIXELMAP_ID_WINDOW3 11
-#define GX_PIXELMAP_ID_WINDOW4 12
-#define GX_PIXELMAP_ID_WINDOW5 13
-#define GX_PIXELMAP_ID_WINDOW6 14
-#define DISPLAY_1_PIXELMAP_TABLE_SIZE 15
+#define GX_PIXELMAP_ID_ICON_CREDITS_WINDOW 7
+#define GX_PIXELMAP_ID_ICON_MORE5 8
+#define GX_PIXELMAP_ID_ICON_SETTING_WINDOW 9
+#define GX_PIXELMAP_ID_MENU2 10
+#define GX_PIXELMAP_ID_P_CREDITS_SCREEN 11
+#define GX_PIXELMAP_ID_P_MAINPAGE_ 12
+#define GX_PIXELMAP_ID_P_MAIN_SCREEN 13
+#define GX_PIXELMAP_ID_REFRESH 14
+#define GX_PIXELMAP_ID_RES7 15
+#define GX_PIXELMAP_ID_WINDOW3 16
+#define GX_PIXELMAP_ID_WINDOW5 17
+#define GX_PIXELMAP_ID_WINDOW6 18
+#define DISPLAY_1_PIXELMAP_TABLE_SIZE 19
 
 /* String Ids                                                                  */
 
