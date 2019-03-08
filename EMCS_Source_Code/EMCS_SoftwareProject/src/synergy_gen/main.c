@@ -5,6 +5,7 @@
 extern void main_thread_create(void);
 extern void adc_thread_create(void);
 extern void pwm_thread_create(void);
+extern void rpm_thread_create(void);
 
 uint32_t g_ssp_common_thread_count;
 bool g_ssp_common_initialized;
@@ -62,6 +63,7 @@ void tx_application_define(void *first_unused_memory)
     main_thread_create ();
     adc_thread_create ();
     pwm_thread_create ();
+    rpm_thread_create ();
 
 #ifdef TX_USER_ENABLE_TRACE
     TX_USER_ENABLE_TRACE;

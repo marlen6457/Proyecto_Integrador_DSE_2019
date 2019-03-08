@@ -10,6 +10,8 @@
 
 #include "main_thread.h"
 
+#include "main_thread.h"
+
 //--------------------------------------------------------------------
 //             Structure Definitions
 //--------------------------------------------------------------------
@@ -43,6 +45,12 @@ union   Ubyte_def
 
 #define C_FILTER_ORDER  15
 
+/* Definition Input Capture*/
+#define BIT_32 (0x100000000U)                   // MAX COUNTS
+
+#define TIMER_SECOND (1000000000U)
+#define TIMER_MILLISECOND (1000000U)
+#define TIMER_MICROSECOND (1000U)
 
 //--------------------------------------------------------------------
 //             Global Variable
@@ -58,6 +66,14 @@ extern uint8_t U8DutyCycle;
 extern char value;
 extern char g_value [5];
 
+extern uint64_t capture_overflow;
+extern uint32_t capture_counter;
+extern uint64_t time_captured;
+extern uint64_t time_captured_ns;
+extern uint64_t time_captured_us;
+extern uint64_t time_captured_s;
+extern uint64_t time_captured_ms;
+
 
 
 extern volatile union Ubyte_def        u8FlagsVar;
@@ -66,6 +82,7 @@ extern volatile union Ubyte_def        u8FlagsVar;
 
 
 extern void SR_InitRam(void);
+
 
 
 #endif /* RAM_H_ */
