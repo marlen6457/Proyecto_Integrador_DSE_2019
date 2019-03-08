@@ -777,7 +777,7 @@ Synergy Configuration
     Symbol: rpm_thread
     Name: RPM Thread
     Stack size (bytes): 1024
-    Priority: 1
+    Priority: 9
     Auto start: Enabled
     Time slicing interval (ticks): 1
     
@@ -794,8 +794,8 @@ Synergy Configuration
       Clock Divider: PCLK/1
       Input Capture Enable Level: None
       Input Capture Enable Filter: None (No filtering)
-      Capture Interrupt Priority: Priority 2
-      Overflow Interrupt Priority: Priority 2
+      Capture Interrupt Priority: Priority 4
+      Overflow Interrupt Priority: Priority 4
       
   Messaging
     Subscriber "Main Thread" 0 0

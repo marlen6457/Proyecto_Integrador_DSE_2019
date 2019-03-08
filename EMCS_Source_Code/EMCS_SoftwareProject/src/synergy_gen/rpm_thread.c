@@ -23,7 +23,7 @@ static const input_capture_cfg_t g_input_capture_cfg =
           INPUT_CAPTURE_REPETITION_PERIODIC,
   .autostart = true, .p_callback = SR_InputCapture_CallBack, .p_context = &g_input_capture, .p_extend =
           &g_input_capture_extend,
-  .capture_irq_ipl = (2), .overflow_irq_ipl = (2), };
+  .capture_irq_ipl = (4), .overflow_irq_ipl = (4), };
 /* Instance structure to use this module. */
 const input_capture_instance_t g_input_capture =
 { .p_ctrl = &g_input_capture_ctrl, .p_cfg = &g_input_capture_cfg, .p_api = &g_input_capture_on_gpt };
@@ -40,7 +40,7 @@ void rpm_thread_create(void)
 
     UINT err;
     err = tx_thread_create (&rpm_thread, (CHAR *) "RPM Thread", rpm_thread_func, (ULONG) NULL, &rpm_thread_stack, 1024,
-                            1, 1, 1, TX_AUTO_START);
+                            9, 9, 1, TX_AUTO_START);
     if (TX_SUCCESS != err)
     {
         tx_startup_err_callback (&rpm_thread, 0);

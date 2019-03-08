@@ -8,7 +8,7 @@ void rpm_thread_entry(void)
     /* Initialize Input Capture Driver */
     g_input_capture.p_api->open(g_input_capture.p_ctrl,g_input_capture.p_cfg);
     g_input_capture.p_api->enable(g_input_capture.p_ctrl);
-   // g_input_capture.p_api->infoGet(g_input_capture.p_ctrl, &input_capture_info);
+
     /* TODO: add your own code here */
     while (1)
     {
