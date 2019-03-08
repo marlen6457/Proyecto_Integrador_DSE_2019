@@ -10,7 +10,8 @@ void pwm_thread_entry(void)
     /* TODO: add your own code here */
     while (1)
     {
-        U8DutyCycle = (uint8_t)(u16ADC_Data * 100/4095);
+//        U8DutyCycle = (uint8_t)(u16ADC_FilterdData * 100/4095);
+        U8DutyCycle = 40;
         g_timer.p_api->dutyCycleSet(g_timer.p_ctrl, U8DutyCycle, TIMER_PWM_UNIT_PERCENT, 0);
 
         tx_thread_sleep (1);
