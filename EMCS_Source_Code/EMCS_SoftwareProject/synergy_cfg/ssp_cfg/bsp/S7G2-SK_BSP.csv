@@ -38,7 +38,7 @@ ADC1: AN06
 CMP0: IVCMP1
 DAC121: DA
 IRQ0: IRQ13"
-"P100","132","","","","","Disabled","","","AGT0: AGTIO
+"P100","132","SCI0_RXD_MISO","","Low","None","Peripheral mode","CMOS","None","AGT0: AGTIO
 BUS0: D0_DQ0
 GLCDC0: LCD_EXTCLK
 IIC1: SCL
@@ -49,7 +49,7 @@ SCI0: RXD_MISO
 SCI0: SCL
 SCI1: SCK
 SPI0: MISO"
-"P101","131","","","","","Disabled","","","AGT0: AGTEE
+"P101","131","SCI0_TXD_MOSI","","Low","None","Peripheral mode","CMOS","None","AGT0: AGTEE
 BUS0: D1_DQ1
 GLCDC0: LCD_CLK
 IIC1: SDA
@@ -60,7 +60,7 @@ SCI0: SDA
 SCI0: TXD_MOSI
 SCI1: CTS_RTS_SS
 SPI0: MOSI"
-"P102","130","","","","","Disabled","","","ADC0: ADTRG
+"P102","130","SCI0_SCK","","Low","","Peripheral mode","CMOS","None","ADC0: ADTRG
 AGT0: AGTO
 BUS0: D2_DQ2
 GLCDC0: LCD_TCON0

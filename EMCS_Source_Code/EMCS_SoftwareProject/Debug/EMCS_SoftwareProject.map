@@ -9815,7 +9815,7 @@ LOAD c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3
 LOAD c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a
 END GROUP
 
-.text           0x00000000    0x90d60
+.text           0x00000000    0x90d78
                 0x00000000                __ROM_Start = .
  *(.vectors)
  .vectors       0x00000000       0x40 ./synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/startup_S7G2.o
@@ -13557,674 +13557,674 @@ END GROUP
                 0x00032dd4        0x8 ./src/synergy_gen/pin_data.o
                 0x00032dd4                g_bsp_pin_cfg
  .rodata.g_bsp_pin_cfg_data
-                0x00032ddc      0x370 ./src/synergy_gen/pin_data.o
+                0x00032ddc      0x388 ./src/synergy_gen/pin_data.o
                 0x00032ddc                g_bsp_pin_cfg_data
  .rodata.g_timer
-                0x0003314c        0xc ./src/synergy_gen/pwm_thread.o
-                0x0003314c                g_timer
+                0x00033164        0xc ./src/synergy_gen/pwm_thread.o
+                0x00033164                g_timer
  .rodata.str1.4
-                0x00033158        0xb ./src/synergy_gen/pwm_thread.o
- *fill*         0x00033163        0x1 ff
+                0x00033170        0xb ./src/synergy_gen/pwm_thread.o
+ *fill*         0x0003317b        0x1 ff
  .rodata.g_timer_cfg
-                0x00033164       0x20 ./src/synergy_gen/pwm_thread.o
+                0x0003317c       0x20 ./src/synergy_gen/pwm_thread.o
  .rodata.g_timer_extend
-                0x00033184        0x5 ./src/synergy_gen/pwm_thread.o
- *fill*         0x00033189        0x3 ff
+                0x0003319c        0x5 ./src/synergy_gen/pwm_thread.o
+ *fill*         0x000331a1        0x3 ff
  .rodata.g_input_capture_extend
-                0x0003318c        0x5 ./src/synergy_gen/rpm_thread.o
- *fill*         0x00033191        0x3 ff
+                0x000331a4        0x5 ./src/synergy_gen/rpm_thread.o
+ *fill*         0x000331a9        0x3 ff
  .rodata.str1.4
-                0x00033194        0xb ./src/synergy_gen/rpm_thread.o
- *fill*         0x0003319f        0x1 ff
+                0x000331ac        0xb ./src/synergy_gen/rpm_thread.o
+ *fill*         0x000331b7        0x1 ff
  .rodata.g_input_capture_cfg
-                0x000331a0       0x14 ./src/synergy_gen/rpm_thread.o
+                0x000331b8       0x14 ./src/synergy_gen/rpm_thread.o
  .rodata.g_input_capture
-                0x000331b4        0xc ./src/synergy_gen/rpm_thread.o
-                0x000331b4                g_input_capture
- .rodata        0x000331c0       0x50 ./src/hardware/lcd_setup.o
+                0x000331cc        0xc ./src/synergy_gen/rpm_thread.o
+                0x000331cc                g_input_capture
+ .rodata        0x000331d8       0x50 ./src/hardware/lcd_setup.o
  .rodata.str1.4
-                0x00033210       0x2e ./src/hardware/lcd_setup.o
- *fill*         0x0003323e        0x2 ff
+                0x00033228       0x2e ./src/hardware/lcd_setup.o
+ *fill*         0x00033256        0x2 ff
  .rodata.display_1_STRING_3_English
-                0x00033240        0x7 ./src/gui/guiapp_resources.o
-                0x00033240                display_1_STRING_3_English
- *fill*         0x00033247        0x1 ff
+                0x00033258        0x7 ./src/gui/guiapp_resources.o
+                0x00033258                display_1_STRING_3_English
+ *fill*         0x0003325f        0x1 ff
  .rodata.display_1_FOUR_English
-                0x00033248        0x2 ./src/gui/guiapp_resources.o
-                0x00033248                display_1_FOUR_English
- *fill*         0x0003324a        0x2 ff
+                0x00033260        0x2 ./src/gui/guiapp_resources.o
+                0x00033260                display_1_FOUR_English
+ *fill*         0x00033262        0x2 ff
  .rodata.DISPLAY_1_THEME_1_REFRESH_pixelmap
-                0x0003324c       0x1c ./src/gui/guiapp_resources.o
-                0x0003324c                DISPLAY_1_THEME_1_REFRESH_pixelmap
+                0x00033264       0x1c ./src/gui/guiapp_resources.o
+                0x00033264                DISPLAY_1_THEME_1_REFRESH_pixelmap
  .rodata.display_1_DAY6_English
-                0x00033268        0x4 ./src/gui/guiapp_resources.o
-                0x00033268                display_1_DAY6_English
+                0x00033280        0x4 ./src/gui/guiapp_resources.o
+                0x00033280                display_1_DAY6_English
  .rodata.DISPLAY_1_THEME_1_CHECKBOX_ON_pixelmap
-                0x0003326c       0x1c ./src/gui/guiapp_resources.o
-                0x0003326c                DISPLAY_1_THEME_1_CHECKBOX_ON_pixelmap
+                0x00033284       0x1c ./src/gui/guiapp_resources.o
+                0x00033284                DISPLAY_1_THEME_1_CHECKBOX_ON_pixelmap
  .rodata.display_1_STRING_12_English
-                0x00033288        0x9 ./src/gui/guiapp_resources.o
-                0x00033288                display_1_STRING_12_English
- *fill*         0x00033291        0x3 ff
+                0x000332a0        0x9 ./src/gui/guiapp_resources.o
+                0x000332a0                display_1_STRING_12_English
+ *fill*         0x000332a9        0x3 ff
  .rodata.display_1_MON8_English
-                0x00033294        0x4 ./src/gui/guiapp_resources.o
-                0x00033294                display_1_MON8_English
+                0x000332ac        0x4 ./src/gui/guiapp_resources.o
+                0x000332ac                display_1_MON8_English
  .rodata.display_1_DAY1_English
-                0x00033298        0x4 ./src/gui/guiapp_resources.o
-                0x00033298                display_1_DAY1_English
+                0x000332b0        0x4 ./src/gui/guiapp_resources.o
+                0x000332b0                display_1_DAY1_English
  .rodata.DISPLAY_1_THEME_1_RADIO_ON_pixelmap
-                0x0003329c       0x1c ./src/gui/guiapp_resources.o
-                0x0003329c                DISPLAY_1_THEME_1_RADIO_ON_pixelmap
+                0x000332b4       0x1c ./src/gui/guiapp_resources.o
+                0x000332b4                DISPLAY_1_THEME_1_RADIO_ON_pixelmap
  .rodata.DISPLAY_1_THEME_1_BACKBUTTON_pixelmap
-                0x000332b8       0x1c ./src/gui/guiapp_resources.o
-                0x000332b8                DISPLAY_1_THEME_1_BACKBUTTON_pixelmap
+                0x000332d0       0x1c ./src/gui/guiapp_resources.o
+                0x000332d0                DISPLAY_1_THEME_1_BACKBUTTON_pixelmap
  .rodata.display_1_ZERO_English
-                0x000332d4        0x2 ./src/gui/guiapp_resources.o
-                0x000332d4                display_1_ZERO_English
- *fill*         0x000332d6        0x2 ff
+                0x000332ec        0x2 ./src/gui/guiapp_resources.o
+                0x000332ec                display_1_ZERO_English
+ *fill*         0x000332ee        0x2 ff
  .rodata.DISPLAY_1_THEME_1_RADIO_OFF_pixelmap
-                0x000332d8       0x1c ./src/gui/guiapp_resources.o
-                0x000332d8                DISPLAY_1_THEME_1_RADIO_OFF_pixelmap
+                0x000332f0       0x1c ./src/gui/guiapp_resources.o
+                0x000332f0                DISPLAY_1_THEME_1_RADIO_OFF_pixelmap
  .rodata.display_1_MON3_English
-                0x000332f4        0x4 ./src/gui/guiapp_resources.o
-                0x000332f4                display_1_MON3_English
+                0x0003330c        0x4 ./src/gui/guiapp_resources.o
+                0x0003330c                display_1_MON3_English
  .rodata.display_1_STRING_6_English
-                0x000332f8        0x8 ./src/gui/guiapp_resources.o
-                0x000332f8                display_1_STRING_6_English
+                0x00033310        0x8 ./src/gui/guiapp_resources.o
+                0x00033310                display_1_STRING_6_English
  .rodata.DISPLAY_1_THEME_1_WINDOW4_pixelmap
-                0x00033300       0x1c ./src/gui/guiapp_resources.o
-                0x00033300                DISPLAY_1_THEME_1_WINDOW4_pixelmap
+                0x00033318       0x1c ./src/gui/guiapp_resources.o
+                0x00033318                DISPLAY_1_THEME_1_WINDOW4_pixelmap
  .rodata.display_1_TWO_English
-                0x0003331c        0x2 ./src/gui/guiapp_resources.o
-                0x0003331c                display_1_TWO_English
- *fill*         0x0003331e        0x2 ff
+                0x00033334        0x2 ./src/gui/guiapp_resources.o
+                0x00033334                display_1_TWO_English
+ *fill*         0x00033336        0x2 ff
  .rodata.display_1_MON12_English
-                0x00033320        0x4 ./src/gui/guiapp_resources.o
-                0x00033320                display_1_MON12_English
+                0x00033338        0x4 ./src/gui/guiapp_resources.o
+                0x00033338                display_1_MON12_English
  .rodata.display_1_STRING_1_English
-                0x00033324        0x7 ./src/gui/guiapp_resources.o
-                0x00033324                display_1_STRING_1_English
- *fill*         0x0003332b        0x1 ff
+                0x0003333c        0x7 ./src/gui/guiapp_resources.o
+                0x0003333c                display_1_STRING_1_English
+ *fill*         0x00033343        0x1 ff
  .rodata.DISPLAY_1_THEME_1_ICON_MORE5_pixelmap_data
-                0x0003332c      0xb35 ./src/gui/guiapp_resources.o
- *fill*         0x00033e61        0x3 ff
+                0x00033344      0xb35 ./src/gui/guiapp_resources.o
+ *fill*         0x00033e79        0x3 ff
  .rodata.DISPLAY_1_THEME_1_REFRESH_pixelmap_data
-                0x00033e64     0x2198 ./src/gui/guiapp_resources.o
+                0x00033e7c     0x2198 ./src/gui/guiapp_resources.o
  .rodata.display_1_DAY4_English
-                0x00035ffc        0x4 ./src/gui/guiapp_resources.o
-                0x00035ffc                display_1_DAY4_English
- .rodata.display_1_THREE_English
-                0x00036000        0x2 ./src/gui/guiapp_resources.o
-                0x00036000                display_1_THREE_English
- *fill*         0x00036002        0x2 ff
- .rodata.display_1_YEAR2_English
-                0x00036004        0x5 ./src/gui/guiapp_resources.o
-                0x00036004                display_1_YEAR2_English
- *fill*         0x00036009        0x3 ff
- .rodata.display_1_STRING_10_English
-                0x0003600c        0x5 ./src/gui/guiapp_resources.o
-                0x0003600c                display_1_STRING_10_English
- *fill*         0x00036011        0x3 ff
- .rodata.display_1_MON6_English
                 0x00036014        0x4 ./src/gui/guiapp_resources.o
-                0x00036014                display_1_MON6_English
+                0x00036014                display_1_DAY4_English
+ .rodata.display_1_THREE_English
+                0x00036018        0x2 ./src/gui/guiapp_resources.o
+                0x00036018                display_1_THREE_English
+ *fill*         0x0003601a        0x2 ff
+ .rodata.display_1_YEAR2_English
+                0x0003601c        0x5 ./src/gui/guiapp_resources.o
+                0x0003601c                display_1_YEAR2_English
+ *fill*         0x00036021        0x3 ff
+ .rodata.display_1_STRING_10_English
+                0x00036024        0x5 ./src/gui/guiapp_resources.o
+                0x00036024                display_1_STRING_10_English
+ *fill*         0x00036029        0x3 ff
+ .rodata.display_1_MON6_English
+                0x0003602c        0x4 ./src/gui/guiapp_resources.o
+                0x0003602c                display_1_MON6_English
  .rodata.display_1_STRING_9_English
-                0x00036018        0x5 ./src/gui/guiapp_resources.o
-                0x00036018                display_1_STRING_9_English
- *fill*         0x0003601d        0x3 ff
+                0x00036030        0x5 ./src/gui/guiapp_resources.o
+                0x00036030                display_1_STRING_9_English
+ *fill*         0x00036035        0x3 ff
  .rodata.DISPLAY_1_THEME_1_WINDOW3_pixelmap
-                0x00036020       0x1c ./src/gui/guiapp_resources.o
-                0x00036020                DISPLAY_1_THEME_1_WINDOW3_pixelmap
+                0x00036038       0x1c ./src/gui/guiapp_resources.o
+                0x00036038                DISPLAY_1_THEME_1_WINDOW3_pixelmap
  .rodata.DISPLAY_1_THEME_1_CHECKBOX_OFF_pixelmap
-                0x0003603c       0x1c ./src/gui/guiapp_resources.o
-                0x0003603c                DISPLAY_1_THEME_1_CHECKBOX_OFF_pixelmap
+                0x00036054       0x1c ./src/gui/guiapp_resources.o
+                0x00036054                DISPLAY_1_THEME_1_CHECKBOX_OFF_pixelmap
  .rodata.DISPLAY_1_THEME_1_CHECKBOX_OFF_pixelmap_data
-                0x00036058      0x18c ./src/gui/guiapp_resources.o
+                0x00036070      0x18c ./src/gui/guiapp_resources.o
  .rodata.DISPLAY_1_THEME_1_WINDOW5_pixelmap
-                0x000361e4       0x1c ./src/gui/guiapp_resources.o
-                0x000361e4                DISPLAY_1_THEME_1_WINDOW5_pixelmap
+                0x000361fc       0x1c ./src/gui/guiapp_resources.o
+                0x000361fc                DISPLAY_1_THEME_1_WINDOW5_pixelmap
  .rodata.display_1_ONE_English
-                0x00036200        0x2 ./src/gui/guiapp_resources.o
-                0x00036200                display_1_ONE_English
- *fill*         0x00036202        0x2 ff
+                0x00036218        0x2 ./src/gui/guiapp_resources.o
+                0x00036218                display_1_ONE_English
+ *fill*         0x0003621a        0x2 ff
  .rodata.display_1_NINE_English
-                0x00036204        0x2 ./src/gui/guiapp_resources.o
-                0x00036204                display_1_NINE_English
- *fill*         0x00036206        0x2 ff
+                0x0003621c        0x2 ./src/gui/guiapp_resources.o
+                0x0003621c                display_1_NINE_English
+ *fill*         0x0003621e        0x2 ff
  .rodata.display_1_MON1_English
-                0x00036208        0x4 ./src/gui/guiapp_resources.o
-                0x00036208                display_1_MON1_English
+                0x00036220        0x4 ./src/gui/guiapp_resources.o
+                0x00036220                display_1_MON1_English
  .rodata.display_1_STRING_4_English
-                0x0003620c        0xc ./src/gui/guiapp_resources.o
-                0x0003620c                display_1_STRING_4_English
+                0x00036224        0xc ./src/gui/guiapp_resources.o
+                0x00036224                display_1_STRING_4_English
  .rodata.DISPLAY_1_THEME_1_WINDOW3_pixelmap_data
-                0x00036218     0xc225 ./src/gui/guiapp_resources.o
- *fill*         0x0004243d        0x3 ff
+                0x00036230     0xc225 ./src/gui/guiapp_resources.o
+ *fill*         0x00042455        0x3 ff
  .rodata.display_1_DAY7_English
-                0x00042440        0x4 ./src/gui/guiapp_resources.o
-                0x00042440                display_1_DAY7_English
+                0x00042458        0x4 ./src/gui/guiapp_resources.o
+                0x00042458                display_1_DAY7_English
  .rodata.display_1_SEVEN_English
-                0x00042444        0x2 ./src/gui/guiapp_resources.o
-                0x00042444                display_1_SEVEN_English
- *fill*         0x00042446        0x2 ff
+                0x0004245c        0x2 ./src/gui/guiapp_resources.o
+                0x0004245c                display_1_SEVEN_English
+ *fill*         0x0004245e        0x2 ff
  .rodata.DISPLAY_1_THEME_1_RES7_pixelmap
-                0x00042448       0x1c ./src/gui/guiapp_resources.o
-                0x00042448                DISPLAY_1_THEME_1_RES7_pixelmap
+                0x00042460       0x1c ./src/gui/guiapp_resources.o
+                0x00042460                DISPLAY_1_THEME_1_RES7_pixelmap
  .rodata.display_1_MON10_English
-                0x00042464        0x4 ./src/gui/guiapp_resources.o
-                0x00042464                display_1_MON10_English
+                0x0004247c        0x4 ./src/gui/guiapp_resources.o
+                0x0004247c                display_1_MON10_English
  .rodata.DISPLAY_1_THEME_1_RADIO_OFF_pixelmap_data
-                0x00042468      0x294 ./src/gui/guiapp_resources.o
+                0x00042480      0x294 ./src/gui/guiapp_resources.o
  .rodata.display_1_MON9_English
-                0x000426fc        0x4 ./src/gui/guiapp_resources.o
-                0x000426fc                display_1_MON9_English
+                0x00042714        0x4 ./src/gui/guiapp_resources.o
+                0x00042714                display_1_MON9_English
  .rodata.display_1_DAY2_English
-                0x00042700        0x4 ./src/gui/guiapp_resources.o
-                0x00042700                display_1_DAY2_English
+                0x00042718        0x4 ./src/gui/guiapp_resources.o
+                0x00042718                display_1_DAY2_English
  .rodata.DISPLAY_1_THEME_1_BACKBUTTON_pixelmap_data
-                0x00042704      0x7a0 ./src/gui/guiapp_resources.o
+                0x0004271c      0x7a0 ./src/gui/guiapp_resources.o
  .rodata.DISPLAY_1_THEME_1_BLACKUPARROW_pixelmap_data
-                0x00042ea4      0x31c ./src/gui/guiapp_resources.o
+                0x00042ebc      0x31c ./src/gui/guiapp_resources.o
  .rodata.DISPLAY_1_THEME_1_WINDOW5_pixelmap_data
-                0x000431c0     0xe768 ./src/gui/guiapp_resources.o
+                0x000431d8     0xe768 ./src/gui/guiapp_resources.o
  .rodata.display_1_MON4_English
-                0x00051928        0x4 ./src/gui/guiapp_resources.o
-                0x00051928                display_1_MON4_English
+                0x00051940        0x4 ./src/gui/guiapp_resources.o
+                0x00051940                display_1_MON4_English
  .rodata.display_1_STRING_7_English
-                0x0005192c        0x3 ./src/gui/guiapp_resources.o
-                0x0005192c                display_1_STRING_7_English
- *fill*         0x0005192f        0x1 ff
+                0x00051944        0x3 ./src/gui/guiapp_resources.o
+                0x00051944                display_1_STRING_7_English
+ *fill*         0x00051947        0x1 ff
  .rodata.DISPLAY_1_THEME_1_WINDOW6_pixelmap_data
-                0x00051930     0xc94c ./src/gui/guiapp_resources.o
+                0x00051948     0xc94c ./src/gui/guiapp_resources.o
  .rodata.display_1_theme_1_color_table
-                0x0005e27c       0x64 ./src/gui/guiapp_resources.o
-                0x0005e27c                display_1_theme_1_color_table
+                0x0005e294       0x64 ./src/gui/guiapp_resources.o
+                0x0005e294                display_1_theme_1_color_table
  .rodata.DISPLAY_1_THEME_1_WINDOW4_pixelmap_data
-                0x0005e2e0     0xd1d0 ./src/gui/guiapp_resources.o
+                0x0005e2f8     0xd1d0 ./src/gui/guiapp_resources.o
  .rodata.display_1_STRING_2_English
-                0x0006b4b0        0x2 ./src/gui/guiapp_resources.o
-                0x0006b4b0                display_1_STRING_2_English
- *fill*         0x0006b4b2        0x2 ff
+                0x0006b4c8        0x2 ./src/gui/guiapp_resources.o
+                0x0006b4c8                display_1_STRING_2_English
+ *fill*         0x0006b4ca        0x2 ff
  .rodata.DISPLAY_1_THEME_1_CHECKBOX_ON_pixelmap_data
-                0x0006b4b4      0x1d2 ./src/gui/guiapp_resources.o
- *fill*         0x0006b686        0x2 ff
+                0x0006b4cc      0x1d2 ./src/gui/guiapp_resources.o
+ *fill*         0x0006b69e        0x2 ff
  .rodata.display_1_DAY5_English
-                0x0006b688        0x4 ./src/gui/guiapp_resources.o
-                0x0006b688                display_1_DAY5_English
+                0x0006b6a0        0x4 ./src/gui/guiapp_resources.o
+                0x0006b6a0                display_1_DAY5_English
  .rodata.display_1_YEAR3_English
-                0x0006b68c        0x5 ./src/gui/guiapp_resources.o
-                0x0006b68c                display_1_YEAR3_English
- *fill*         0x0006b691        0x3 ff
+                0x0006b6a4        0x5 ./src/gui/guiapp_resources.o
+                0x0006b6a4                display_1_YEAR3_English
+ *fill*         0x0006b6a9        0x3 ff
  .rodata.display_1_STRING_11_English
-                0x0006b694        0x5 ./src/gui/guiapp_resources.o
-                0x0006b694                display_1_STRING_11_English
- *fill*         0x0006b699        0x3 ff
+                0x0006b6ac        0x5 ./src/gui/guiapp_resources.o
+                0x0006b6ac                display_1_STRING_11_English
+ *fill*         0x0006b6b1        0x3 ff
  .rodata.display_1_MON7_English
-                0x0006b69c        0x4 ./src/gui/guiapp_resources.o
-                0x0006b69c                display_1_MON7_English
+                0x0006b6b4        0x4 ./src/gui/guiapp_resources.o
+                0x0006b6b4                display_1_MON7_English
  .rodata.display_1_FIVE_English
-                0x0006b6a0        0x2 ./src/gui/guiapp_resources.o
-                0x0006b6a0                display_1_FIVE_English
- *fill*         0x0006b6a2        0x2 ff
+                0x0006b6b8        0x2 ./src/gui/guiapp_resources.o
+                0x0006b6b8                display_1_FIVE_English
+ *fill*         0x0006b6ba        0x2 ff
  .rodata.DISPLAY_1_THEME_1_ICON_MORE5_pixelmap
-                0x0006b6a4       0x1c ./src/gui/guiapp_resources.o
-                0x0006b6a4                DISPLAY_1_THEME_1_ICON_MORE5_pixelmap
+                0x0006b6bc       0x1c ./src/gui/guiapp_resources.o
+                0x0006b6bc                DISPLAY_1_THEME_1_ICON_MORE5_pixelmap
  .rodata.display_1_MON2_English
-                0x0006b6c0        0x4 ./src/gui/guiapp_resources.o
-                0x0006b6c0                display_1_MON2_English
+                0x0006b6d8        0x4 ./src/gui/guiapp_resources.o
+                0x0006b6d8                display_1_MON2_English
  .rodata.display_1_STRING_5_English
-                0x0006b6c4        0x6 ./src/gui/guiapp_resources.o
-                0x0006b6c4                display_1_STRING_5_English
- *fill*         0x0006b6ca        0x2 ff
+                0x0006b6dc        0x6 ./src/gui/guiapp_resources.o
+                0x0006b6dc                display_1_STRING_5_English
+ *fill*         0x0006b6e2        0x2 ff
  .rodata.DISPLAY_1_THEME_1_MENU2_pixelmap_data
-                0x0006b6cc     0xd0a5 ./src/gui/guiapp_resources.o
- *fill*         0x00078771        0x3 ff
+                0x0006b6e4     0xd0a5 ./src/gui/guiapp_resources.o
+ *fill*         0x00078789        0x3 ff
  .rodata.DISPLAY_1_THEME_1_MENU2_pixelmap
-                0x00078774       0x1c ./src/gui/guiapp_resources.o
-                0x00078774                DISPLAY_1_THEME_1_MENU2_pixelmap
+                0x0007878c       0x1c ./src/gui/guiapp_resources.o
+                0x0007878c                DISPLAY_1_THEME_1_MENU2_pixelmap
  .rodata.DISPLAY_1_THEME_1_RADIO_ON_pixelmap_data
-                0x00078790      0x294 ./src/gui/guiapp_resources.o
+                0x000787a8      0x294 ./src/gui/guiapp_resources.o
  .rodata.display_1_MON11_English
-                0x00078a24        0x4 ./src/gui/guiapp_resources.o
-                0x00078a24                display_1_MON11_English
+                0x00078a3c        0x4 ./src/gui/guiapp_resources.o
+                0x00078a3c                display_1_MON11_English
  .rodata.display_1_DAY3_English
-                0x00078a28        0x4 ./src/gui/guiapp_resources.o
-                0x00078a28                display_1_DAY3_English
+                0x00078a40        0x4 ./src/gui/guiapp_resources.o
+                0x00078a40                display_1_DAY3_English
  .rodata.DISPLAY_1_THEME_1_WINDOW6_pixelmap
-                0x00078a2c       0x1c ./src/gui/guiapp_resources.o
-                0x00078a2c                DISPLAY_1_THEME_1_WINDOW6_pixelmap
+                0x00078a44       0x1c ./src/gui/guiapp_resources.o
+                0x00078a44                DISPLAY_1_THEME_1_WINDOW6_pixelmap
  .rodata.display_1_YEAR1_English
-                0x00078a48        0x7 ./src/gui/guiapp_resources.o
-                0x00078a48                display_1_YEAR1_English
- *fill*         0x00078a4f        0x1 ff
+                0x00078a60        0x7 ./src/gui/guiapp_resources.o
+                0x00078a60                display_1_YEAR1_English
+ *fill*         0x00078a67        0x1 ff
  .rodata.display_1_SIX_English
-                0x00078a50        0x2 ./src/gui/guiapp_resources.o
-                0x00078a50                display_1_SIX_English
- *fill*         0x00078a52        0x2 ff
+                0x00078a68        0x2 ./src/gui/guiapp_resources.o
+                0x00078a68                display_1_SIX_English
+ *fill*         0x00078a6a        0x2 ff
  .rodata.display_1_MON5_English
-                0x00078a54        0x4 ./src/gui/guiapp_resources.o
-                0x00078a54                display_1_MON5_English
+                0x00078a6c        0x4 ./src/gui/guiapp_resources.o
+                0x00078a6c                display_1_MON5_English
  .rodata.display_1_STRING_8_English
-                0x00078a58        0x4 ./src/gui/guiapp_resources.o
-                0x00078a58                display_1_STRING_8_English
+                0x00078a70        0x4 ./src/gui/guiapp_resources.o
+                0x00078a70                display_1_STRING_8_English
  .rodata.DISPLAY_1_THEME_1_BLACKUPARROW_pixelmap
-                0x00078a5c       0x1c ./src/gui/guiapp_resources.o
-                0x00078a5c                DISPLAY_1_THEME_1_BLACKUPARROW_pixelmap
+                0x00078a74       0x1c ./src/gui/guiapp_resources.o
+                0x00078a74                DISPLAY_1_THEME_1_BLACKUPARROW_pixelmap
  .rodata.display_1_EIGHT_English
-                0x00078a78        0x2 ./src/gui/guiapp_resources.o
-                0x00078a78                display_1_EIGHT_English
- *fill*         0x00078a7a        0x2 ff
+                0x00078a90        0x2 ./src/gui/guiapp_resources.o
+                0x00078a90                display_1_EIGHT_English
+ *fill*         0x00078a92        0x2 ff
  .rodata.DISPLAY_1_THEME_1_RES7_pixelmap_data
-                0x00078a7c    0x15025 ./src/gui/guiapp_resources.o
- *fill*         0x0008daa1        0x3 ff
+                0x00078a94    0x15025 ./src/gui/guiapp_resources.o
+ *fill*         0x0008dab9        0x3 ff
  .rodata.window2_icon_1_define
-                0x0008daa4       0x40 ./src/gui/guiapp_specifications.o
-                0x0008daa4                window2_icon_1_define
+                0x0008dabc       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dabc                window2_icon_1_define
  .rodata.window6_icon_1_define
-                0x0008dae4       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dae4                window6_icon_1_define
+                0x0008dafc       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dafc                window6_icon_1_define
  .rodata.window6_icon_6_define
-                0x0008db24       0x40 ./src/gui/guiapp_specifications.o
-                0x0008db24                window6_icon_6_define
+                0x0008db3c       0x40 ./src/gui/guiapp_specifications.o
+                0x0008db3c                window6_icon_6_define
  .rodata.guiapp_widget_table
-                0x0008db64       0x38 ./src/gui/guiapp_specifications.o
-                0x0008db64                guiapp_widget_table
+                0x0008db7c       0x38 ./src/gui/guiapp_specifications.o
+                0x0008db7c                guiapp_widget_table
  .rodata.window2_define
-                0x0008db9c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008db9c                window2_define
+                0x0008dbb4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dbb4                window2_define
  .rodata.window3_prompt_2_define
-                0x0008dbdc       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dbdc                window3_prompt_2_define
+                0x0008dbf4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dbf4                window3_prompt_2_define
  .rodata.window6_define
-                0x0008dc1c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dc1c                window6_define
+                0x0008dc34       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dc34                window6_define
  .rodata.window1_icon_define
-                0x0008dc5c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dc5c                window1_icon_define
+                0x0008dc74       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dc74                window1_icon_define
  .rodata.window6_icon_5_define
-                0x0008dc9c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dc9c                window6_icon_5_define
+                0x0008dcb4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dcb4                window6_icon_5_define
  .rodata.window1_define
-                0x0008dcdc       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dcdc                window1_define
+                0x0008dcf4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dcf4                window1_define
  .rodata.window3_prompt_1_define
-                0x0008dd1c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dd1c                window3_prompt_1_define
+                0x0008dd34       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dd34                window3_prompt_1_define
  .rodata.window3_define
-                0x0008dd5c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dd5c                window3_define
+                0x0008dd74       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dd74                window3_define
  .rodata.window6_prompt_1_define
-                0x0008dd9c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dd9c                window6_prompt_1_define
+                0x0008ddb4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008ddb4                window6_prompt_1_define
  .rodata.window6_icon_define
-                0x0008dddc       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dddc                window6_icon_define
+                0x0008ddf4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008ddf4                window6_icon_define
  .rodata.window5_icon_4_define
-                0x0008de1c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008de1c                window5_icon_4_define
+                0x0008de34       0x40 ./src/gui/guiapp_specifications.o
+                0x0008de34                window5_icon_4_define
  .rodata.window2_button_define
-                0x0008de5c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008de5c                window2_button_define
+                0x0008de74       0x40 ./src/gui/guiapp_specifications.o
+                0x0008de74                window2_button_define
  .rodata.window5_define
-                0x0008de9c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008de9c                window5_define
+                0x0008deb4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008deb4                window5_define
  .rodata.window3_prompt_define
-                0x0008dedc       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dedc                window3_prompt_define
+                0x0008def4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008def4                window3_prompt_define
  .rodata.window4_icon_3_define
-                0x0008df1c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008df1c                window4_icon_3_define
+                0x0008df34       0x40 ./src/gui/guiapp_specifications.o
+                0x0008df34                window4_icon_3_define
  .rodata.window6_prompt_define
-                0x0008df5c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008df5c                window6_prompt_define
+                0x0008df74       0x40 ./src/gui/guiapp_specifications.o
+                0x0008df74                window6_prompt_define
  .rodata.window2_prompt_1_define
-                0x0008df9c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008df9c                window2_prompt_1_define
+                0x0008dfb4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dfb4                window2_prompt_1_define
  .rodata.window2_button_2_define
-                0x0008dfdc       0x40 ./src/gui/guiapp_specifications.o
-                0x0008dfdc                window2_button_2_define
+                0x0008dff4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008dff4                window2_button_2_define
  .rodata.window6_prompt_4_define
-                0x0008e01c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008e01c                window6_prompt_4_define
+                0x0008e034       0x40 ./src/gui/guiapp_specifications.o
+                0x0008e034                window6_prompt_4_define
  .rodata.window4_define
-                0x0008e05c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008e05c                window4_define
+                0x0008e074       0x40 ./src/gui/guiapp_specifications.o
+                0x0008e074                window4_define
  .rodata.window3_icon_2_define
-                0x0008e09c       0x40 ./src/gui/guiapp_specifications.o
-                0x0008e09c                window3_icon_2_define
+                0x0008e0b4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008e0b4                window3_icon_2_define
  .rodata.window3_icon_7_define
-                0x0008e0dc       0x40 ./src/gui/guiapp_specifications.o
-                0x0008e0dc                window3_icon_7_define
+                0x0008e0f4       0x40 ./src/gui/guiapp_specifications.o
+                0x0008e0f4                window3_icon_7_define
  .rodata.str1.4
-                0x0008e11c       0xd9 ./src/gui/guiapp_specifications.o
- *fill*         0x0008e1f5        0x3 ff
+                0x0008e134       0xd9 ./src/gui/guiapp_specifications.o
+ *fill*         0x0008e20d        0x3 ff
  .rodata.window2_button_1_define
-                0x0008e1f8       0x40 ./src/gui/guiapp_specifications.o
-                0x0008e1f8                window2_button_1_define
+                0x0008e210       0x40 ./src/gui/guiapp_specifications.o
+                0x0008e210                window2_button_1_define
  .rodata.str1.4
                 0x00000000        0x8 ./src/main_thread_entry.o
- .rodata        0x0008e238       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_arc_draw.o)
- .rodata        0x0008e258       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_circle_draw.o)
- .rodata        0x0008e278       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_ellipse_draw.o)
- .rodata        0x0008e298       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_wide_arc_draw.o)
- .rodata        0x0008e2b8       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_wide_circle_draw.o)
- .rodata        0x0008e2d8       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_wide_ellipse_draw.o)
- .rodata        0x0008e2f8       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_arc_draw.o)
- .rodata        0x0008e318       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_arc_fill.o)
- .rodata        0x0008e338       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_circle_draw.o)
- .rodata        0x0008e358       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_circle_fill.o)
- .rodata        0x0008e378       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_ellipse_draw.o)
- .rodata        0x0008e398        0x8 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_ellipse_fill.o)
- .rodata        0x0008e3a0       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_simple_pie_fill.o)
- .rodata        0x0008e3c0       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_wide_arc_draw.o)
- .rodata        0x0008e3e0       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_wide_circle_draw.o)
- .rodata        0x0008e400       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_wide_ellipse_draw.o)
+ .rodata        0x0008e250       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_arc_draw.o)
+ .rodata        0x0008e270       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_circle_draw.o)
+ .rodata        0x0008e290       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_ellipse_draw.o)
+ .rodata        0x0008e2b0       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_wide_arc_draw.o)
+ .rodata        0x0008e2d0       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_wide_circle_draw.o)
+ .rodata        0x0008e2f0       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_aliased_wide_ellipse_draw.o)
+ .rodata        0x0008e310       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_arc_draw.o)
+ .rodata        0x0008e330       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_arc_fill.o)
+ .rodata        0x0008e350       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_circle_draw.o)
+ .rodata        0x0008e370       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_circle_fill.o)
+ .rodata        0x0008e390       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_ellipse_draw.o)
+ .rodata        0x0008e3b0        0x8 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_ellipse_fill.o)
+ .rodata        0x0008e3b8       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_simple_pie_fill.o)
+ .rodata        0x0008e3d8       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_wide_arc_draw.o)
+ .rodata        0x0008e3f8       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_wide_circle_draw.o)
+ .rodata        0x0008e418       0x20 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_display_driver_generic_wide_ellipse_draw.o)
  .rodata.char_34
-                0x0008e420       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008e483        0x1 ff
+                0x0008e438       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008e49b        0x1 ff
  .rodata.char_35
-                0x0008e484       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008e4e7        0x1 ff
+                0x0008e49c       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008e4ff        0x1 ff
  .rodata.char_36
-                0x0008e4e8       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008e54b        0x1 ff
+                0x0008e500       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008e563        0x1 ff
  .rodata.char_50
-                0x0008e54c       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e564       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_51
-                0x0008e5b8       0xb4 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e5d0       0xb4 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_52
-                0x0008e66c       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e684       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_53
-                0x0008e6d8       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e6f0       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_54
-                0x0008e744       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e75c       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_55
-                0x0008e7bc       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e7d4       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_56
-                0x0008e834       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e84c       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_57
-                0x0008e8ac       0xa8 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e8c4       0xa8 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_58
-                0x0008e954       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e96c       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_59
-                0x0008e9c0       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008e9d8       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_73
-                0x0008ea38       0x3f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008ea77        0x1 ff
+                0x0008ea50       0x3f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008ea8f        0x1 ff
  .rodata.char_74
-                0x0008ea78       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008ea90       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_75
-                0x0008eac0       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008ead8       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_76
-                0x0008eb08       0x51 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008eb59        0x3 ff
+                0x0008eb20       0x51 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008eb71        0x3 ff
  .rodata.char_77
-                0x0008eb5c       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008ebd1        0x3 ff
+                0x0008eb74       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008ebe9        0x3 ff
  .rodata.char_78
-                0x0008ebd4       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008ebec       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_79
-                0x0008ec1c       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008ec91        0x3 ff
+                0x0008ec34       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008eca9        0x3 ff
  .rodata.char_30
-                0x0008ec94       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008ecf7        0x1 ff
+                0x0008ecac       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008ed0f        0x1 ff
  .rodata.char_25
-                0x0008ecf8       0xa8 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008ed10       0xa8 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_31
-                0x0008eda0       0x4d D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008eded        0x3 ff
+                0x0008edb8       0x4d D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008ee05        0x3 ff
  .rodata.font_SansPro_Regular_ttf_18_aa
-                0x0008edf0      0x474 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008ee08      0x474 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_33
-                0x0008f264       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f2c7        0x1 ff
+                0x0008f27c       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f2df        0x1 ff
  .rodata.char_2a
-                0x0008f2c8       0x24 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f2e0       0x24 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_2c
-                0x0008f2ec       0x18 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f304       0x18 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_2d
-                0x0008f304        0x5 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f309        0x3 ff
+                0x0008f31c        0x5 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f321        0x3 ff
  .rodata.char_3a
-                0x0008f30c       0x1b D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f327        0x1 ff
+                0x0008f324       0x1b D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f33f        0x1 ff
  .rodata.char_3b
-                0x0008f328       0x34 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f340       0x34 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_3c
-                0x0008f35c       0x3f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f39b        0x1 ff
+                0x0008f374       0x3f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f3b3        0x1 ff
  .rodata.char_3d
-                0x0008f39c       0x2d D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f3c9        0x3 ff
+                0x0008f3b4       0x2d D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f3e1        0x3 ff
  .rodata.char_3e
-                0x0008f3cc       0x3f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f40b        0x1 ff
+                0x0008f3e4       0x3f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f423        0x1 ff
  .rodata.char_3f
-                0x0008f40c       0x54 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f424       0x54 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_5a
-                0x0008f460       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f478       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_5b
-                0x0008f4cc       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f4e4       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_5c
-                0x0008f50c       0x70 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f524       0x70 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_5d
-                0x0008f57c       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f594       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_5e
-                0x0008f5bc       0x31 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f5ed        0x3 ff
+                0x0008f5d4       0x31 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f605        0x3 ff
  .rodata.char_5f
-                0x0008f5f0        0x9 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f5f9        0x3 ff
+                0x0008f608        0x9 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f611        0x3 ff
  .rodata.char_22
-                0x0008f5fc       0x1e D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f61a        0x2 ff
+                0x0008f614       0x1e D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f632        0x2 ff
  .rodata.char_7a
-                0x0008f61c       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f634       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_7b
-                0x0008f664       0x50 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f67c       0x50 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_7c
-                0x0008f6b4       0x24 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f6cc       0x24 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_7d
-                0x0008f6d8       0x50 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f6f0       0x50 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_7e
-                0x0008f728       0x1b D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008f743        0x1 ff
+                0x0008f740       0x1b D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008f75b        0x1 ff
  .rodata.char_41
-                0x0008f744       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f75c       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_42
-                0x0008f7bc       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f7d4       0x6c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_43
-                0x0008f828       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f840       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_44
-                0x0008f8a0       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f8b8       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_45
-                0x0008f918       0x60 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f930       0x60 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_46
-                0x0008f978       0x60 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f990       0x60 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_60
-                0x0008f9d8        0xc D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008f9f0        0xc D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_61
-                0x0008f9e4       0x3f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fa23        0x1 ff
+                0x0008f9fc       0x3f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fa3b        0x1 ff
  .rodata.char_62
-                0x0008fa24       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fa99        0x3 ff
+                0x0008fa3c       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fab1        0x3 ff
  .rodata.char_63
-                0x0008fa9c       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008fab4       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_64
-                0x0008fae4       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fb59        0x3 ff
+                0x0008fafc       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fb71        0x3 ff
  .rodata.char_65
-                0x0008fb5c       0x51 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fbad        0x3 ff
+                0x0008fb74       0x51 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fbc5        0x3 ff
  .rodata.char_66
-                0x0008fbb0       0x4e D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fbfe        0x2 ff
+                0x0008fbc8       0x4e D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fc16        0x2 ff
  .rodata.char_67
-                0x0008fc00       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fc75        0x3 ff
+                0x0008fc18       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fc8d        0x3 ff
  .rodata.char_68
-                0x0008fc78       0x68 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008fc90       0x68 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_69
-                0x0008fce0       0x27 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fd07        0x1 ff
+                0x0008fcf8       0x27 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fd1f        0x1 ff
  .rodata.char_27
-                0x0008fd08        0xf D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fd17        0x1 ff
+                0x0008fd20        0xf D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fd2f        0x1 ff
  .rodata.char_40
-                0x0008fd18       0xe1 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fdf9        0x3 ff
+                0x0008fd30       0xe1 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fe11        0x3 ff
  .rodata.char_29
-                0x0008fdfc       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008fe14       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_23
-                0x0008fe3c       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008fe9f        0x1 ff
+                0x0008fe54       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008feb7        0x1 ff
  .rodata.char_37
-                0x0008fea0       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008ff03        0x1 ff
+                0x0008feb8       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008ff1b        0x1 ff
  .rodata.char_24
-                0x0008ff04       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0008ff1c       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_38
-                0x0008ff7c       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0008ffdf        0x1 ff
+                0x0008ff94       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0008fff7        0x1 ff
  .rodata.char_21
-                0x0008ffe0       0x27 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x00090007        0x1 ff
+                0x0008fff8       0x27 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0009001f        0x1 ff
  .rodata.char_39
-                0x00090008       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0009006b        0x1 ff
+                0x00090020       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x00090083        0x1 ff
  .rodata.char_26
-                0x0009006c       0x84 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x00090084       0x84 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_47
-                0x000900f0       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x00090108       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_48
-                0x00090168       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x00090180       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_49
-                0x000901e0       0x24 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x000901f8       0x24 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_70
-                0x00090204       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x00090279        0x3 ff
+                0x0009021c       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x00090291        0x3 ff
  .rodata.char_2b
-                0x0009027c       0x51 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x000902cd        0x3 ff
+                0x00090294       0x51 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x000902e5        0x3 ff
  .rodata.char_71
-                0x000902d0       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x00090345        0x3 ff
+                0x000902e8       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0009035d        0x3 ff
  .rodata.char_2e
-                0x00090348        0x6 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0009034e        0x2 ff
+                0x00090360        0x6 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x00090366        0x2 ff
  .rodata.char_72
-                0x00090350       0x36 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x00090386        0x2 ff
+                0x00090368       0x36 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0009039e        0x2 ff
  .rodata.char_2f
-                0x00090388       0x70 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x000903a0       0x70 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_4a
-                0x000903f8       0x60 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x00090410       0x60 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_4b
-                0x00090458       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x00090470       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_4c
-                0x000904d0       0x60 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x000904e8       0x60 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_4d
-                0x00090530       0x84 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x00090548       0x84 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_4e
-                0x000905b4       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x000905cc       0x78 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_4f
-                0x0009062c       0x90 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x00090644       0x90 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_28
-                0x000906bc       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x000906d4       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_6a
-                0x000906fc       0x55 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x00090751        0x3 ff
+                0x00090714       0x55 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x00090769        0x3 ff
  .rodata.char_6b
-                0x00090754       0x68 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x0009076c       0x68 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_6c
-                0x000907bc       0x27 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x000907e3        0x1 ff
+                0x000907d4       0x27 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x000907fb        0x1 ff
  .rodata.char_6d
-                0x000907e4       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x00090859        0x3 ff
+                0x000907fc       0x75 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x00090871        0x3 ff
  .rodata.char_6e
-                0x0009085c       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+                0x00090874       0x48 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
  .rodata.char_6f
-                0x000908a4       0x51 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x000908f5        0x3 ff
+                0x000908bc       0x51 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x0009090d        0x3 ff
  .rodata.char_32
-                0x000908f8       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
- *fill*         0x0009095b        0x1 ff
+                0x00090910       0x63 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_font_8bpp.o)
+ *fill*         0x00090973        0x1 ff
  .rodata.str1.4
-                0x0009095c       0x5f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_initialize.o)
- *fill*         0x000909bb        0x1 ff
+                0x00090974       0x5f D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_system_initialize.o)
+ *fill*         0x000909d3        0x1 ff
  .rodata.sin_value_table
-                0x000909bc      0x168 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_utility_math_sin.o)
+                0x000909d4      0x168 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_utility_math_sin.o)
  .rodata.sqrt_table
-                0x00090b24      0x100 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_utility_math_sqrt.o)
+                0x00090b3c      0x100 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_utility_math_sqrt.o)
  .rodata.reorder_index
-                0x00090c24       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_image_reader_jpeg_decode.o)
- .rodata        0x00090c64       0x4c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_image_reader_png_decode.o)
+                0x00090c3c       0x40 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_image_reader_jpeg_decode.o)
+ .rodata        0x00090c7c       0x4c D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_image_reader_png_decode.o)
  .rodata.str1.4
-                0x00090cb0       0x2d D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_image_reader_png_decode.o)
- *fill*         0x00090cdd        0x3 ff
+                0x00090cc8       0x2d D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\gx\cm4_gcc\libgx.a(gx_image_reader_png_decode.o)
+ *fill*         0x00090cf5        0x3 ff
  .rodata.g_vfp_offset
-                0x00090ce0        0x4 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\tx\cm4_gcc\libtx.a(tx_thread_schedule.o)
-                0x00090ce0                g_vfp_offset
+                0x00090cf8        0x4 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\src\framework\el\tx\cm4_gcc\libtx.a(tx_thread_schedule.o)
+                0x00090cf8                g_vfp_offset
  .rodata.str1.4
-                0x00090ce4        0x4 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg.a(lib_a-impure.o)
+                0x00090cfc        0x4 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg.a(lib_a-impure.o)
                                   0x2 (size before relaxing)
  .rodata._global_impure_ptr
-                0x00090ce8        0x4 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg.a(lib_a-impure.o)
-                0x00090ce8                _global_impure_ptr
-                0x00090cec                __usb_dev_descriptor_start_fs = .
+                0x00090d00        0x4 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg.a(lib_a-impure.o)
+                0x00090d00                _global_impure_ptr
+                0x00090d04                __usb_dev_descriptor_start_fs = .
  *(.usb_device_desc_fs*)
-                0x00090cec                __usb_cfg_descriptor_start_fs = .
+                0x00090d04                __usb_cfg_descriptor_start_fs = .
  *(.usb_config_desc_fs*)
-                0x00090cec                __usb_interface_descriptor_start_fs = .
+                0x00090d04                __usb_interface_descriptor_start_fs = .
  *(.usb_interface_desc_fs*)
-                0x00090cec                __usb_descriptor_end_fs = .
-                0x00090cec                __usb_dev_descriptor_start_hs = .
+                0x00090d04                __usb_descriptor_end_fs = .
+                0x00090d04                __usb_dev_descriptor_start_hs = .
  *(.usb_device_desc_hs*)
-                0x00090cec                __usb_cfg_descriptor_start_hs = .
+                0x00090d04                __usb_cfg_descriptor_start_hs = .
  *(.usb_config_desc_hs*)
-                0x00090cec                __usb_interface_descriptor_start_hs = .
+                0x00090d04                __usb_interface_descriptor_start_hs = .
  *(.usb_interface_desc_hs*)
-                0x00090cec                __usb_descriptor_end_hs = .
+                0x00090d04                __usb_descriptor_end_hs = .
  *(.eh_frame*)
- .eh_frame      0x00090cec        0x0 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
- .eh_frame      0x00090cec       0x70 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg.a(lib_a-strcmp.o)
- .eh_frame      0x00090d5c        0x4 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
-                0x00090d60                __ROM_End = .
+ .eh_frame      0x00090d04        0x0 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x00090d04       0x70 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg.a(lib_a-strcmp.o)
+ .eh_frame      0x00090d74        0x4 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+                0x00090d78                __ROM_End = .
 
-.glue_7         0x00090d60        0x0
+.glue_7         0x00090d78        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x00090d60        0x0
+.glue_7t        0x00090d78        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00090d60        0x0
+.vfp11_veneer   0x00090d78        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00090d60        0x0
+.v4_bx          0x00090d78        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00090d60        0x0
+.iplt           0x00090d78        0x0
  .iplt          0x00000000        0x0 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00090d60                __exidx_start = .
+                0x00090d78                __exidx_start = .
 
-.ARM.exidx      0x00090d60        0x8
+.ARM.exidx      0x00090d78        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00090d60        0x8 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu\libgcc.a(_divdi3.o)
- .ARM.exidx     0x00090d68        0x0 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu\libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x00090d78        0x8 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu\libgcc.a(_divdi3.o)
+ .ARM.exidx     0x00090d80        0x0 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu\libgcc.a(_udivdi3.o)
                                   0x8 (size before relaxing)
-                0x00090d68                __exidx_end = .
-                0x00090d68                __etext = .
+                0x00090d80                __exidx_end = .
+                0x00090d80                __etext = .
 
-.rel.dyn        0x00090d68        0x0
+.rel.dyn        0x00090d80        0x0
  .rel.iplt      0x00000000        0x0 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
-.data           0x1ffe0000      0x7fc load address 0x00090d68
+.data           0x1ffe0000      0x7fc load address 0x00090d80
                 0x1ffe0000                __data_start__ = .
  *(vtable)
  *(.data.*)
@@ -14721,7 +14721,7 @@ END GROUP
                 0x1ffe07fc                . = ALIGN (0x4)
                 0x1ffe07fc                __data_end__ = .
 
-.igot.plt       0x1ffe07fc        0x0 load address 0x00091564
+.igot.plt       0x1ffe07fc        0x0 load address 0x0009157c
  .igot.plt      0x00000000        0x0 c:/renesas/synergy/e2studio_v6.2.1_ssp_v1.5.0/toolchains/gcc_arm/4.9_2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
 
 .ssp_dtc_vector_table
@@ -14734,10 +14734,10 @@ END GROUP
  *(.qspi_flash*)
                 0x60000000                __qspi_flash_end__ = .
                 0x00000000                __qspi_flash_code_size__ = (__qspi_flash_end__ - __qspi_flash_start__)
-                0x00091564                __qspi_flash_code_addr__ = (__etext + (__data_end__ - __data_start__))
+                0x0009157c                __qspi_flash_code_addr__ = (__etext + (__data_end__ - __data_start__))
 
 .qspi_non_retentive
-                0x60000000        0x0 load address 0x00091564
+                0x60000000        0x0 load address 0x0009157c
                 0x60000000                __qspi_non_retentive_start__ = .
  *(.qspi_non_retentive*)
                 0x60000000                __qspi_non_retentive_end__ = .
