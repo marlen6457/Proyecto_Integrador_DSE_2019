@@ -38,8 +38,15 @@ void SR_InputCapture_CallBack(input_capture_callback_args_t *p_args)
                    Seconds (s) time_ns = ((overflows * max_counts) + counter) / clk_freq_hz
                  * */
                 time_captured = (uint64_t)(((capture_overflow * BIT_32) + (uint64_t)capture_counter) * TIMER_SECOND / (pclk_freq_hz));
-                time_captured_ns = (uint32_t)((float)time_captured + 0.5F);
-                time_captured_us = (uint32_t)(((float)time_captured / (float)TIMER_MICROSECOND) + 0.5F);
+
+                //u64TimeCaptured_ns = (uint32_t)((float)time_captured + 0.5F);
+                u32TimeCaptured_us = (uint32_t)(((float)time_captured / (float)TIMER_MICROSECOND) + 0.5F);
+
+                u32SpeedInst = ((MICRO_SECONDS_IN_A_MINUTE)/ (u32TimeCaptured_us)) * (uint32_t) (SCALED_FACTOR);
+
+                u32SpeedInst = (uint32_t)(u32SpeedInst)/(uint32_t)(MAGNET_POLES * SCALED_FACTOR);
+
+                u32TimeCaptured_us = (uint32_t)(((float)time_captured / (float)TIMER_MICROSECOND) + 0.5F);
                 time_captured_ms = (uint32_t)(((float)time_captured / (float)TIMER_MILLISECOND) + 0.5F);
                 time_captured_s = (uint32_t)(((float)time_captured / (float)TIMER_SECOND) + 0.5F);
                 time_captured = 0;
