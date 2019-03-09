@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  2. 3.2019   Time (hh:mm): 19:54                        */
+/*  Date (dd.mm.yyyy):  9. 3.2019   Time (hh:mm): 10:25                        */
 /*******************************************************************************/
 
 
@@ -26,7 +26,7 @@ extern   "C" {
 #define ID_BACK_CREDITS 2
 #define ID_MAIN_PAGE 3
 #define ID_BACK_BTN 4
-#define ID_WINDOW1 5
+#define ID_WINDOW 5
 #define ID_ICON_MORE 6
 #define ID_ICON_TEAM 7
 

@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  2. 3.2019   Time (hh:mm): 19:54                        */
+/*  Date (dd.mm.yyyy):  9. 3.2019   Time (hh:mm): 10:25                        */
 /*******************************************************************************/
 
 
@@ -228,7 +228,7 @@ GX_CONST GX_STUDIO_WIDGET window1_define =
 {
     "window1",
     GX_TYPE_WINDOW,                          /* widget type                    */
-    ID_WINDOW1,                              /* widget id                      */
+    ID_WINDOW,                               /* widget id                      */
     #if defined(GX_WIDGET_USER_DATA)
     0,                                       /* user data                      */
     #endif
