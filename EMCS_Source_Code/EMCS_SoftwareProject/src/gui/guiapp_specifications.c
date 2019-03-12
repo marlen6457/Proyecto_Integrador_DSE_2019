@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  2. 3.2019   Time (hh:mm): 19:54                        */
+/*  Date (dd.mm.yyyy): 11. 3.2019   Time (hh:mm): 19:49                        */
 /*******************************************************************************/
 
 
@@ -25,6 +25,27 @@ GX_DISPLAY display_1_control_block;
 GX_CANVAS  display_1_canvas_control_block;
 GX_WINDOW_ROOT display_1_root_window;
 
+UINT gx_studio_button_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent)
+{
+    UINT status;
+    GX_BUTTON *button = (GX_BUTTON *) control_block;
+    status = gx_button_create(button, info->widget_name, parent, info->style, info->widget_id, &info->size);
+    return status;
+}
+
+UINT gx_studio_pixelmap_button_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent)
+{
+    UINT status;
+    GX_PIXELMAP_BUTTON *button = (GX_PIXELMAP_BUTTON *) control_block;
+    GX_PIXELMAP_BUTTON_PROPERTIES *props = (GX_PIXELMAP_BUTTON_PROPERTIES *) info->properties;
+    status = gx_pixelmap_button_create(button, info->widget_name, parent,
+               props->normal_pixelmap_id,
+               props->selected_pixelmap_id,
+               props->disabled_pixelmap_id,
+               info->style, info->widget_id, &info->size);
+    return status;
+}
+
 UINT gx_studio_icon_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent)
 {
     UINT status;
@@ -34,6 +55,20 @@ UINT gx_studio_icon_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_b
     if (props->selected_pixelmap_id)
     {
         gx_icon_pixelmap_set(icon, props->normal_pixelmap_id, props->selected_pixelmap_id);
+    }
+    return status;
+}
+
+UINT gx_studio_prompt_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent)
+{
+    UINT status;
+    GX_PROMPT *prompt = (GX_PROMPT *) control_block;
+    GX_PROMPT_PROPERTIES *props = (GX_PROMPT_PROPERTIES *) info->properties;
+    status = gx_prompt_create(prompt, info->widget_name, parent, props->string_id, info->style, info->widget_id, &info->size);
+    if (status == GX_SUCCESS)
+    {
+        gx_prompt_font_set(prompt, props->font_id);
+        gx_prompt_text_color_set(prompt, props->normal_text_color_id, props->selected_text_color_id);
     }
     return status;
 }
@@ -90,7 +125,7 @@ GX_CONST GX_STUDIO_WIDGET credits_page_define =
 {
     "credits_page",
     GX_TYPE_WINDOW,                          /* widget type                    */
-    ID_CREDITS_PAGE,                         /* widget id                      */
+    GX_ID_NONE,                              /* widget id                      */
     #if defined(GX_WIDGET_USER_DATA)
     0,                                       /* user data                      */
     #endif
@@ -110,12 +145,94 @@ GX_CONST GX_STUDIO_WIDGET credits_page_define =
 };
 GX_WINDOW_PROPERTIES main_page_properties =
 {
-    GX_PIXELMAP_ID_P_MAINPAGE_               /* wallpaper pixelmap id          */
+    GX_PIXELMAP_ID_P_MAINPAGE_V2             /* wallpaper pixelmap id          */
 };
 GX_ICON_PROPERTIES main_page_icon_1_properties =
 {
     GX_PIXELMAP_ID_BACKBUTTON,               /* normal pixelmap id             */
     0                                        /* selected pixelmap id           */
+};
+GX_PIXELMAP_BUTTON_PROPERTIES main_page_pixelmap_button_properties =
+{
+    0,                                       /* normal pixelmap id             */
+    0,                                       /* selected pixelmap id           */
+    0                                        /* disabled pixelmap id           */
+};
+GX_PROMPT_PROPERTIES main_page_prompt_properties =
+{
+    0,                                       /* string id                      */
+    GX_FONT_ID_PROMPT,                       /* font id                        */
+    GX_COLOR_ID_TEXT_INPUT_FILL,             /* normal text color              */
+    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_prompt_define =
+{
+    "prompt",
+    GX_TYPE_PROMPT,                          /* widget type                    */
+    ID_FAN_TEXT,                             /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_NONE|GX_STYLE_TRANSPARENT|GX_STYLE_ENABLED|GX_STYLE_TEXT_CENTER,   /* style flags */
+    GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
+    sizeof(GX_PROMPT),                       /* control block size             */
+    GX_COLOR_ID_TEXT_INPUT_TEXT,             /* normal color id                */
+    GX_COLOR_ID_SELECTED_FILL,               /* selected color id              */
+    gx_studio_prompt_create,                 /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {23, 222, 70, 245},                      /* widget size                    */
+    GX_NULL,                                 /* no next widget                 */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt), /* control block      */
+    (void *) &main_page_prompt_properties    /* extended properties            */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_button_define =
+{
+    "button",
+    GX_TYPE_BUTTON,                          /* widget type                    */
+    ID_BTN_EX1,                              /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_RAISED|GX_STYLE_TRANSPARENT|GX_STYLE_ENABLED,   /* style flags */
+    GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
+    sizeof(GX_BUTTON),                       /* control block size             */
+    GX_COLOR_ID_BTN_LOWER,                   /* normal color id                */
+    GX_COLOR_ID_BTN_UPPER,                   /* selected color id              */
+    gx_studio_button_create,                 /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {15, 214, 78, 256},                      /* widget size                    */
+    &main_page_prompt_define,                /* next widget definition         */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_button), /* control block      */
+    (void *) GX_NULL                         /* no extended properties         */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_pixelmap_button_define =
+{
+    "pixelmap_button",
+    GX_TYPE_PIXELMAP_BUTTON,                 /* widget type                    */
+    ID_FAN_STATUS,                           /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_NONE|GX_STYLE_ENABLED,   /* style flags                    */
+    0,                                       /* status flags                   */
+    sizeof(GX_PIXELMAP_BUTTON),              /* control block size             */
+    GX_COLOR_ID_BTN_LOWER,                   /* normal color id                */
+    GX_COLOR_ID_BTN_UPPER,                   /* selected color id              */
+    gx_studio_pixelmap_button_create,        /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {18, 217, 75, 253},                      /* widget size                    */
+    &main_page_button_define,                /* next widget definition         */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_pixelmap_button), /* control block */
+    (void *) &main_page_pixelmap_button_properties /* extended properties      */
 };
 
 GX_CONST GX_STUDIO_WIDGET main_page_icon_1_define =
@@ -134,8 +251,8 @@ GX_CONST GX_STUDIO_WIDGET main_page_icon_1_define =
     gx_studio_icon_create,                   /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {176, 256, 239, 319},                    /* widget size                    */
-    GX_NULL,                                 /* no next widget                 */
+    {172, 255, 235, 318},                    /* widget size                    */
+    &main_page_pixelmap_button_define,       /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_icon_1), /* control block      */
     (void *) &main_page_icon_1_properties    /* extended properties            */
@@ -157,7 +274,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_define =
     gx_studio_window_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     (UINT (*)(GX_WIDGET *, GX_EVENT *)) Mainpage_handler, /* event function override */
-    {0, 0, 239, 319},                        /* widget size                    */
+    {-4, -1, 235, 318},                      /* widget size                    */
     GX_NULL,                                 /* next widget                    */
     &main_page_icon_1_define,                /* child widget                   */
     0,                                       /* control block                  */
@@ -228,7 +345,7 @@ GX_CONST GX_STUDIO_WIDGET window1_define =
 {
     "window1",
     GX_TYPE_WINDOW,                          /* widget type                    */
-    ID_WINDOW1,                              /* widget id                      */
+    ID_WINDOW,                               /* widget id                      */
     #if defined(GX_WIDGET_USER_DATA)
     0,                                       /* user data                      */
     #endif

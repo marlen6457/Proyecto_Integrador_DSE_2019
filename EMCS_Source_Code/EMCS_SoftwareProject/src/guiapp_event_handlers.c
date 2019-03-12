@@ -24,6 +24,7 @@ extern GX_WINDOW_ROOT * p_window_root;
 static UINT show_window(GX_WINDOW * p_new, GX_WIDGET * p_widget, bool detach_old);
 static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_id);
 static void update_text(GX_WIDGET * p_widget, GX_RESOURCE_ID id, char * p_text);
+static void update_pixelmap_button_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT button);
 
 
 UINT splash_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
@@ -53,6 +54,7 @@ UINT splash_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
     UINT result = gx_window_event_process(widget, event_ptr);
+    GX_WIDGET * p_widget = (GX_WIDGET *) widget;
 
     switch (event_ptr->gx_event_type){
 
@@ -60,6 +62,10 @@ UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
                 show_window((GX_WINDOW*)&window1, (GX_WIDGET*)widget, true);
                 break;
 
+        case GX_SIGNAL(ID_BTN_EX1, GX_EVENT_CLICKED):
+        update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS, GX_PIXELMAP_ID_GREEN_STATUS);
+        update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
+        break;
 
 
 
@@ -154,6 +160,24 @@ static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_
         gx_prompt_text_id_set(p_prompt, string_id);
     }
 }
+
+static void update_pixelmap_button_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT button)
+{
+    GX_PIXELMAP_BUTTON * p_button = NULL;
+
+    UINT err = gx_widget_find(p_widget, (USHORT)id, GX_SEARCH_DEPTH_INFINITE, (GX_WIDGET **) &p_button);
+    if (GX_SUCCESS == err)
+    {
+        err = gx_pixelmap_button_pixelmap_set(p_button, button, button, button);
+        if (GX_SUCCESS != err) {
+            while(1);
+        }
+
+    } else {
+        while(1);
+    }
+}
+
 void toggle_screen(GX_WINDOW *new_win, GX_WINDOW *old_win)
 {
     UINT gx_err = GX_SUCCESS;

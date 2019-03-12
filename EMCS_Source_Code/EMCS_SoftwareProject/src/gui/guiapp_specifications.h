@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  2. 3.2019   Time (hh:mm): 19:54                        */
+/*  Date (dd.mm.yyyy): 11. 3.2019   Time (hh:mm): 19:49                        */
 /*******************************************************************************/
 
 
@@ -22,13 +22,15 @@ extern   "C" {
 
 /* Define widget ids                                                           */
 
-#define ID_CREDITS_PAGE 1
-#define ID_BACK_CREDITS 2
-#define ID_MAIN_PAGE 3
-#define ID_BACK_BTN 4
-#define ID_WINDOW1 5
-#define ID_ICON_MORE 6
-#define ID_ICON_TEAM 7
+#define ID_BACK_CREDITS 1
+#define ID_MAIN_PAGE 2
+#define ID_BACK_BTN 3
+#define ID_FAN_STATUS 4
+#define ID_BTN_EX1 5
+#define ID_FAN_TEXT 6
+#define ID_WINDOW 7
+#define ID_ICON_MORE 8
+#define ID_ICON_TEAM 9
 
 
 /* Declare properties structures for each utilized widget type                 */
@@ -66,7 +68,22 @@ typedef struct
 {
     GX_RESOURCE_ID normal_pixelmap_id;
     GX_RESOURCE_ID selected_pixelmap_id;
+    GX_RESOURCE_ID disabled_pixelmap_id;
+} GX_PIXELMAP_BUTTON_PROPERTIES;
+
+typedef struct
+{
+    GX_RESOURCE_ID normal_pixelmap_id;
+    GX_RESOURCE_ID selected_pixelmap_id;
 } GX_ICON_PROPERTIES;
+
+typedef struct
+{
+    GX_RESOURCE_ID string_id;
+    GX_RESOURCE_ID font_id;
+    GX_RESOURCE_ID normal_text_color_id;
+    GX_RESOURCE_ID selected_text_color_id;
+} GX_PROMPT_PROPERTIES;
 
 typedef struct
 {
@@ -86,6 +103,9 @@ typedef struct MAIN_PAGE_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
     GX_ICON main_page_icon_1;
+    GX_PIXELMAP_BUTTON main_page_pixelmap_button;
+    GX_BUTTON main_page_button;
+    GX_PROMPT main_page_prompt;
 } MAIN_PAGE_CONTROL_BLOCK;
 
 typedef struct WINDOW1_CONTROL_BLOCK_STRUCT
@@ -194,7 +214,10 @@ typedef struct GX_STUDIO_DISPLAY_INFO_STRUCT
 
 /* Declare Studio-generated functions for creating top-level widgets           */
 
+UINT gx_studio_button_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
+UINT gx_studio_pixelmap_button_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 UINT gx_studio_icon_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
+UINT gx_studio_prompt_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 UINT gx_studio_window_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 GX_WIDGET *gx_studio_widget_create(GX_BYTE *storage, GX_CONST GX_STUDIO_WIDGET *definition, GX_WIDGET *parent);
 UINT gx_studio_named_widget_create(char *name, GX_WIDGET *parent, GX_WIDGET **new_widget);
