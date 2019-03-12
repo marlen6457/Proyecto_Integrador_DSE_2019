@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  6. 2.2019   Time (hh:mm): 15:21                        */
+/*  Date (dd.mm.yyyy): 11. 3.2019   Time (hh:mm): 21:15                        */
 /*******************************************************************************/
 
 
@@ -22,29 +22,15 @@ extern   "C" {
 
 /* Define widget ids                                                           */
 
-#define ID_BACK_W6 1
-#define ID_UP_DAY 2
-#define ID_DAY 3
-#define ID_MONTH 4
-#define ID_UP_MONTH 5
-#define ID_YEAR 6
-#define ID_UP_YEAR 7
-#define ID_BACK_W5 8
-#define ID_BACK_W4 9
-#define ID_MIN 10
-#define ID_BACK_W3 11
-#define ID_RES 12
-#define ID_DEC 13
-#define ID_UNITS 14
-#define ID_REFRESH 15
-#define ID_WINDOW2 16
-#define ID_BTN_DUTY 17
-#define ID_BTN_SPD 18
-#define ID_BTN_CTS 19
-#define ID_BACK_BTN 20
-#define ID_BTN_CAL 21
-#define ID_WINDOW1 22
-#define ID_ICON_MORE 23
+#define ID_BACK_CREDITS 1
+#define ID_MAIN_PAGE 2
+#define ID_BACK_BTN 3
+#define ID_FAN_STATUS 4
+#define ID_BTN_EX1 5
+#define ID_FAN_TEXT 6
+#define ID_WINDOW 7
+#define ID_ICON_MORE 8
+#define ID_ICON_TEAM 9
 
 
 /* Declare properties structures for each utilized widget type                 */
@@ -80,11 +66,10 @@ typedef struct
 
 typedef struct
 {
-    GX_RESOURCE_ID string_id;
-    GX_RESOURCE_ID font_id;
-    GX_RESOURCE_ID normal_text_color_id;
-    GX_RESOURCE_ID selected_text_color_id;
-} GX_TEXT_BUTTON_PROPERTIES;
+    GX_RESOURCE_ID normal_pixelmap_id;
+    GX_RESOURCE_ID selected_pixelmap_id;
+    GX_RESOURCE_ID disabled_pixelmap_id;
+} GX_PIXELMAP_BUTTON_PROPERTIES;
 
 typedef struct
 {
@@ -108,65 +93,34 @@ typedef struct
 
 /* Declare top-level control blocks                                            */
 
-typedef struct WINDOW6_CONTROL_BLOCK_STRUCT
+typedef struct CREDITS_PAGE_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
-    GX_ICON window6_icon_5;
-    GX_ICON window6_icon_6;
-    GX_PROMPT window6_prompt_4;
-    GX_PROMPT window6_prompt;
-    GX_ICON window6_icon;
-    GX_PROMPT window6_prompt_1;
-    GX_ICON window6_icon_1;
-} WINDOW6_CONTROL_BLOCK;
+    GX_ICON credits_page_icon_4;
+} CREDITS_PAGE_CONTROL_BLOCK;
 
-typedef struct WINDOW5_CONTROL_BLOCK_STRUCT
+typedef struct MAIN_PAGE_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
-    GX_ICON window5_icon_4;
-} WINDOW5_CONTROL_BLOCK;
-
-typedef struct WINDOW4_CONTROL_BLOCK_STRUCT
-{
-    GX_WINDOW_MEMBERS_DECLARE
-    GX_ICON window4_icon_3;
-} WINDOW4_CONTROL_BLOCK;
-
-typedef struct WINDOW3_CONTROL_BLOCK_STRUCT
-{
-    GX_WINDOW_MEMBERS_DECLARE
-    GX_ICON window3_icon_2;
-    GX_PROMPT window3_prompt_2;
-    GX_PROMPT window3_prompt;
-    GX_PROMPT window3_prompt_1;
-    GX_ICON window3_icon_7;
-} WINDOW3_CONTROL_BLOCK;
-
-typedef struct WINDOW2_CONTROL_BLOCK_STRUCT
-{
-    GX_WINDOW_MEMBERS_DECLARE
-    GX_TEXT_BUTTON window2_button;
-    GX_TEXT_BUTTON window2_button_1;
-    GX_TEXT_BUTTON window2_button_2;
-    GX_ICON window2_icon_1;
-    GX_PROMPT window2_prompt_1;
-} WINDOW2_CONTROL_BLOCK;
+    GX_ICON main_page_icon_1;
+    GX_PIXELMAP_BUTTON main_page_pixelmap_button;
+    GX_BUTTON main_page_button;
+    GX_PROMPT main_page_prompt;
+} MAIN_PAGE_CONTROL_BLOCK;
 
 typedef struct WINDOW1_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
     GX_ICON window1_icon;
+    GX_ICON window1_icon_8;
 } WINDOW1_CONTROL_BLOCK;
 
 
 /* extern statically defined control blocks                                    */
 
 #ifndef GUIX_STUDIO_GENERATED_FILE
-extern WINDOW6_CONTROL_BLOCK window6;
-extern WINDOW5_CONTROL_BLOCK window5;
-extern WINDOW4_CONTROL_BLOCK window4;
-extern WINDOW3_CONTROL_BLOCK window3;
-extern WINDOW2_CONTROL_BLOCK window2;
+extern CREDITS_PAGE_CONTROL_BLOCK credits_page;
+extern MAIN_PAGE_CONTROL_BLOCK main_page;
 extern WINDOW1_CONTROL_BLOCK window1;
 #endif
 
@@ -232,12 +186,9 @@ VOID _gx_synergy_jpeg_draw (GX_DRAW_CONTEXT *p_context, INT x, INT y, GX_PIXELMA
 
 /* Declare event process functions, draw functions, and callback functions     */
 
-UINT window6_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
-UINT window5_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
-UINT window4_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
-UINT window3_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
-UINT window2_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
-UINT window1_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
+UINT Credits_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
+UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
+UINT splash_handler(GX_WINDOW *widget, GX_EVENT *event_ptr);
 
 /* Declare the GX_STUDIO_DISPLAY_INFO structure                                */
 
@@ -263,7 +214,8 @@ typedef struct GX_STUDIO_DISPLAY_INFO_STRUCT
 
 /* Declare Studio-generated functions for creating top-level widgets           */
 
-UINT gx_studio_text_button_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
+UINT gx_studio_button_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
+UINT gx_studio_pixelmap_button_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 UINT gx_studio_icon_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 UINT gx_studio_prompt_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
 UINT gx_studio_window_create(GX_CONST GX_STUDIO_WIDGET *info, GX_WIDGET *control_block, GX_WIDGET *parent);
