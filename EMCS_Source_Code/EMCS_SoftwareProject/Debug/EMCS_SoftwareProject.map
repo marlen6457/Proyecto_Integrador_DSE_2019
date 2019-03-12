@@ -1187,7 +1187,7 @@ Discarded input sections
                 0x00000000       0x28 ./synergy/ssp/src/framework/tes/dave2d/dave_base.o
  .debug_ranges  0x00000000       0x18 ./synergy/ssp/src/framework/tes/dave2d/dave_base.o
  .debug_line    0x00000000       0x74 ./synergy/ssp/src/framework/tes/dave2d/dave_base.o
- .debug_str     0x00000000      0x179 ./synergy/ssp/src/framework/tes/dave2d/dave_base.o
+ .debug_str     0x00000000      0x19e ./synergy/ssp/src/framework/tes/dave2d/dave_base.o
  .comment       0x00000000       0x71 ./synergy/ssp/src/framework/tes/dave2d/dave_base.o
  .debug_frame   0x00000000       0x30 ./synergy/ssp/src/framework/tes/dave2d/dave_base.o
  .ARM.attributes
