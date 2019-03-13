@@ -1,6 +1,5 @@
 #include "adc_thread.h"
 #include "Ram.h"
-//#include <stdio.h>
 
 /* Control Thread entry function */
 void adc_thread_entry(void)
@@ -15,7 +14,8 @@ void adc_thread_entry(void)
         //********ADC & PWM ***************
         g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);
 
-        u16ADC_FilterdData = (u16ADC_Data + (C_FILTER_ORDER-1) * u16ADC_FilterdData) / C_FILTER_ORDER;
+        u16ADC_FilterdData = (uint16_t)(u16ADC_Data + ((uint16_t)(C_FILTER_ORDER) - 1) * u16ADC_FilterdData) / (uint16_t)(C_FILTER_ORDER);
+
         if(u16ADC_Data > 512)
         {
             g_ioport.p_api->pinWrite(IOPORT_PORT_06_PIN_00, IOPORT_LEVEL_HIGH);

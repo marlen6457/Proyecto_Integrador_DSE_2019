@@ -41,7 +41,7 @@ union   Ubyte_def
 
 #define C_TICK_PER_SEC  500
 
-#define C_FILTER_ORDER  15
+#define C_FILTER_ORDER      15
 
 /* Definition Input Capture*/
 #define BIT_32 (0x100000000U)                   // MAX COUNTS
@@ -65,30 +65,47 @@ extern uint16_t  u16TimePerSec1ms;
 
 extern uint16_t u16ADC_Data;
 extern uint16_t u16ADC_FilterdData;
-extern uint8_t U8DutyCycle;
+extern uint8_t u8DutyCycleInst;
+extern uint8_t u8DutyCycleReal;
 
 extern char value;
 extern char g_value [5];
 
 extern uint64_t capture_overflow;
-extern uint32_t capture_counter;
-extern uint64_t time_captured;
+extern uint32_t u32CaptureCounter;
+extern uint64_t u64TimeCaptured;
 extern uint64_t u64TimeCaptured_ns;
 extern uint32_t u32TimeCaptured_us;
 extern uint64_t time_captured_s;
 extern uint64_t time_captured_ms;
 
 extern uint32_t u32SpeedInst;
+extern uint16_t u16SpeedInst;
 
 
+//--------------------------------------------------------------------
+//             Filter Variable
+//--------------------------------------------------------------------
 
+extern uint32_t u32VarAccumulator;
+extern uint16_t u16RPMvalueAvg;
+extern uint16_t u16InputValue;
+
+
+//--------------------------------------------------------------------
 
 extern volatile union Ubyte_def        u8FlagsVar;
 #define    u8Flags              u8FlagsVar.Ubyte
 #define    bf_SystemTickTrue     u8FlagsVar.Ubit.b0
 
 
+//--------------------------------------------------------------------
+//             Functions
+//--------------------------------------------------------------------
+
 extern void SR_InitRam(void);
+extern void SR_FilterRPM(uint16_t* lpu16Data, uint32_t* lpu32ShiftAdd, uint16_t* lpu16Result);
+extern void SR_InitFilter(uint16_t lu16InputData);
 
 
 #endif /* RAM_H_ */

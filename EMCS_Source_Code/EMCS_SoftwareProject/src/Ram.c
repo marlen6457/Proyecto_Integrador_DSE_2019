@@ -13,18 +13,25 @@ uint16_t  u16TimePerSec1ms;
 
 uint16_t u16ADC_Data;
 uint16_t u16ADC_FilterdData;
-uint8_t U8DutyCycle;
+uint8_t u8DutyCycleInst;
+uint8_t u8DutyCycleReal;
 
 uint64_t capture_overflow;
-uint32_t capture_counter;
-uint64_t time_captured;
+uint32_t u32CaptureCounter;
+uint64_t u64TimeCaptured;
 uint64_t u64TimeCaptured_ns;
 uint32_t u32TimeCaptured_us;
-uint64_t time_captured_s;
-uint64_t time_captured_ms;
 
 uint32_t u32SpeedInst;
+uint16_t u16SpeedInst;
 
+//--------------------------------------------------------------------
+//             Filter Variable
+//--------------------------------------------------------------------
+
+uint32_t u32VarAccumulator;
+uint16_t u16RPMvalueAvg;
+uint16_t u16InputValue;
 
 char value;
 char g_value [5];
@@ -43,7 +50,7 @@ void SR_InitRam(void)
     //g_value [5]    = "000";
 
     capture_overflow = 0;
-    capture_counter = 0;
-    time_captured = 0;
+    u32CaptureCounter = 0;
+    u64TimeCaptured = 0;
 
 }

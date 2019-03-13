@@ -163,7 +163,7 @@ SCI9: RXD_MISO
 SCI9: SCL
 SDHI0: DAT6
 SPI1: MISO"
-"P203","53","GPIO","GPIO21","","None","Input mode","","None","BUS0: A19
+"P203","53","GPIO","GPIO21","Low","None","Output mode (Initial High)","CMOS","None","BUS0: A19
 CAN0: CTX
 CTSU0: TSCAP
 GPT5: GTIOCA
