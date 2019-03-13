@@ -2510,3 +2510,603 @@ org.xml.sax.SAXParseException; cvc-complex-type.2.4.a: Invalid content was found
 
 !ENTRY com.tasking.util 2 0 2019-03-12 18:45:56.844
 !MESSAGE Input file not found: "". Using first of 1 alternatives: "file:/C:/Renesas/Synergy/e2studio_v6.2.1_ssp_v1.5.0/internal/projectgen/arm/1.5/pinmapping/PinCfgR7FS7G27xxxxxxFC.xml"
+
+!ENTRY org.eclipse.ui.monitoring 4 0 2019-03-12 18:48:03.061
+!MESSAGE UI freeze of 4.7s at 18:47:58.329
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.061
+!MESSAGE Sample at 18:47:59.841 (+1.512s)
+Thread 'main' tid=1 (RUNNABLE)
+!STACK 0
+java.lang.Exception: Stack Trace
+	at com.tasking.pinmapper.settings.api.impl.PinSettingsImpl.getConfigSettingArray(Unknown Source)
+	at com.tasking.pinmapper.settings.api.impl.PinSettingsImpl$1ConfigSettingList.get(Unknown Source)
+	at com.tasking.pinmapper.settings.api.impl.PinSettingsImpl$1ConfigSettingList.get(Unknown Source)
+	at java.util.AbstractList$Itr.next(AbstractList.java:358)
+	at com.tasking.pinmapper.settings.PinSettingsModel.configSettingStrings(PinSettingsModel.java:969)
+	at com.tasking.pinmapper.settings.PinSettingsModel.updateConfigs(PinSettingsModel.java:793)
+	at com.tasking.pinmapper.settings.PinSettingsModel.saveXml(PinSettingsModel.java:564)
+	at com.tasking.pinmapper.settings.PinSettingsModel.save(PinSettingsModel.java:521)
+	at com.tasking.pinmapper.editors.PinEditor.commonSave(PinEditor.java:830)
+	at com.tasking.pinmapper.editors.PinEditor.doSave(PinEditor.java:867)
+	at com.renesas.cdt.synergy.pinconfiguration.internal.pages.PagePinConfig.saveContent(PagePinConfig.java:813)
+	at com.renesas.cdt.synergy.settingseditor.pages.ConfigPageCompositeWrapper.saveContent(ConfigPageCompositeWrapper.java:133)
+	at com.renesas.cdt.synergy.settingseditor.internal.editors.SynergySettingsEditor.doSave(SynergySettingsEditor.java:342)
+	at org.eclipse.ui.internal.SaveableHelper$2.run(SaveableHelper.java:157)
+	at org.eclipse.ui.internal.SaveableHelper$5.run(SaveableHelper.java:286)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:437)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:353)
+	at org.eclipse.ui.internal.WorkbenchWindow$14.run(WorkbenchWindow.java:2184)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2180)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:294)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:272)
+	at org.eclipse.ui.internal.SaveableHelper.savePart(SaveableHelper.java:162)
+	at org.eclipse.ui.internal.WorkbenchPage.saveSaveable(WorkbenchPage.java:3904)
+	at org.eclipse.ui.internal.WorkbenchPage.saveEditor(WorkbenchPage.java:3918)
+	at org.eclipse.cdt.internal.ui.cview.BuildGroup$CDTBuildAction.saveEditors(BuildGroup.java:112)
+	at org.eclipse.cdt.internal.ui.cview.BuildGroup$CDTBuildAction.run(BuildGroup.java:79)
+	at org.eclipse.cdt.ui.actions.BuildActiveConfigMenuAction.run(BuildActiveConfigMenuAction.java:92)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:247)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$5(ActionContributionItem.java:436)
+	at org.eclipse.jface.action.ActionContributionItem$$Lambda$67/24525574.handleEvent(Unknown Source)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4228)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3816)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.062
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=1018 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@015c115d
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.062
+!MESSAGE Thread 'Worker-99' tid=545 (WAITING)
+Waiting for: org.eclipse.ui.console.IOConsoleInputStream@00978b48
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:150)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:93)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.TracingConsole$InputReadJob.run(TracingConsole.java:195)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.062
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=497 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@018cb367
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.062
+!MESSAGE Thread 'SVN Kit 1.8 Connector' tid=306 (WAITING)
+Waiting for: java.util.ArrayList@00ba612d
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.polarion.team.svn.connector.svnkit.SVNKitService$ProgressMonitorThread.run(SVNKitService.java:201)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.062
+!MESSAGE Thread 'Thread-9' tid=46 (WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@014582f2
+!STACK 0
+java.lang.Exception: Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingDeque.takeFirst(LinkedBlockingDeque.java:492)
+	at java.util.concurrent.LinkedBlockingDeque.take(LinkedBlockingDeque.java:680)
+	at sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:118)
+	at com.renesas.cdt.synergy.pagecommon.utils.FilteredFolderWatcher$FilterableFolderWatcherRunnable.processEvents(FilteredFolderWatcher.java:220)
+	at com.renesas.cdt.synergy.pagecommon.utils.FilteredFolderWatcher$FilterableFolderWatcherRunnable.run(FilteredFolderWatcher.java:210)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.063
+!MESSAGE Thread 'Thread-7' tid=43 (TIMED_WAITING)
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:85)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.063
+!MESSAGE Thread 'TimerQueue' tid=30 (TIMED_WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@007bb948
+Holding: java.util.concurrent.locks.ReentrantLock$NonfairSync@012dfe45
+!STACK 0
+java.lang.Exception: Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.DelayQueue.take(DelayQueue.java:223)
+	at javax.swing.TimerQueue.run(TimerQueue.java:171)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.063
+!MESSAGE Thread 'EventAdmin Async Event Dispatcher Thread' tid=29 (WAITING)
+Waiting for: org.eclipse.swt.widgets.RunnableLock@0175da24
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:246)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4813)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.063
+!MESSAGE Thread 'Java indexing' tid=27 (WAITING)
+Waiting for: org.eclipse.jdt.internal.core.search.indexing.IndexManager@0141d7d8
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:371)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.063
+!MESSAGE Thread 'EMF Reference Cleaner' tid=17 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@00c29fa8
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.063
+!MESSAGE Thread 'Worker-JM' tid=15 (WAITING)
+Waiting for: java.util.ArrayList@01194e8c
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.063
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=1153 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@000b9f03
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.063
+!MESSAGE Sample at 18:48:01.164 (+1.323s)
+Thread 'main' tid=1 (RUNNABLE)
+!STACK 0
+java.lang.Exception: Stack Trace
+	at com.tasking.pinmapper.settings.api.impl.ConfigSettingImpl.getConfigurationId(Unknown Source)
+	at com.tasking.pinmapper.settings.PinSettingsModel.configSettingStrings(PinSettingsModel.java:971)
+	at com.tasking.pinmapper.settings.PinSettingsModel.updateConfigs(PinSettingsModel.java:793)
+	at com.tasking.pinmapper.settings.PinSettingsModel.saveXml(PinSettingsModel.java:564)
+	at com.tasking.pinmapper.settings.PinSettingsModel.save(PinSettingsModel.java:521)
+	at com.tasking.pinmapper.editors.PinEditor.commonSave(PinEditor.java:830)
+	at com.tasking.pinmapper.editors.PinEditor.doSave(PinEditor.java:867)
+	at com.renesas.cdt.synergy.pinconfiguration.internal.pages.PagePinConfig.saveContent(PagePinConfig.java:813)
+	at com.renesas.cdt.synergy.settingseditor.pages.ConfigPageCompositeWrapper.saveContent(ConfigPageCompositeWrapper.java:133)
+	at com.renesas.cdt.synergy.settingseditor.internal.editors.SynergySettingsEditor.doSave(SynergySettingsEditor.java:342)
+	at org.eclipse.ui.internal.SaveableHelper$2.run(SaveableHelper.java:157)
+	at org.eclipse.ui.internal.SaveableHelper$5.run(SaveableHelper.java:286)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:437)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:353)
+	at org.eclipse.ui.internal.WorkbenchWindow$14.run(WorkbenchWindow.java:2184)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2180)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:294)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:272)
+	at org.eclipse.ui.internal.SaveableHelper.savePart(SaveableHelper.java:162)
+	at org.eclipse.ui.internal.WorkbenchPage.saveSaveable(WorkbenchPage.java:3904)
+	at org.eclipse.ui.internal.WorkbenchPage.saveEditor(WorkbenchPage.java:3918)
+	at org.eclipse.cdt.internal.ui.cview.BuildGroup$CDTBuildAction.saveEditors(BuildGroup.java:112)
+	at org.eclipse.cdt.internal.ui.cview.BuildGroup$CDTBuildAction.run(BuildGroup.java:79)
+	at org.eclipse.cdt.ui.actions.BuildActiveConfigMenuAction.run(BuildActiveConfigMenuAction.java:92)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:247)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$5(ActionContributionItem.java:436)
+	at org.eclipse.jface.action.ActionContributionItem$$Lambda$67/24525574.handleEvent(Unknown Source)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4228)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3816)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.064
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=1018 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@015c115d
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.064
+!MESSAGE Thread 'Worker-99' tid=545 (WAITING)
+Waiting for: org.eclipse.ui.console.IOConsoleInputStream@00978b48
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:150)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:93)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.TracingConsole$InputReadJob.run(TracingConsole.java:195)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.064
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=497 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@018cb367
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.064
+!MESSAGE Thread 'SVN Kit 1.8 Connector' tid=306 (WAITING)
+Waiting for: java.util.ArrayList@00ba612d
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.polarion.team.svn.connector.svnkit.SVNKitService$ProgressMonitorThread.run(SVNKitService.java:201)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.064
+!MESSAGE Thread 'Thread-9' tid=46 (WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@014582f2
+!STACK 0
+java.lang.Exception: Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingDeque.takeFirst(LinkedBlockingDeque.java:492)
+	at java.util.concurrent.LinkedBlockingDeque.take(LinkedBlockingDeque.java:680)
+	at sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:118)
+	at com.renesas.cdt.synergy.pagecommon.utils.FilteredFolderWatcher$FilterableFolderWatcherRunnable.processEvents(FilteredFolderWatcher.java:220)
+	at com.renesas.cdt.synergy.pagecommon.utils.FilteredFolderWatcher$FilterableFolderWatcherRunnable.run(FilteredFolderWatcher.java:210)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.065
+!MESSAGE Thread 'Thread-7' tid=43 (TIMED_WAITING)
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:85)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.065
+!MESSAGE Thread 'TimerQueue' tid=30 (TIMED_WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@007bb948
+Holding: java.util.concurrent.locks.ReentrantLock$NonfairSync@012dfe45
+!STACK 0
+java.lang.Exception: Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.DelayQueue.take(DelayQueue.java:223)
+	at javax.swing.TimerQueue.run(TimerQueue.java:171)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.065
+!MESSAGE Thread 'EventAdmin Async Event Dispatcher Thread' tid=29 (WAITING)
+Waiting for: org.eclipse.swt.widgets.RunnableLock@0175da24
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:246)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4813)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.065
+!MESSAGE Thread 'Java indexing' tid=27 (WAITING)
+Waiting for: org.eclipse.jdt.internal.core.search.indexing.IndexManager@0141d7d8
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:371)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.065
+!MESSAGE Thread 'EMF Reference Cleaner' tid=17 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@00c29fa8
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.065
+!MESSAGE Thread 'Worker-JM' tid=15 (WAITING)
+Waiting for: java.util.ArrayList@01194e8c
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.065
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=1153 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@000b9f03
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.065
+!MESSAGE Sample at 18:48:02.500 (+1.336s)
+Thread 'main' tid=1 (RUNNABLE)
+!STACK 0
+java.lang.Exception: Stack Trace
+	at com.tasking.pinmapper.settings.api.impl.PinSettingsImpl.getConfigSettingArray(Unknown Source)
+	at com.tasking.pinmapper.settings.api.impl.PinSettingsImpl$1ConfigSettingList.get(Unknown Source)
+	at com.tasking.pinmapper.settings.api.impl.PinSettingsImpl$1ConfigSettingList.get(Unknown Source)
+	at java.util.AbstractList$Itr.next(AbstractList.java:358)
+	at com.tasking.pinmapper.settings.PinSettingsModel.configSettingStrings(PinSettingsModel.java:969)
+	at com.tasking.pinmapper.settings.PinSettingsModel.updateConfigs(PinSettingsModel.java:793)
+	at com.tasking.pinmapper.settings.PinSettingsModel.saveXml(PinSettingsModel.java:564)
+	at com.tasking.pinmapper.settings.PinSettingsModel.save(PinSettingsModel.java:521)
+	at com.tasking.pinmapper.editors.PinEditor.commonSave(PinEditor.java:830)
+	at com.tasking.pinmapper.editors.PinEditor.doSave(PinEditor.java:867)
+	at com.renesas.cdt.synergy.pinconfiguration.internal.pages.PagePinConfig.saveContent(PagePinConfig.java:813)
+	at com.renesas.cdt.synergy.settingseditor.pages.ConfigPageCompositeWrapper.saveContent(ConfigPageCompositeWrapper.java:133)
+	at com.renesas.cdt.synergy.settingseditor.internal.editors.SynergySettingsEditor.doSave(SynergySettingsEditor.java:342)
+	at org.eclipse.ui.internal.SaveableHelper$2.run(SaveableHelper.java:157)
+	at org.eclipse.ui.internal.SaveableHelper$5.run(SaveableHelper.java:286)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:437)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:353)
+	at org.eclipse.ui.internal.WorkbenchWindow$14.run(WorkbenchWindow.java:2184)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2180)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:294)
+	at org.eclipse.ui.internal.SaveableHelper.runProgressMonitorOperation(SaveableHelper.java:272)
+	at org.eclipse.ui.internal.SaveableHelper.savePart(SaveableHelper.java:162)
+	at org.eclipse.ui.internal.WorkbenchPage.saveSaveable(WorkbenchPage.java:3904)
+	at org.eclipse.ui.internal.WorkbenchPage.saveEditor(WorkbenchPage.java:3918)
+	at org.eclipse.cdt.internal.ui.cview.BuildGroup$CDTBuildAction.saveEditors(BuildGroup.java:112)
+	at org.eclipse.cdt.internal.ui.cview.BuildGroup$CDTBuildAction.run(BuildGroup.java:79)
+	at org.eclipse.cdt.ui.actions.BuildActiveConfigMenuAction.run(BuildActiveConfigMenuAction.java:92)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:247)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:228)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$5(ActionContributionItem.java:436)
+	at org.eclipse.jface.action.ActionContributionItem$$Lambda$67/24525574.handleEvent(Unknown Source)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4410)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4228)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3816)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:687)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:604)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.066
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=1018 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@015c115d
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.066
+!MESSAGE Thread 'Worker-127' tid=949 (RUNNABLE)
+!STACK 0
+java.lang.Exception: Stack Trace
+	at org.eclipse.core.internal.resources.refresh.win32.Win32Natives.WaitForMultipleObjects(Native Method)
+	at org.eclipse.core.internal.resources.refresh.win32.Win32Monitor.waitForNotification(Win32Monitor.java:582)
+	at org.eclipse.core.internal.resources.refresh.win32.Win32Monitor.run(Win32Monitor.java:519)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.066
+!MESSAGE Thread 'Worker-99' tid=545 (WAITING)
+Waiting for: org.eclipse.ui.console.IOConsoleInputStream@00978b48
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:150)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:93)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.cdt.dsf.gdb.internal.ui.console.TracingConsole$InputReadJob.run(TracingConsole.java:195)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.066
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=497 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@018cb367
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.066
+!MESSAGE Thread 'SVN Kit 1.8 Connector' tid=306 (WAITING)
+Waiting for: java.util.ArrayList@00ba612d
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.polarion.team.svn.connector.svnkit.SVNKitService$ProgressMonitorThread.run(SVNKitService.java:201)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.066
+!MESSAGE Thread 'Thread-9' tid=46 (WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@014582f2
+!STACK 0
+java.lang.Exception: Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+	at java.util.concurrent.LinkedBlockingDeque.takeFirst(LinkedBlockingDeque.java:492)
+	at java.util.concurrent.LinkedBlockingDeque.take(LinkedBlockingDeque.java:680)
+	at sun.nio.fs.AbstractWatchService.take(AbstractWatchService.java:118)
+	at com.renesas.cdt.synergy.pagecommon.utils.FilteredFolderWatcher$FilterableFolderWatcherRunnable.processEvents(FilteredFolderWatcher.java:220)
+	at com.renesas.cdt.synergy.pagecommon.utils.FilteredFolderWatcher$FilterableFolderWatcherRunnable.run(FilteredFolderWatcher.java:210)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.066
+!MESSAGE Thread 'Thread-7' tid=43 (TIMED_WAITING)
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Thread.sleep(Native Method)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:85)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.067
+!MESSAGE Thread 'TimerQueue' tid=30 (TIMED_WAITING)
+Waiting for: java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@007bb948
+Holding: java.util.concurrent.locks.ReentrantLock$NonfairSync@012dfe45
+!STACK 0
+java.lang.Exception: Stack Trace
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+	at java.util.concurrent.DelayQueue.take(DelayQueue.java:223)
+	at javax.swing.TimerQueue.run(TimerQueue.java:171)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.067
+!MESSAGE Thread 'EventAdmin Async Event Dispatcher Thread' tid=29 (WAITING)
+Waiting for: org.eclipse.swt.widgets.RunnableLock@0175da24
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:246)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4813)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:211)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:53)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.067
+!MESSAGE Thread 'Java indexing' tid=27 (WAITING)
+Waiting for: org.eclipse.jdt.internal.core.search.indexing.IndexManager@0141d7d8
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.eclipse.jdt.internal.core.search.processing.JobManager.run(JobManager.java:371)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.067
+!MESSAGE Thread 'EMF Reference Cleaner' tid=17 (WAITING)
+Waiting for: java.lang.ref.ReferenceQueue$Lock@00c29fa8
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.067
+!MESSAGE Thread 'Worker-JM' tid=15 (WAITING)
+Waiting for: java.util.ArrayList@01194e8c
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.core.internal.jobs.InternalWorker.run(InternalWorker.java:59)
+!SUBENTRY 2 org.eclipse.ui.monitoring 1 0 2019-03-12 18:48:03.067
+!MESSAGE Thread 'org.eclipse.cdt.internal.ui.text.CReconciler' tid=1153 (TIMED_WAITING)
+Waiting for: org.eclipse.jface.text.reconciler.DirtyRegionQueue@000b9f03
+!STACK 0
+java.lang.Exception: Stack Trace
+	at java.lang.Object.wait(Native Method)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:180)
+
+!ENTRY com.renesas.cdt.synergy.packs 2 0 2019-03-12 18:48:04.135
+!MESSAGE Warning parsing file '/C:/Users/JPRMEXDI/Documents/Repository/project_git/Proyecto_Integrador_DSE_2019/EMCS_Source_Code/EMCS_SoftwareProject/.module_descriptions/Renesas%23%23Framework%20Services%23%23all%23%23sf_el_nx_crypto%23%23%23%231.5.0.xml': cvc-complex-type.2.4.a: Invalid content was found starting with element 'includes'. One of '{functions, init}' is expected.
+!STACK 0
+org.xml.sax.SAXParseException; cvc-complex-type.2.4.a: Invalid content was found starting with element 'includes'. One of '{functions, init}' is expected.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:452)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3230)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1790)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:740)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.DOMValidatorHelper.beginNode(DOMValidatorHelper.java:277)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.DOMValidatorHelper.validate(DOMValidatorHelper.java:244)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.DOMValidatorHelper.validate(DOMValidatorHelper.java:190)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:109)
+	at javax.xml.validation.Validator.validate(Validator.java:124)
+	at com.renesas.cdt.synergy.packs.model.ModuleUtils.parseDocument(ModuleUtils.java:445)
+	at com.renesas.cdt.synergy.packs.model.ModuleUtils.parseDocument(ModuleUtils.java:423)
+	at com.renesas.cdt.synergy.packs.model.ModuleUtils.parseModuleDescription(ModuleUtils.java:414)
+	at com.renesas.cdt.synergy.packs.model.ModuleUtils.parseModuleDescriptionFile(ModuleUtils.java:214)
+	at com.renesas.cdt.synergy.packs.model.ModuleUtils.getPossibleModuleDescriptionDocument(ModuleUtils.java:388)
+	at com.renesas.cdt.synergy.packs.model.ModuleUtils.getModulesListForAvailableModulesEvent(ModuleUtils.java:344)
+	at com.renesas.cdt.synergy.packs.model.ModuleUtils.saveAvailableComponentsSetting(ModuleUtils.java:245)
+	at com.renesas.cdt.synergy.contentgen.builder.SynergyProjectBuilder.generateContent(SynergyProjectBuilder.java:106)
+	at com.renesas.cdt.synergy.contentgen.builder.SynergyBuilder.incrementalBuild(SynergyBuilder.java:83)
+	at com.renesas.cdt.synergy.contentgen.builder.SynergyBuilder.build(SynergyBuilder.java:48)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:487)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:406)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:285)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.tasking.util 2 0 2019-03-12 18:48:06.364
+!MESSAGE Input file not found: "". Using first of 1 alternatives: "file:/C:/Renesas/Synergy/e2studio_v6.2.1_ssp_v1.5.0/internal/projectgen/arm/1.5/pinmapping/PinCfgR7FS7G27xxxxxxFC.xml"
+
+!ENTRY com.tasking.util 2 0 2019-03-12 18:48:06.513
+!MESSAGE Input file not found: "". Using first of 1 alternatives: "file:/C:/Renesas/Synergy/e2studio_v6.2.1_ssp_v1.5.0/internal/projectgen/arm/1.5/pinmapping/PinCfgR7FS7G27xxxxxxFC.xml"
+
+!ENTRY com.tasking.util 2 0 2019-03-12 18:48:44.509
+!MESSAGE Input file not found: "". Using first of 1 alternatives: "file:/C:/Renesas/Synergy/e2studio_v6.2.1_ssp_v1.5.0/internal/projectgen/arm/1.5/pinmapping/PinCfgR7FS7G27xxxxxxFC.xml"
+
+!ENTRY com.tasking.util 2 0 2019-03-12 18:48:44.633
+!MESSAGE Input file not found: "". Using first of 1 alternatives: "file:/C:/Renesas/Synergy/e2studio_v6.2.1_ssp_v1.5.0/internal/projectgen/arm/1.5/pinmapping/PinCfgR7FS7G27xxxxxxFC.xml"

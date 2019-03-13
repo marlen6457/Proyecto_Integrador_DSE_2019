@@ -812,8 +812,16 @@ Synergy Configuration
       Payload: duty_payload
       Payload type: duty_payload_t
       
+    Event Class "rpms"
+      Symbol: SF_MESSAGE_EVENT_CLASS_RPMS
+      Name: rpms
+      Payload header file: rpms_api.h
+      Payload: rpms_payload
+      Payload type: rpms_payload_t
+      
     Subscriber "Main Thread" 0 0
       Event Class "Touch"
       Event Class "setpoint"
       Event Class "duty"
+      Event Class "rpms"
       
