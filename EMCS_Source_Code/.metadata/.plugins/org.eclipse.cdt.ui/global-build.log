@@ -268,3 +268,11 @@ arm-none-eabi-size --format=berkeley "EMCS_SoftwareProject.elf"
 'Finished building: EMCS_SoftwareProject.srec'
 ' '
 ' '
+20:35:12 **** Incremental Build of configuration Debug for project Thermostat_SK_S7G2 ****
+make -j4 all 
+'Invoking: Cross ARM GNU Print Size'
+arm-none-eabi-size --format=berkeley "Thermostat_SK_S7G2.elf"
+   text	   data	    bss	    dec	    hex	filename
+1415964	   4808	1174692	2595464	 279a88	Thermostat_SK_S7G2.elf
+'Finished building: Thermostat_SK_S7G2.siz'
+' '
