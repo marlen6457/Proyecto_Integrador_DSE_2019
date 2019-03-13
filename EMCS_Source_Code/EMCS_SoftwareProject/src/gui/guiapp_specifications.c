@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy): 12. 3.2019   Time (hh:mm): 17:57                        */
+/*  Date (dd.mm.yyyy): 12. 3.2019   Time (hh:mm): 19:29                        */
 /*******************************************************************************/
 
 
@@ -178,6 +178,96 @@ GX_PROMPT_PROPERTIES main_page_prompt_1_properties =
     GX_COLOR_ID_TEXT_INPUT_FILL,             /* normal text color              */
     GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
 };
+GX_PROMPT_PROPERTIES main_page_prompt_2_properties =
+{
+    0,                                       /* string id                      */
+    GX_FONT_ID_PROMPT,                       /* font id                        */
+    GX_COLOR_ID_TEXT,                        /* normal text color              */
+    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+};
+GX_PROMPT_PROPERTIES main_page_prompt_3_properties =
+{
+    0,                                       /* string id                      */
+    GX_FONT_ID_PROMPT,                       /* font id                        */
+    GX_COLOR_ID_TEXT,                        /* normal text color              */
+    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+};
+GX_PROMPT_PROPERTIES main_page_prompt_4_properties =
+{
+    0,                                       /* string id                      */
+    GX_FONT_ID_PROMPT,                       /* font id                        */
+    GX_COLOR_ID_TEXT,                        /* normal text color              */
+    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_prompt_4_define =
+{
+    "prompt_4",
+    GX_TYPE_PROMPT,                          /* widget type                    */
+    ID_RPMS_TEXT,                            /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_THIN|GX_STYLE_ENABLED|GX_STYLE_TEXT_CENTER,   /* style flags */
+    GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
+    sizeof(GX_PROMPT),                       /* control block size             */
+    GX_COLOR_ID_WIDGET_FILL,                 /* normal color id                */
+    GX_COLOR_ID_SELECTED_FILL,               /* selected color id              */
+    gx_studio_prompt_create,                 /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {116, 123, 225, 146},                    /* widget size                    */
+    GX_NULL,                                 /* no next widget                 */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt_4), /* control block    */
+    (void *) &main_page_prompt_4_properties  /* extended properties            */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_prompt_3_define =
+{
+    "prompt_3",
+    GX_TYPE_PROMPT,                          /* widget type                    */
+    ID_DUTY_TEXT,                            /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_THIN|GX_STYLE_ENABLED|GX_STYLE_TEXT_CENTER,   /* style flags */
+    GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
+    sizeof(GX_PROMPT),                       /* control block size             */
+    GX_COLOR_ID_WIDGET_FILL,                 /* normal color id                */
+    GX_COLOR_ID_SELECTED_FILL,               /* selected color id              */
+    gx_studio_prompt_create,                 /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {118, 82, 227, 105},                     /* widget size                    */
+    &main_page_prompt_4_define,              /* next widget definition         */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt_3), /* control block    */
+    (void *) &main_page_prompt_3_properties  /* extended properties            */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_prompt_2_define =
+{
+    "prompt_2",
+    GX_TYPE_PROMPT,                          /* widget type                    */
+    ID_SET_POINT_TEXT,                       /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_THIN|GX_STYLE_ENABLED|GX_STYLE_TEXT_CENTER,   /* style flags */
+    GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
+    sizeof(GX_PROMPT),                       /* control block size             */
+    GX_COLOR_ID_WIDGET_FILL,                 /* normal color id                */
+    GX_COLOR_ID_SELECTED_FILL,               /* selected color id              */
+    gx_studio_prompt_create,                 /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {116, 41, 225, 64},                      /* widget size                    */
+    &main_page_prompt_3_define,              /* next widget definition         */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt_2), /* control block    */
+    (void *) &main_page_prompt_2_properties  /* extended properties            */
+};
 
 GX_CONST GX_STUDIO_WIDGET main_page_prompt_1_define =
 {
@@ -196,7 +286,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_prompt_1_define =
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
     {114, 222, 161, 245},                    /* widget size                    */
-    GX_NULL,                                 /* no next widget                 */
+    &main_page_prompt_2_define,              /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt_1), /* control block    */
     (void *) &main_page_prompt_1_properties  /* extended properties            */

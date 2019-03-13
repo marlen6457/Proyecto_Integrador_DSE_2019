@@ -5,11 +5,13 @@
 #include "setpoint_api.h"
 #include "duty_api.h"
 #include "rpms_api.h"
+#include "system_api.h"
 typedef union u_sf_message_payload
 {
     sf_touch_panel_payload_t sf_touch_panel_payload;
     setpoint_payload_t setpoint_payload;
     duty_payload_t duty_payload;
     rpms_payload_t rpms_payload;
+    system_payload_t system_payload;
 } sf_message_payload_t;
 #endif /* SF_MESSAGE_PAYLOADS_H_ */

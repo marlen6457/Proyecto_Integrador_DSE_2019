@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy): 12. 3.2019   Time (hh:mm): 17:57                        */
+/*  Date (dd.mm.yyyy): 12. 3.2019   Time (hh:mm): 19:29                        */
 /*******************************************************************************/
 
 
@@ -31,9 +31,12 @@ extern   "C" {
 #define ID_BTN_OFF 7
 #define ID_FAN_STATUS_OFF 8
 #define ID_FAN_TEXT2 9
-#define ID_WINDOW 10
-#define ID_ICON_MORE 11
-#define ID_ICON_TEAM 12
+#define ID_SET_POINT_TEXT 10
+#define ID_DUTY_TEXT 11
+#define ID_RPMS_TEXT 12
+#define ID_WINDOW 13
+#define ID_ICON_MORE 14
+#define ID_ICON_TEAM 15
 
 
 /* Declare properties structures for each utilized widget type                 */
@@ -112,6 +115,9 @@ typedef struct MAIN_PAGE_CONTROL_BLOCK_STRUCT
     GX_BUTTON main_page_button_1;
     GX_PIXELMAP_BUTTON main_page_pixelmap_button_1;
     GX_PROMPT main_page_prompt_1;
+    GX_PROMPT main_page_prompt_2;
+    GX_PROMPT main_page_prompt_3;
+    GX_PROMPT main_page_prompt_4;
 } MAIN_PAGE_CONTROL_BLOCK;
 
 typedef struct WINDOW1_CONTROL_BLOCK_STRUCT

@@ -213,14 +213,19 @@
   </synergyComponentSelection>
   <synergyIcuConfiguration/>
   <synergyMessagingConfiguration>
+    <event display="set point" value="SF_MESSAGE_EVENT_SET_POINT"/>
+    <event display="duty cycle" value="SF_MESSAGE_EVENT_DUTY_CYCLE"/>
+    <event display="rpms" value="SF_MESSAGE_EVENT_RPMS"/>
     <eventClass display="setpoint" header="setpoint_api.h" id="eventClass.1630780896" payload="setpoint_payload" payloadType="setpoint_payload_t" value="SF_MESSAGE_EVENT_CLASS_SETPOINT"/>
     <eventClass display="duty" header="duty_api.h" id="eventClass.697511962" payload="duty_payload" payloadType="duty_payload_t" value="SF_MESSAGE_EVENT_CLASS_DUTY"/>
     <eventClass display="rpms" header="rpms_api.h" id="eventClass.1460525633" payload="rpms_payload" payloadType="rpms_payload_t" value="SF_MESSAGE_EVENT_CLASS_RPMS"/>
+    <eventClass display="system" header="system_api.h" id="eventClass.836898615" payload="system_payload" payloadType="system_payload_t" value="SF_MESSAGE_EVENT_CLASS_SYSTEM"/>
     <subscriber context="rtos.threadx.thread.239426899" end="0" id="subscriber.859390088" start="0">
       <subscribe eventClass="module.framework.sf_touch_panel.eventClass.eventClassTouch"/>
       <subscribe eventClass="eventClass.1630780896"/>
       <subscribe eventClass="eventClass.697511962"/>
       <subscribe eventClass="eventClass.1460525633"/>
+      <subscribe eventClass="eventClass.836898615"/>
     </subscriber>
   </synergyMessagingConfiguration>
   <synergyModuleConfiguration>

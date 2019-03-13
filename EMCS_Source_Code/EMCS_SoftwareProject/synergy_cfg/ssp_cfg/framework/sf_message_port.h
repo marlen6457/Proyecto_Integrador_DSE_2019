@@ -7,11 +7,15 @@ typedef enum e_sf_message_event_class
     SF_MESSAGE_EVENT_CLASS_SETPOINT, /* setpoint */
     SF_MESSAGE_EVENT_CLASS_DUTY, /* duty */
     SF_MESSAGE_EVENT_CLASS_RPMS, /* rpms */
+    SF_MESSAGE_EVENT_CLASS_SYSTEM, /* system */
 } sf_message_event_class_t;
 typedef enum e_sf_message_event
 {
     SF_MESSAGE_EVENT_UNUSED, /* Unused */
     SF_MESSAGE_EVENT_NEW_DATA, /* New Data */
+    SF_MESSAGE_EVENT_SET_POINT, /* set point */
+    SF_MESSAGE_EVENT_DUTY_CYCLE, /* duty cycle */
+    SF_MESSAGE_EVENT_RPMS, /* rpms */
 } sf_message_event_t;
 extern TX_QUEUE main_thread_message_queue;
 #endif /* SF_MESSAGE_PORT_H_ */
