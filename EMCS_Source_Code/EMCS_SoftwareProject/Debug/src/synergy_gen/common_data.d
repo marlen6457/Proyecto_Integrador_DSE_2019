@@ -55,6 +55,7 @@ src/synergy_gen/common_data.o: ../src/synergy_gen/common_data.c \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework/sf_message_cfg.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework/sf_message_payloads.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\api/sf_touch_panel_api.h \
+ C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/setpoint_api.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\instances/r_jpeg_decode.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\api/r_jpeg_decode_api.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\driver/r_jpeg_decode_cfg.h \
@@ -189,6 +190,8 @@ C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\
 C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework/sf_message_payloads.h:
 
 C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\api/sf_touch_panel_api.h:
+
+C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/setpoint_api.h:
 
 C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\instances/r_jpeg_decode.h:
 
