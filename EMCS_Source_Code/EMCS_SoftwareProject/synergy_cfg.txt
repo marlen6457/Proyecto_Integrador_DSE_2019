@@ -805,7 +805,15 @@ Synergy Configuration
       Payload: setpoint_payload
       Payload type: setpoint_payload_t
       
+    Event Class "duty"
+      Symbol: SF_MESSAGE_EVENT_CLASS_DUTY
+      Name: duty
+      Payload header file: duty_api.h
+      Payload: duty_payload
+      Payload type: duty_payload_t
+      
     Subscriber "Main Thread" 0 0
       Event Class "Touch"
       Event Class "setpoint"
+      Event Class "duty"
       
