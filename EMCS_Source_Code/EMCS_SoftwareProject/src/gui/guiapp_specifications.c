@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy): 11. 3.2019   Time (hh:mm): 21:15                        */
+/*  Date (dd.mm.yyyy): 12. 3.2019   Time (hh:mm): 17:57                        */
 /*******************************************************************************/
 
 
@@ -165,6 +165,88 @@ GX_PROMPT_PROPERTIES main_page_prompt_properties =
     GX_COLOR_ID_TEXT_INPUT_FILL,             /* normal text color              */
     GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
 };
+GX_PIXELMAP_BUTTON_PROPERTIES main_page_pixelmap_button_1_properties =
+{
+    0,                                       /* normal pixelmap id             */
+    0,                                       /* selected pixelmap id           */
+    0                                        /* disabled pixelmap id           */
+};
+GX_PROMPT_PROPERTIES main_page_prompt_1_properties =
+{
+    0,                                       /* string id                      */
+    GX_FONT_ID_PROMPT,                       /* font id                        */
+    GX_COLOR_ID_TEXT_INPUT_FILL,             /* normal text color              */
+    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_prompt_1_define =
+{
+    "prompt_1",
+    GX_TYPE_PROMPT,                          /* widget type                    */
+    ID_FAN_TEXT2,                            /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_NONE|GX_STYLE_TRANSPARENT|GX_STYLE_ENABLED|GX_STYLE_TEXT_CENTER,   /* style flags */
+    GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
+    sizeof(GX_PROMPT),                       /* control block size             */
+    GX_COLOR_ID_TEXT_INPUT_TEXT,             /* normal color id                */
+    GX_COLOR_ID_SELECTED_FILL,               /* selected color id              */
+    gx_studio_prompt_create,                 /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {114, 222, 161, 245},                    /* widget size                    */
+    GX_NULL,                                 /* no next widget                 */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt_1), /* control block    */
+    (void *) &main_page_prompt_1_properties  /* extended properties            */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_pixelmap_button_1_define =
+{
+    "pixelmap_button_1",
+    GX_TYPE_PIXELMAP_BUTTON,                 /* widget type                    */
+    ID_FAN_STATUS_OFF,                       /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_NONE|GX_STYLE_ENABLED,   /* style flags                    */
+    GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
+    sizeof(GX_PIXELMAP_BUTTON),              /* control block size             */
+    GX_COLOR_ID_BTN_LOWER,                   /* normal color id                */
+    GX_COLOR_ID_BTN_UPPER,                   /* selected color id              */
+    gx_studio_pixelmap_button_create,        /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {105, 217, 169, 253},                    /* widget size                    */
+    &main_page_prompt_1_define,              /* next widget definition         */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_pixelmap_button_1), /* control block */
+    (void *) &main_page_pixelmap_button_1_properties /* extended properties    */
+};
+
+GX_CONST GX_STUDIO_WIDGET main_page_button_1_define =
+{
+    "button_1",
+    GX_TYPE_BUTTON,                          /* widget type                    */
+    ID_BTN_OFF,                              /* widget id                      */
+    #if defined(GX_WIDGET_USER_DATA)
+    0,                                       /* user data                      */
+    #endif
+    GX_STYLE_BORDER_NONE|GX_STYLE_TRANSPARENT|GX_STYLE_ENABLED,   /* style flags */
+    GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
+    sizeof(GX_BUTTON),                       /* control block size             */
+    GX_COLOR_ID_BTN_LOWER,                   /* normal color id                */
+    GX_COLOR_ID_BTN_UPPER,                   /* selected color id              */
+    gx_studio_button_create,                 /* create function                */
+    GX_NULL,                                 /* drawing function override      */
+    GX_NULL,                                 /* event function override        */
+    {98, 197, 175, 264},                     /* widget size                    */
+    &main_page_pixelmap_button_1_define,     /* next widget definition         */
+    GX_NULL,                                 /* no child widgets               */ 
+    offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_button_1), /* control block    */
+    (void *) GX_NULL                         /* no extended properties         */
+};
 
 GX_CONST GX_STUDIO_WIDGET main_page_prompt_define =
 {
@@ -182,8 +264,8 @@ GX_CONST GX_STUDIO_WIDGET main_page_prompt_define =
     gx_studio_prompt_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {23, 223, 70, 246},                      /* widget size                    */
-    GX_NULL,                                 /* no next widget                 */
+    {23, 222, 70, 245},                      /* widget size                    */
+    &main_page_button_1_define,              /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt), /* control block      */
     (void *) &main_page_prompt_properties    /* extended properties            */
@@ -193,11 +275,11 @@ GX_CONST GX_STUDIO_WIDGET main_page_button_define =
 {
     "button",
     GX_TYPE_BUTTON,                          /* widget type                    */
-    ID_BTN_EX1,                              /* widget id                      */
+    ID_BTN_ON,                               /* widget id                      */
     #if defined(GX_WIDGET_USER_DATA)
     0,                                       /* user data                      */
     #endif
-    GX_STYLE_BORDER_NONE|GX_STYLE_TRANSPARENT|GX_STYLE_ENABLED,   /* style flags */
+    GX_STYLE_BORDER_NONE|GX_STYLE_TRANSPARENT|GX_STYLE_DRAW_SELECTED|GX_STYLE_ENABLED,   /* style flags */
     GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
     sizeof(GX_BUTTON),                       /* control block size             */
     GX_COLOR_ID_BTN_LOWER,                   /* normal color id                */
@@ -205,7 +287,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_button_define =
     gx_studio_button_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {4, 197, 89, 275},                       /* widget size                    */
+    {8, 197, 85, 264},                       /* widget size                    */
     &main_page_prompt_define,                /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_button), /* control block      */

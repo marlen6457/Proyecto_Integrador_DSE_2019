@@ -58,16 +58,25 @@ UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 
     switch (event_ptr->gx_event_type){
 
+
+
         case GX_SIGNAL(ID_BACK_BTN, GX_EVENT_CLICKED):
                 show_window((GX_WINDOW*)&window1, (GX_WIDGET*)widget, true);
                 break;
 
-        case GX_SIGNAL(ID_BTN_EX1, GX_EVENT_CLICKED):
-        update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS, GX_PIXELMAP_ID_GREEN_STATUS);
-        update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
-        break;
+        case GX_SIGNAL(ID_BTN_ON, GX_EVENT_CLICKED):
+                update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS, GX_PIXELMAP_ID_GREEN_STATUS);
+                update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS_OFF, GX_PIXELMAP_ID_GRAY_STATUS);
+                update_text_id(widget->gx_widget_parent, ID_FAN_TEXT2, GX_STRING_ID_STATUS_OFF);
+                update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
+                break;
 
-
+        case GX_SIGNAL(ID_BTN_OFF, GX_EVENT_CLICKED):
+                update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS_OFF, GX_PIXELMAP_ID_RED_STATUS);
+                update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS, GX_PIXELMAP_ID_GRAY_STATUS);
+                update_text_id(widget->gx_widget_parent, ID_FAN_TEXT2, GX_STRING_ID_STATUS_OFF);
+                update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
+                break;
 
 
 
