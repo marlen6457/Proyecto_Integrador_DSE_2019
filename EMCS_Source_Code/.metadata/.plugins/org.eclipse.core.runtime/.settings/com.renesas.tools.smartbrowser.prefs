@@ -17,7 +17,11 @@ Current.DocList.NOTIFICATION.Doc000.MessageActions.Count=1
 Current.DocList.NOTIFICATION.Doc000.MessageContents=My \#FANBOOST vote goes to \#PascalWehrlein of @MahindraRacing. Show your support by doing the same\! \#passioneering
 Current.DocList.NOTIFICATION.Doc000.MessageId=https\://twitter.com/RenesasAmerica/status/1083252487522443264
 Current.DocList.NOTIFICATION.Doc000.ProviderId=com.renesas.tools.smartbrowser
+<<<<<<< HEAD
 Current.DocList.NOTIFICATION.Doc000.ReceivedDate=2019/03/09
+=======
+Current.DocList.NOTIFICATION.Doc000.ReceivedDate=2019/03/11
+>>>>>>> Dev_IDO_update_v2
 Current.DocList.NOTIFICATION.Doc001.CategoryId=com.renesas.tools.smartbrowser.category.renesasnews
 Current.DocList.NOTIFICATION.Doc001.DocType=DTYPE_NOTIFICATION
 Current.DocList.NOTIFICATION.Doc001.IsExecuted=false
@@ -28,7 +32,11 @@ Current.DocList.NOTIFICATION.Doc001.MessageActions.Count=1
 Current.DocList.NOTIFICATION.Doc001.MessageContents=Announcement\: @MouserElec is our exclusive sponsor and supports the MCU Car Rally 2019 at \#ew19\! Mouser shares our mission to strengthen students' skills and support them in becoming the drivers of future technology. For details\: https\://t.co/3oCP5pv6p0. https\://t.co/luhwoPmYnR
 Current.DocList.NOTIFICATION.Doc001.MessageId=https\://twitter.com/RenesasAmerica/status/1096241454228389891
 Current.DocList.NOTIFICATION.Doc001.ProviderId=com.renesas.tools.smartbrowser
+<<<<<<< HEAD
 Current.DocList.NOTIFICATION.Doc001.ReceivedDate=2019/03/09
+=======
+Current.DocList.NOTIFICATION.Doc001.ReceivedDate=2019/03/11
+>>>>>>> Dev_IDO_update_v2
 Current.DocList.NOTIFICATION.Doc002.CategoryId=com.renesas.tools.smartbrowser.category.renesasnews
 Current.DocList.NOTIFICATION.Doc002.DocType=DTYPE_NOTIFICATION
 Current.DocList.NOTIFICATION.Doc002.IsExecuted=false
@@ -39,7 +47,11 @@ Current.DocList.NOTIFICATION.Doc002.MessageActions.Count=1
 Current.DocList.NOTIFICATION.Doc002.MessageContents=The annual leading international world fair on all things embedded is here again\! Visit Renesas at Embedded World in Hall 1, Stand 310 to experience our latest technologies and innovative solutions for a truly connected world. See you there\! \#ew19 \#renesasinside https\://t.co/j9sFJ3x34W
 Current.DocList.NOTIFICATION.Doc002.MessageId=https\://twitter.com/RenesasAmerica/status/1097541413351378946
 Current.DocList.NOTIFICATION.Doc002.ProviderId=com.renesas.tools.smartbrowser
+<<<<<<< HEAD
 Current.DocList.NOTIFICATION.Doc002.ReceivedDate=2019/03/09
+=======
+Current.DocList.NOTIFICATION.Doc002.ReceivedDate=2019/03/11
+>>>>>>> Dev_IDO_update_v2
 Current.DocList.NOTIFICATION.Doc003.CategoryId=com.renesas.tools.smartbrowser.category.renesasnews
 Current.DocList.NOTIFICATION.Doc003.DocType=DTYPE_NOTIFICATION
 Current.DocList.NOTIFICATION.Doc003.IsExecuted=false
@@ -50,7 +62,11 @@ Current.DocList.NOTIFICATION.Doc003.MessageActions.Count=1
 Current.DocList.NOTIFICATION.Doc003.MessageContents=Find out how technology and embedded systems have been playing a vital role for @MahindraRacing driver Pascal Wehrlein as he gives his personal insights into the technology that's driving him forward. Read\: https\://t.co/vUUaFYaR9j https\://t.co/KMqqsyfEp3
 Current.DocList.NOTIFICATION.Doc003.MessageId=https\://twitter.com/RenesasAmerica/status/1098266222695800834
 Current.DocList.NOTIFICATION.Doc003.ProviderId=com.renesas.tools.smartbrowser
+<<<<<<< HEAD
 Current.DocList.NOTIFICATION.Doc003.ReceivedDate=2019/03/09
+=======
+Current.DocList.NOTIFICATION.Doc003.ReceivedDate=2019/03/11
+>>>>>>> Dev_IDO_update_v2
 Current.DocList.NOTIFICATION.Doc004.CategoryId=com.renesas.tools.smartbrowser.category.renesasnews
 Current.DocList.NOTIFICATION.Doc004.DocType=DTYPE_NOTIFICATION
 Current.DocList.NOTIFICATION.Doc004.IsExecuted=false
@@ -61,7 +77,11 @@ Current.DocList.NOTIFICATION.Doc004.MessageActions.Count=1
 Current.DocList.NOTIFICATION.Doc004.MessageContents=Have you registered for @embedded_world? Do not miss us at Hall 1, Stand 310 to catch the revolutionary SOTB Technology, Autonomous Driving Technology and meet with @MahindraRacingdriver Pascal Wehrlein (only on 26 Feb)\! See you there\! \#ew19 \#renesasinside https\://t.co/goglQg9xRZ
 Current.DocList.NOTIFICATION.Doc004.MessageId=https\://twitter.com/RenesasAmerica/status/1098802090372222977
 Current.DocList.NOTIFICATION.Doc004.ProviderId=com.renesas.tools.smartbrowser
+<<<<<<< HEAD
 Current.DocList.NOTIFICATION.Doc004.ReceivedDate=2019/03/09
+=======
+Current.DocList.NOTIFICATION.Doc004.ReceivedDate=2019/03/11
+>>>>>>> Dev_IDO_update_v2
 Current.DocList.NOTIFICATION.Filter.IssueDate=
 Current.DocList.NOTIFICATION.Filter.IssueDate.ComparisonType=CMPTYPE_LATER
 Current.DocList.NOTIFICATION.Filter.KeywordTitle=
@@ -109,5 +129,9 @@ RssMessageHistory.Site002.RssMessages.RssMessage003=https\://twitter.com/Renesas
 RssMessageHistory.Site002.RssMessages.RssMessage004=https\://twitter.com/RenesasAmerica/status/1083252487522443264
 RssMessageHistory.Site002.RssSite=http\://tool-support.renesas.com/autoupdate/support/smartbrowser/en-us/RenesasNews/rss.xml
 RssRegisteredSite.IsOpenedTopSite=true
+<<<<<<< HEAD
 RssRegisteredSite.LastChecking=1552350671009
+=======
+RssRegisteredSite.LastChecking=1552359738272
+>>>>>>> Dev_IDO_update_v2
 eclipse.preferences.version=1

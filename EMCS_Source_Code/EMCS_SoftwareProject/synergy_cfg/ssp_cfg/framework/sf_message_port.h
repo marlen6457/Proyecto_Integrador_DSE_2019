@@ -4,6 +4,8 @@
 typedef enum e_sf_message_event_class
 {
     SF_MESSAGE_EVENT_CLASS_TOUCH, /* Touch */
+    SF_MESSAGE_EVENT_CLASS_SETPOINT, /* setpoint */
+    SF_MESSAGE_EVENT_CLASS_DUTY, /* duty */
 } sf_message_event_class_t;
 typedef enum e_sf_message_event
 {

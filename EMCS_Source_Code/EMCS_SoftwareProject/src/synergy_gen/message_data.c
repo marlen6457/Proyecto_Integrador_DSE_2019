@@ -13,8 +13,19 @@ static sf_message_subscriber_t *gp_group_SF_MESSAGE_EVENT_CLASS_TOUCH[] =
 static sf_message_subscriber_list_t g_list_SF_MESSAGE_EVENT_CLASS_TOUCH =
 { .event_class = SF_MESSAGE_EVENT_CLASS_TOUCH, .number_of_nodes = 1, .pp_subscriber_group =
           gp_group_SF_MESSAGE_EVENT_CLASS_TOUCH };
+static sf_message_subscriber_t *gp_group_SF_MESSAGE_EVENT_CLASS_SETPOINT[] =
+{ &main_thread_message_queue_0_0, };
+static sf_message_subscriber_list_t g_list_SF_MESSAGE_EVENT_CLASS_SETPOINT =
+{ .event_class = SF_MESSAGE_EVENT_CLASS_SETPOINT, .number_of_nodes = 1, .pp_subscriber_group =
+          gp_group_SF_MESSAGE_EVENT_CLASS_SETPOINT };
+static sf_message_subscriber_t *gp_group_SF_MESSAGE_EVENT_CLASS_DUTY[] =
+{ &main_thread_message_queue_0_0, };
+static sf_message_subscriber_list_t g_list_SF_MESSAGE_EVENT_CLASS_DUTY =
+{ .event_class = SF_MESSAGE_EVENT_CLASS_DUTY, .number_of_nodes = 1, .pp_subscriber_group =
+          gp_group_SF_MESSAGE_EVENT_CLASS_DUTY };
 sf_message_subscriber_list_t *p_subscriber_lists[] =
-{ &g_list_SF_MESSAGE_EVENT_CLASS_TOUCH, NULL };
+{ &g_list_SF_MESSAGE_EVENT_CLASS_TOUCH, &g_list_SF_MESSAGE_EVENT_CLASS_SETPOINT, &g_list_SF_MESSAGE_EVENT_CLASS_DUTY,
+  NULL };
 void g_message_init(void);
 void g_message_init(void)
 {

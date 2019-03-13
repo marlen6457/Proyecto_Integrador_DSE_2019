@@ -6,13 +6,17 @@
 
 #include "main_thread.h"
 
-//static bool button_enabled = false;
-int contador=0;
-int contador2=0;
-int contador3=0;
-int adc_value=984;
-int hundreds,tens,units=0;
-int counter_aux=0;
+
+static GX_EVENT g_gx_event;
+
+GX_WINDOW_ROOT * p_window_root;
+extern GX_CONST GX_STUDIO_WIDGET *guiapp_widget_table[];
+
+GX_WINDOW*      p_splash_screen;
+GX_WINDOW*      p_mainpage_screen;
+GX_WINDOW*      p_credits_screen;
+GX_WINDOW_ROOT* p_root;
+
 
 
 extern GX_WINDOW_ROOT * p_window_root;
@@ -20,9 +24,10 @@ extern GX_WINDOW_ROOT * p_window_root;
 static UINT show_window(GX_WINDOW * p_new, GX_WIDGET * p_widget, bool detach_old);
 static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_id);
 static void update_text(GX_WIDGET * p_widget, GX_RESOURCE_ID id, char * p_text);
+static void update_pixelmap_button_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT button);
 
 
-UINT window1_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
+UINT splash_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
     UINT result = gx_window_event_process(widget, event_ptr);
 
@@ -30,7 +35,11 @@ UINT window1_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
     {
 
         case GX_SIGNAL(ID_ICON_MORE, GX_EVENT_CLICKED):
-        show_window((GX_WINDOW*)&window2, (GX_WIDGET*)widget, true);
+        show_window((GX_WINDOW*)&main_page, (GX_WIDGET*)widget, true);
+        break;
+
+        case GX_SIGNAL(ID_ICON_TEAM, GX_EVENT_CLICKED):
+        show_window((GX_WINDOW*)&credits_page, (GX_WIDGET*)widget, true);
         break;
 
 
@@ -42,31 +51,36 @@ UINT window1_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
     return result;
 }
 
-UINT window2_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
+UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
     UINT result = gx_window_event_process(widget, event_ptr);
+    GX_WIDGET * p_widget = (GX_WIDGET *) widget;
 
     switch (event_ptr->gx_event_type){
+
+
 
         case GX_SIGNAL(ID_BACK_BTN, GX_EVENT_CLICKED):
                 show_window((GX_WINDOW*)&window1, (GX_WIDGET*)widget, true);
                 break;
 
-        case GX_SIGNAL(ID_BTN_DUTY, GX_EVENT_CLICKED):
-                        show_window((GX_WINDOW*)&window3, (GX_WIDGET*)widget, true);
-                        break;
+        case GX_SIGNAL(ID_BTN_ON, GX_EVENT_CLICKED):
+                update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS, GX_PIXELMAP_ID_GREEN_STATUS);
+                update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS_OFF, GX_PIXELMAP_ID_GRAY_STATUS);
+                update_text_id(widget->gx_widget_parent, ID_FAN_TEXT2, GX_STRING_ID_STATUS_OFF);
+                update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
+                break;
 
-        case GX_SIGNAL(ID_BTN_SPD, GX_EVENT_CLICKED):
-                                show_window((GX_WINDOW*)&window4, (GX_WIDGET*)widget, true);
-                                break;
+        case GX_SIGNAL(ID_BTN_OFF, GX_EVENT_CLICKED):
+                update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS_OFF, GX_PIXELMAP_ID_RED_STATUS);
+                update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS, GX_PIXELMAP_ID_GRAY_STATUS);
+                update_text_id(widget->gx_widget_parent, ID_FAN_TEXT2, GX_STRING_ID_STATUS_OFF);
+                update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
+                break;
 
-        case GX_SIGNAL(ID_BTN_CTS, GX_EVENT_CLICKED):
-                                        show_window((GX_WINDOW*)&window5, (GX_WIDGET*)widget, true);
-                                        break;
 
-        case GX_SIGNAL(ID_BTN_CAL, GX_EVENT_CLICKED):
-                                                show_window((GX_WINDOW*)&window6, (GX_WIDGET*)widget, true);
-                                                break;
+
+
 
 
 
@@ -80,201 +94,15 @@ UINT window2_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 }
 
 
-UINT window3_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
+UINT Credits_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
     UINT result = gx_window_event_process(widget, event_ptr);
 
     switch (event_ptr->gx_event_type){
 
-        case GX_SIGNAL(ID_BACK_W3, GX_EVENT_CLICKED):
-                show_window((GX_WINDOW*)&window2, (GX_WIDGET*)widget, true);
-                break;
-//------------------------
-                case GX_SIGNAL(ID_REFRESH, GX_EVENT_CLICKED):
-                               // contador=contador+1;
-                                //if(contador==1){
-                                  //      update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_ONE);
-
-                                            //  }
-                               // if(contador==2){
-                                 //        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_TWO);
-
-                                   //                                           }
-                                //if(contador>=8){
-                                  //                                  contador=0;
-                                    //                            }
-
-                            //    break;
-//---------------------------------------------
-                                tens=(adc_value%100)/10;
-
-                                    switch(tens)
-                                    {
-                                     case 0:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_ZERO);
-                                         break;
-
-                                     case 1:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_ONE);
-                                         break;
-
-                                     case 2:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_TWO);
-                                         break;
-
-                                     case 3:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_THREE);
-                                         break;
-
-                                     case 4:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_FOUR);
-                                         break;
-
-                                     case 5:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_FIVE);
-                                         break;
-
-                                     case 6:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_SIX);
-                                         break;
-
-                                     case 7:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_SEVEN);
-                                         break;
-
-                                     case 8:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_EIGHT);
-                                         break;
-
-                                     case 9:
-                                         update_text_id(widget->gx_widget_parent, ID_DEC, GX_STRING_ID_NINE);
-                                         break;
-
-                                     }
-
-
-                                hundreds=adc_value/100;
-
-
-
-
-                                switch(hundreds)
-                                {
-                                    case 0:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_ZERO);
-                                        break;
-                                    case 1:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_ONE);
-                                        break;
-
-                                    case 2:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_TWO);
-                                        break;
-
-                                    case 3:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_THREE);
-                                        break;
-
-                                    case 4:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_FOUR);
-                                        break;
-                                    case 5:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_FIVE);
-                                        break;
-
-                                    case 6:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_SIX);
-                                        break;
-
-                                    case 7:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_SEVEN);
-                                        break;
-
-                                    case 8:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_EIGHT);
-                                        break;
-
-                                    case 9:
-                                        update_text_id(widget->gx_widget_parent, ID_RES, GX_STRING_ID_NINE);
-                                        break;
-
-                                }
-
-                                units=adc_value%10;
-
-
-                                switch(units)
-                                {
-                                    case 0:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_ZERO);
-                                        break;
-                                    case 1:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_ONE);
-                                        break;
-
-                                    case 2:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_TWO);
-                                        break;
-
-                                    case 3:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_THREE);
-                                        break;
-
-                                    case 4:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_FOUR);
-                                        break;
-                                    case 5:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_FIVE);
-                                        break;
-
-                                    case 6:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_SIX);
-                                        break;
-
-                                    case 7:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_SEVEN);
-                                        break;
-
-                                    case 8:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_EIGHT);
-                                        break;
-
-                                    case 9:
-                                        update_text_id(widget->gx_widget_parent, ID_UNITS, GX_STRING_ID_NINE);
-                                        break;
-
-                                }
-
-
-                                break;
-
-
-
-
-
-//-----------------------------------------------------------------------
-
-//-----------------------------
-        default:
-            result = gx_window_event_process(widget, event_ptr);
-            break;
-    }
-
-
-    return result;
-}
-
-
-
-UINT window4_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
-{
-    UINT result = gx_window_event_process(widget, event_ptr);
-
-    switch (event_ptr->gx_event_type){
-
-        case GX_SIGNAL(ID_BACK_W4, GX_EVENT_CLICKED):
-                show_window((GX_WINDOW*)&window2, (GX_WIDGET*)widget, true);
-                break;
+        case GX_SIGNAL(ID_BACK_CREDITS, GX_EVENT_CLICKED):
+        show_window((GX_WINDOW*)&window1, (GX_WIDGET*)widget, true);
+        break;
 
 
         default:
@@ -286,167 +114,6 @@ UINT window4_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
     return result;
 }
 
-
-UINT window5_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
-{
-    UINT result = gx_window_event_process(widget, event_ptr);
-
-    switch (event_ptr->gx_event_type){
-
-        case GX_SIGNAL(ID_BACK_W5, GX_EVENT_CLICKED):
-                show_window((GX_WINDOW*)&window2, (GX_WIDGET*)widget, true);
-                break;
-
-
-        default:
-            result = gx_window_event_process(widget, event_ptr);
-            break;
-    }
-
-
-    return result;
-}
-
-UINT window6_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
-{
-    UINT result = gx_window_event_process(widget, event_ptr);
-
-    switch (event_ptr->gx_event_type){
-
-        case GX_SIGNAL(ID_BACK_W6, GX_EVENT_CLICKED):
-                show_window((GX_WINDOW*)&window2, (GX_WIDGET*)widget, true);
-                break;
-//------------------------
-
-                case GX_SIGNAL(ID_UP_DAY, GX_EVENT_CLICKED):
-                                contador=contador+1;
-                                if(contador==1){
-                                        update_text_id(widget->gx_widget_parent, ID_DAY, GX_STRING_ID_DAY1);
-
-                                              }
-                                if(contador==2){
-                                        update_text_id(widget->gx_widget_parent, ID_DAY, GX_STRING_ID_DAY2);
-
-                                           }
-                                if(contador==3){
-                                           update_text_id(widget->gx_widget_parent, ID_DAY, GX_STRING_ID_DAY3);
-                                                                                                           }
-
-                                if(contador==4){
-                                         update_text_id(widget->gx_widget_parent, ID_DAY, GX_STRING_ID_DAY4);
-                                }
-
-                                if(contador==5){
-                                         update_text_id(widget->gx_widget_parent, ID_DAY, GX_STRING_ID_DAY5);
-                                }
-                                if(contador==6){
-                                                                         update_text_id(widget->gx_widget_parent, ID_DAY, GX_STRING_ID_DAY6);
-
-                                }
-                                if(contador==7){
-                                        update_text_id(widget->gx_widget_parent, ID_DAY, (GX_STRING_ID_DAY7));
-                                }
-                                if(contador>=8){
-                                                                    contador=0;
-                                                                }
-
-                                break;
-//---------------------------------------------
-                case GX_SIGNAL(ID_UP_MONTH, GX_EVENT_CLICKED):
-                                                contador2=contador2+1;
-                                                if(contador2==1){
-                                                        update_text_id(widget->gx_widget_parent, ID_MONTH, GX_STRING_ID_MON1);
-
-                                                              }
-                                                if(contador2==2){
-                                                        update_text_id(widget->gx_widget_parent, ID_MONTH, GX_STRING_ID_MON2);
-
-                                                           }
-                                                if(contador2==3){
-                                                           update_text_id(widget->gx_widget_parent, ID_MONTH, GX_STRING_ID_MON3);
-                                                                                                                           }
-
-                                                if(contador2==4){
-                                                         update_text_id(widget->gx_widget_parent, ID_MONTH, GX_STRING_ID_MON4);
-                                                }
-
-                                                if(contador2==5){
-                                                         update_text_id(widget->gx_widget_parent, ID_MONTH, GX_STRING_ID_MON5);
-                                                }
-                                                if(contador2==6){
-                                                          update_text_id(widget->gx_widget_parent, ID_MONTH, GX_STRING_ID_MON6);
-
-                                                }
-                                                if(contador2==7){
-                                                        update_text_id(widget->gx_widget_parent, ID_MONTH, (GX_STRING_ID_MON7));
-                                                }
-                                               if(contador2==8){
-                                                        update_text_id(widget->gx_widget_parent, ID_MONTH, (GX_STRING_ID_MON8));
-                                                }
-
-                                    if(contador2==9){
-                                                        update_text_id(widget->gx_widget_parent, ID_MONTH, (GX_STRING_ID_MON9));
-                                                }
-
-
-                                    if(contador2==10){
-                                                        update_text_id(widget->gx_widget_parent, ID_MONTH, (GX_STRING_ID_MON10));
-                                                }
-
-                                    if(contador2==11){
-                                                        update_text_id(widget->gx_widget_parent, ID_MONTH, (GX_STRING_ID_MON11));
-                                                }
-
-                                    if(contador2==12){
-                                                        update_text_id(widget->gx_widget_parent, ID_MONTH, (GX_STRING_ID_MON12));
-                                                }
-
-
-
-                                    if(contador2>=13){
-                                                                                    contador2=0;
-                                                             }
-
-                                                break;
-
-
-//-----------------------------------------------------------------------
-
-                case GX_SIGNAL(ID_UP_YEAR, GX_EVENT_CLICKED):
-                                                contador3=contador3+1;
-                                                if(contador3==1){
-                                                        update_text_id(widget->gx_widget_parent, ID_YEAR, GX_STRING_ID_YEAR1);
-
-                                                              }
-                                                if(contador3==2){
-                                                        update_text_id(widget->gx_widget_parent, ID_YEAR, GX_STRING_ID_YEAR2);
-
-                                                           }
-                                                if(contador3==3){
-                                                           update_text_id(widget->gx_widget_parent, ID_YEAR, GX_STRING_ID_YEAR3);
-                                                                                                                           }
-
-
-
-
-                                    if(contador3>=4){
-                                                                                    contador3=0;
-                                                             }
-
-                                                break;
-
-
-
-
-//-----------------------------
-        default:
-            result = gx_window_event_process(widget, event_ptr);
-            break;
-    }
-
-
-    return result;
-}
 
 
 static UINT show_window(GX_WINDOW * p_new, GX_WIDGET * p_widget, bool detach_old)
@@ -503,6 +170,58 @@ static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_
     }
 }
 
+static void update_pixelmap_button_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT button)
+{
+    GX_PIXELMAP_BUTTON * p_button = NULL;
+
+    UINT err = gx_widget_find(p_widget, (USHORT)id, GX_SEARCH_DEPTH_INFINITE, (GX_WIDGET **) &p_button);
+    if (GX_SUCCESS == err)
+    {
+        err = gx_pixelmap_button_pixelmap_set(p_button, button, button, button);
+        if (GX_SUCCESS != err) {
+            while(1);
+        }
+
+    } else {
+        while(1);
+    }
+}
+
+void toggle_screen(GX_WINDOW *new_win, GX_WINDOW *old_win)
+{
+    UINT gx_err = GX_SUCCESS;
+
+    if (!new_win->gx_widget_parent)
+    {
+        gx_err = gx_widget_attach(p_root, (GX_WIDGET *) new_win);
+        if (GX_SUCCESS != gx_err) {
+            while(1);
+        }
+
+    }
+    else
+    {
+        gx_err = gx_widget_show((GX_WIDGET *) new_win);
+        if (GX_SUCCESS != gx_err) {
+            while(1);
+        }
+
+        /** User defined events are routed to the widget that has the current
+            focus. Since gx_widget_show does not claim focus we must manually
+            claim focus to insure user defined events (e.g temperature updates)
+            will be routed to this window properly. */
+        gx_err = gx_system_focus_claim(new_win);
+        if (GX_SUCCESS != gx_err && GX_NO_CHANGE != gx_err) {
+                while(1);
+            }
+
+    }
+    gx_err = gx_widget_hide((GX_WIDGET *) old_win);
+    if (GX_SUCCESS != gx_err) {
+            while(1);
+        }
+
+}
 
 
 
