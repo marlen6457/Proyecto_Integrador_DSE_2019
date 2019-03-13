@@ -60,7 +60,6 @@ src/pwm_thread_entry.o: ../src/pwm_thread_entry.c \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/setpoint_api.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/duty_api.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/rpms_api.h \
- C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/system_api.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\instances/r_jpeg_decode.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\api/r_jpeg_decode_api.h \
  C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\driver/r_jpeg_decode_cfg.h \
@@ -224,8 +223,6 @@ C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\
 C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/duty_api.h:
 
 C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/rpms_api.h:
-
-C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/system_api.h:
 
 C:\Users\JPRMEXDI\Documents\Repository\project_git\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\instances/r_jpeg_decode.h:
 

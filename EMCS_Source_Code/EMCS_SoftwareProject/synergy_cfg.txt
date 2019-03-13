@@ -798,18 +798,6 @@ Synergy Configuration
       Overflow Interrupt Priority: Priority 2
       
   Messaging
-    Event "set point"
-      Symbol: SF_MESSAGE_EVENT_SET_POINT
-      Name: set point
-      
-    Event "duty cycle"
-      Symbol: SF_MESSAGE_EVENT_DUTY_CYCLE
-      Name: duty cycle
-      
-    Event "rpms"
-      Symbol: SF_MESSAGE_EVENT_RPMS
-      Name: rpms
-      
     Event Class "setpoint"
       Symbol: SF_MESSAGE_EVENT_CLASS_SETPOINT
       Name: setpoint
@@ -831,17 +819,9 @@ Synergy Configuration
       Payload: rpms_payload
       Payload type: rpms_payload_t
       
-    Event Class "system"
-      Symbol: SF_MESSAGE_EVENT_CLASS_SYSTEM
-      Name: system
-      Payload header file: system_api.h
-      Payload: system_payload
-      Payload type: system_payload_t
-      
     Subscriber "Main Thread" 0 0
       Event Class "Touch"
       Event Class "setpoint"
       Event Class "duty"
       Event Class "rpms"
-      Event Class "system"
       
