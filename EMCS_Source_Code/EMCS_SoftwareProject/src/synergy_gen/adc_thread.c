@@ -59,7 +59,7 @@ void adc_thread_create(void)
 
     UINT err;
     err = tx_thread_create (&adc_thread, (CHAR *) "ADC Thread", adc_thread_func, (ULONG) NULL, &adc_thread_stack, 1024,
-                            9, 9, 1, TX_AUTO_START);
+                            9, 9, 10, TX_AUTO_START);
     if (TX_SUCCESS != err)
     {
         tx_startup_err_callback (&adc_thread, 0);

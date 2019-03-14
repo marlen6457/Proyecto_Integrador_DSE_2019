@@ -657,13 +657,24 @@ Synergy Configuration
       Symbol: g_main_semaphore_lcdc
       Initial count: 0
       
+    Object "g_state_data_mutex Mutex"
+      Name: State Data Mutex
+      Symbol: g_state_data_mutex
+      Priority inheritance: Disabled
+      
+    Object "g_system_queue Queue"
+      Name: System Queue
+      Symbol: g_system_queue
+      Message Size (Words): 1
+      Queue Size (Bytes): 80
+      
   Thread "ADC Thread"
     Symbol: adc_thread
     Name: ADC Thread
     Stack size (bytes): 1024
     Priority: 9
     Auto start: Enabled
-    Time slicing interval (ticks): 1
+    Time slicing interval (ticks): 10
     
     Instance "g_adc0 ADC Driver on r_adc"
       Name: g_adc0
@@ -798,22 +809,42 @@ Synergy Configuration
       Overflow Interrupt Priority: Priority 2
       
   Messaging
-    Event Class "setpoint"
+    Event "Update Duty Cycle"
+      Symbol: SF_MESSAGE_EVENT_UPDATE_DUTY_CYCLE
+      Name: Update Duty Cycle
+      
+    Event "Setpoint Value"
+      Symbol: SF_MESSAGE_EVENT_SETPOINT_VALUE
+      Name: Setpoint Value
+      
+    Event "RPM Read"
+      Symbol: SF_MESSAGE_EVENT_RPM_READ
+      Name: RPM Read
+      
+    Event Class "DutyCycle"
+      Symbol: SF_MESSAGE_EVENT_CLASS_DUTYCYCLE
+      Name: DutyCycle
+      Payload header file: dutycycle_api.h
+      Payload: dutycycle_payload
+      Payload type: dutycycle_payload_t
+      
+    Event Class "Setpoint"
       Symbol: SF_MESSAGE_EVENT_CLASS_SETPOINT
-      Name: setpoint
+      Name: Setpoint
       Payload header file: setpoint_api.h
       Payload: setpoint_payload
       Payload type: setpoint_payload_t
       
-    Event Class "duty"
-      Symbol: SF_MESSAGE_EVENT_CLASS_DUTY
-      Name: duty
-      Payload header file: duty_api.h
-      Payload: duty_payload
-      Payload type: duty_payload_t
+    Event Class "RPMsignal"
+      Symbol: SF_MESSAGE_EVENT_CLASS_RPMSIGNAL
+      Name: RPMsignal
+      Payload header file: rpmsignal_api.h
+      Payload: rpmsignal_payload
+      Payload type: rpmsignal_payload_t
       
     Subscriber "Main Thread" 0 0
       Event Class "Touch"
-      Event Class "setpoint"
-      Event Class "duty"
+      Event Class "DutyCycle"
+      Event Class "Setpoint"
+      Event Class "RPMsignal"
       

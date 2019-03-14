@@ -16,6 +16,8 @@ uint16_t u16ADC_FilterdData;
 uint8_t u8DutyCycleInst;
 uint8_t u8DutyCycleReal;
 
+uint16_t u16SetpointValue;
+
 uint64_t capture_overflow;
 uint32_t u32CaptureCounter;
 uint64_t u64TimeCaptured;
@@ -33,8 +35,10 @@ uint32_t u32VarAccumulator;
 uint16_t u16RPMvalueAvg;
 uint16_t u16InputValue;
 
-char value;
-char g_value [5];
+
+char g_dutycycle_value[4];
+char g_rpm_value[4];
+char g_setpoint_value[4];
 
 volatile union Ubyte_def        u8FlagsVar;
 /*
@@ -45,9 +49,10 @@ volatile union Ubyte_def        u8FlagsVar;
 
 void SR_InitRam(void)
 {
-    u16TimeSec = 0;
-    u16TimePerSec1ms = C_TICK_PER_SEC;
-    //g_value [5]    = "000";
+
+    g_dutycycle_value[4]    = "0000%";
+    g_setpoint_value[4]     = "0000rpm";
+    g_rpm_value[4]          = "0000rpm";
 
     capture_overflow = 0;
     u32CaptureCounter = 0;

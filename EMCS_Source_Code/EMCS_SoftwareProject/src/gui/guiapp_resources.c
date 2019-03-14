@@ -6,7 +6,7 @@
 /*  site at www.expresslogic.com.                                              */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy): 12. 3.2019   Time (hh:mm): 17:57                        */
+/*  Date (dd.mm.yyyy): 13. 3.2019   Time (hh:mm): 22:08                        */
 /*******************************************************************************/
 
 
@@ -39728,10 +39728,11 @@ GX_CONST GX_UBYTE display_1_ZERO_English[2] = "0";
 GX_CONST GX_UBYTE display_1_STATUS_ON_English[3] = "ON";
 GX_CONST GX_UBYTE display_1_NO_STATUS_English[5] = "AUTO";
 GX_CONST GX_UBYTE display_1_STATUS_OFF_English[4] = "OFF";
+GX_CONST GX_UBYTE display_1_STRING_13_English[5] = "PRON";
 
 /* String Table for display_1 language English                                 */
 
-GX_CONST GX_UBYTE *display_1_English_string_table[48] =
+GX_CONST GX_UBYTE *display_1_English_string_table[49] =
 {
     GX_NULL,
     display_1_STRING_1_English,
@@ -39780,7 +39781,8 @@ GX_CONST GX_UBYTE *display_1_English_string_table[48] =
     display_1_ZERO_English,
     display_1_STATUS_ON_English,
     display_1_NO_STATUS_English,
-    display_1_STATUS_OFF_English
+    display_1_STATUS_OFF_English,
+    display_1_STRING_13_English
 
 };
 

@@ -68,8 +68,11 @@ extern uint16_t u16ADC_FilterdData;
 extern uint8_t u8DutyCycleInst;
 extern uint8_t u8DutyCycleReal;
 
-extern char value;
-extern char g_value [5];
+extern uint16_t u16SetpointValue;
+
+extern char g_dutycycle_value[4];
+extern char g_rpm_value[4];
+extern char g_setpoint_value[4];
 
 extern uint64_t capture_overflow;
 extern uint32_t u32CaptureCounter;
@@ -83,6 +86,7 @@ extern uint32_t u32SpeedInst;
 extern uint16_t u16SpeedInst;
 
 
+
 //--------------------------------------------------------------------
 //             Filter Variable
 //--------------------------------------------------------------------
@@ -90,7 +94,6 @@ extern uint16_t u16SpeedInst;
 extern uint32_t u32VarAccumulator;
 extern uint16_t u16RPMvalueAvg;
 extern uint16_t u16InputValue;
-
 
 //--------------------------------------------------------------------
 
@@ -107,5 +110,14 @@ extern void SR_InitRam(void);
 extern void SR_FilterRPM(uint16_t* lpu16Data, uint32_t* lpu32ShiftAdd, uint16_t* lpu16Result);
 extern void SR_InitFilter(uint16_t lu16InputData);
 
+//--------------------------------------------------------------------
+//             Post message
+//--------------------------------------------------------------------
+extern const sf_message_post_cfg_t g_post_cfg;
+extern const sf_message_acquire_cfg_t g_acquire_cfg;
+
+extern void SR_RPMSignal_message(void);
+extern void SR_Dutycycle_message(void);
+extern void SR_SetpointADC_message(void);
 
 #endif /* RAM_H_ */

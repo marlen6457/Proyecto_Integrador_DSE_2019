@@ -6,18 +6,12 @@
 
 #include "main_thread.h"
 
-
-static GX_EVENT g_gx_event;
-
 GX_WINDOW_ROOT * p_window_root;
-extern GX_CONST GX_STUDIO_WIDGET *guiapp_widget_table[];
 
 GX_WINDOW*      p_splash_screen;
 GX_WINDOW*      p_mainpage_screen;
 GX_WINDOW*      p_credits_screen;
 GX_WINDOW_ROOT* p_root;
-
-
 
 extern GX_WINDOW_ROOT * p_window_root;
 
@@ -25,6 +19,8 @@ static UINT show_window(GX_WINDOW * p_new, GX_WIDGET * p_widget, bool detach_old
 static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_id);
 static void update_text(GX_WIDGET * p_widget, GX_RESOURCE_ID id, char * p_text);
 static void update_pixelmap_button_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT button);
+static void toggle_screen(GX_WINDOW *new_win, GX_WINDOW *old_win);
+UINT settings_item_show(GX_WINDOW *widget, USHORT new_content, USHORT old_content);
 
 
 UINT splash_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
@@ -56,12 +52,11 @@ UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
     UINT result = gx_window_event_process(widget, event_ptr);
     GX_WIDGET * p_widget = (GX_WIDGET *) widget;
 
-    switch (event_ptr->gx_event_type){
-
-
+    switch (event_ptr->gx_event_type)
+    {
 
         case GX_SIGNAL(ID_BACK_BTN, GX_EVENT_CLICKED):
-                show_window((GX_WINDOW*)&window1, (GX_WIDGET*)widget, true);
+                 show_window((GX_WINDOW*)&splash_page, (GX_WIDGET*)widget, true);
                 break;
 
         case GX_SIGNAL(ID_BTN_ON, GX_EVENT_CLICKED):
@@ -78,21 +73,17 @@ UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
                 update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
                 break;
 
-
-
-
-
-
-
         default:
             result = gx_window_event_process(widget, event_ptr);
             break;
     }
+    update_text(widget->gx_widget_parent, ID_TEXT_DUTYCYCLE, g_dutycycle_value);
+    update_text(widget->gx_widget_parent, ID_TEXT_RPM, g_rpm_value);
+    update_text(widget->gx_widget_parent, ID_TEXT_SETPOINT, g_setpoint_value);
 
 
     return result;
 }
-
 
 UINT Credits_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
 {
@@ -101,7 +92,7 @@ UINT Credits_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
     switch (event_ptr->gx_event_type){
 
         case GX_SIGNAL(ID_BACK_CREDITS, GX_EVENT_CLICKED):
-        show_window((GX_WINDOW*)&window1, (GX_WIDGET*)widget, true);
+        show_window((GX_WINDOW*)&splash_page, (GX_WIDGET*)widget, true);
         break;
 
 
@@ -142,7 +133,13 @@ static UINT show_window(GX_WINDOW * p_new, GX_WIDGET * p_widget, bool detach_old
 
     return err;
 }
-
+/*******************************************************************************************************************//**
+ * @brief   Helper function to update strings based on resource ID.
+ *
+ * @param[in]   p_widget    Parent widget (typically the current screen)
+ * @param[in]   id          Resource ID of the widget to show or hide
+ * @param[in]   p_text      Pointer to string to display
+***********************************************************************************************************************/
 static void update_text(GX_WIDGET * p_widget, GX_RESOURCE_ID id, char * p_text)
 {
     GX_PROMPT * p_prompt = NULL;
@@ -151,14 +148,20 @@ static void update_text(GX_WIDGET * p_widget, GX_RESOURCE_ID id, char * p_text)
     if (GX_SUCCESS == err)
     {
         err = gx_prompt_text_set(p_prompt, p_text);
-        if (GX_SUCCESS != err) {
+        if (GX_SUCCESS != err)
+        {
             while(1);
         }
 
-    } else {
-        while(1);
     }
 }
+/*******************************************************************************************************************//**
+ * @brief   Helper function to update strings based on ID.
+ *
+ * @param[in]   p_widget    Parent widget (typically the current screen)
+ * @param[in]   id          Resource ID of the widget to show or hide
+ * @param[in]   string_id   ID of string to display
+***********************************************************************************************************************/
 static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_id)
 {
     GX_PROMPT * p_prompt = NULL;
@@ -169,7 +172,13 @@ static void update_text_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT string_
         gx_prompt_text_id_set(p_prompt, string_id);
     }
 }
-
+/*******************************************************************************************************************//**
+ * @brief   Helper function to update pixelmap buttons based on ID.
+ *
+ * @param[in]   p_widget    Parent widget (typically the current screen)
+ * @param[in]   id          Resource ID of the widget to show or hide
+ * @param[in]   button      ID of button to display
+***********************************************************************************************************************/
 static void update_pixelmap_button_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, UINT button)
 {
     GX_PIXELMAP_BUTTON * p_button = NULL;
@@ -187,6 +196,14 @@ static void update_pixelmap_button_id(GX_WIDGET * p_widget, GX_RESOURCE_ID id, U
     }
 }
 
+/*******************************************************************************************************************//**
+ * @brief   Toggles between top level screens defined with .
+ *
+ * @param[in]   new_win  The pointer to the window to show
+ * @param[in]   old_win  The pinter to the old window to hide
+ *
+ * @retval      GX_SUCCESS
+ ***********************************************************************************************************************/
 void toggle_screen(GX_WINDOW *new_win, GX_WINDOW *old_win)
 {
     UINT gx_err = GX_SUCCESS;
@@ -214,15 +231,12 @@ void toggle_screen(GX_WINDOW *new_win, GX_WINDOW *old_win)
         if (GX_SUCCESS != gx_err && GX_NO_CHANGE != gx_err) {
                 while(1);
             }
-
     }
     gx_err = gx_widget_hide((GX_WIDGET *) old_win);
     if (GX_SUCCESS != gx_err) {
             while(1);
         }
-
 }
-
 
 
 

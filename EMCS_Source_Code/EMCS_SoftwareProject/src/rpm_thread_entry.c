@@ -1,5 +1,7 @@
 #include "rpm_thread.h"
 #include "Ram.h"
+#include "sf_message_payloads.h"
+#include <stdio.h>
 
 /*****************************************************************************
  Name:          rpm_thread_entry
@@ -18,6 +20,8 @@ void rpm_thread_entry(void)
     SR_InitFilter (u16SpeedInst);
     while (1)
     {
+        snprintf(g_rpm_value, sizeof(g_rpm_value), "%d", u16RPMvalueAvg);
+        SR_RPMSignal_message();
         tx_thread_sleep (1);
     }
 }
@@ -108,4 +112,33 @@ void SR_InputCapture_CallBack(input_capture_callback_args_t *p_args)
                 break;
         }
  }
+/*******************************************************************************************************************//**
+ * @brief   Posts RPM signal message to messaging framework.
+***********************************************************************************************************************/
+void SR_RPMSignal_message(void)
+{
+    sf_message_header_t * p_message  = NULL;
+    sf_message_payload_t * p_payload = NULL;
+    /** Get buffer from messaging framework. */
+    ssp_err_t err;
+    err = g_sf_message0.p_api->bufferAcquire(g_sf_message0.p_ctrl, (sf_message_header_t **) &p_message, &g_acquire_cfg, TX_NO_WAIT);
+    if (SSP_SUCCESS != err)
+    {
+        /** TODO_THERMO: Send error message. */
+        while(1);
+    }
+    else
+    {
+
+    /** Create message in buffer. */
+    p_message->event_b.class_code = SF_MESSAGE_EVENT_CLASS_RPMSIGNAL;
+    p_message->event_b.code  = SF_MESSAGE_EVENT_RPM_READ;
+    p_payload = (sf_message_payload_t*)(p_message+1);
+    p_payload->rpmsignal_payload.rpmsignal= (uint16_t)u16RPMvalueAvg;
+
+    /** Post message. */
+    sf_message_post_err_t post_err;
+    err = g_sf_message0.p_api->post(g_sf_message0.p_ctrl, (sf_message_header_t *) p_message, &g_post_cfg, &post_err, TX_NO_WAIT);
+    }
+}
 
