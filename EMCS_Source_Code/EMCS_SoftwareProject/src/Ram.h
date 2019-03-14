@@ -43,6 +43,18 @@ union   Ubyte_def
 
 #define C_FILTER_ORDER  15
 
+/* Definition Input Capture*/
+#define BIT_32 (0x100000000U)                   // MAX COUNTS
+
+#define TIMER_SECOND            (1000000000U)
+#define TIMER_MILLISECOND       (1000000U)
+#define TIMER_MICROSECOND       (1000U)
+
+#define MICRO_SECONDS_IN_A_MINUTE   60000000
+
+#define MAGNET_POLES        4
+#define SCALED_FACTOR       1000
+
 
 //--------------------------------------------------------------------
 //             Global Variable
@@ -57,6 +69,17 @@ extern uint8_t U8DutyCycle;
 
 extern char value;
 extern char g_value [5];
+
+extern uint64_t capture_overflow;
+extern uint32_t capture_counter;
+extern uint64_t time_captured;
+extern uint64_t u64TimeCaptured_ns;
+extern uint32_t u32TimeCaptured_us;
+extern uint64_t time_captured_s;
+extern uint64_t time_captured_ms;
+
+extern uint32_t u32SpeedInst;
+
 
 
 
