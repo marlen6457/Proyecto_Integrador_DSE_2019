@@ -5541,3 +5541,6 @@ java.lang.ClassNotFoundException: org.eclipse.equinox.internal.p2.ui.sdk.Install
 
 !ENTRY com.renesas.tools.smartbrowser 4 0 2019-03-14 19:29:53.105
 !MESSAGE HTTP status error (http://tool-support.renesas.com/autoupdate/support/smartbrowser/contexthelp/en-us/e2s/V6.02.01/CreateProject/rss.xml)
+
+!ENTRY com.renesas.tools.smartbrowser 4 0 2019-03-14 19:30:03.435
+!MESSAGE HTTP status error (http://tool-support.renesas.com/autoupdate/support/smartbrowser/contexthelp/en-us/e2s/V6.02.01/Synergy/CreateProject/rss.xml)
