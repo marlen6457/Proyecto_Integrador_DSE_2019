@@ -156,7 +156,7 @@
   <v1:configSetting configurationId="glcdc0.lcd_tcon0" altId="glcdc0.lcd_tcon0.p315">
     <v1:connectionSetting altId="p315.glcdc0.lcd_tcon0"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p203.gpio_mode" altId="p203.gpio_mode.gpio_mode_in"/>
+  <v1:configSetting configurationId="p203.gpio_mode" altId="p203.gpio_mode.gpio_mode_out.high"/>
   <v1:configSetting configurationId="p307.gpio_drivecapacity" altId="p307.gpio_speed.gpio_speed_medium"/>
   <v1:configSetting configurationId="ctsu0.ts11" altId="ctsu0.ts11.p415">
     <v1:connectionSetting altId="p415.ctsu0.ts11"/>
@@ -393,7 +393,7 @@
   <v1:configSetting configurationId="p204" altId="p204.ctsu0.ts00">
     <v1:connectionSetting altId="ctsu0.ts00.p204"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="p203" altId="p203.input"/>
+  <v1:configSetting configurationId="p203" altId="p203.output.high"/>
   <v1:configSetting configurationId="p202" altId="p202.sci2.sck">
     <v1:connectionSetting altId="sci2.sck.p202"/>
   </v1:configSetting>
@@ -832,7 +832,7 @@
   <v1:configSetting configurationId="usbdp" altId="usbdp.usbfs0.usbdp">
     <v1:connectionSetting altId="usbfs0.usbdp.usbdp"/>
   </v1:configSetting>
-  <v1:configSetting configurationId="gpt0.mode" altId="gpt0.mode.gtiocaorgtiocb.free"/>
+  <v1:configSetting configurationId="gpt0.mode" altId="gpt0.mode.disabled"/>
   <v1:configSetting configurationId="gpt0.pairing" altId="gpt0.pairing.free"/>
   <v1:configSetting configurationId="gpt1.gtioca" altId="gpt1.gtioca.p405">
     <v1:connectionSetting altId="p405.gpt1.gtioca"/>
@@ -913,5 +913,5 @@
     <v1:connectionSetting altId="sci0.rxd.p100"/>
   </v1:configSetting>
   <v1:configSetting configurationId="gpt3.gtioca" altId="gpt3.gtioca.none"/>
-  <v1:configSetting configurationId="gpt3.mode" altId="gpt3.mode.gtiocaorgtiocb.free"/>
+  <v1:configSetting configurationId="gpt3.mode" altId="gpt3.mode.disabled"/>
 </v1:pinSettings>
