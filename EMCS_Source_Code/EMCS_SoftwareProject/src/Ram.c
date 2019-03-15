@@ -17,6 +17,7 @@ uint8_t u8DutyCycleInst;
 uint8_t u8DutyCycleReal;
 
 uint16_t u16SetpointValue;
+uint16_t u16SetpointValueold;
 
 uint64_t capture_overflow;
 uint32_t u32CaptureCounter;
@@ -36,11 +37,8 @@ uint16_t u16RPMvalueAvg;
 uint16_t u16InputValue;
 
 
-char g_dutycycle_value[4];
-char g_rpm_value[4];
-char g_setpoint_value[4];
 
-volatile union Ubyte_def        u8FlagsVar;
+
 /*
 #define    u8Flags              u8FlagsVar.Ubyte
 #define    bf_SystemTickTrue     u8FlagsVar.Ubit.b0
@@ -49,13 +47,11 @@ volatile union Ubyte_def        u8FlagsVar;
 
 void SR_InitRam(void)
 {
-
-    g_dutycycle_value[4]    = "0000%";
-    g_setpoint_value[4]     = "0000rpm";
-    g_rpm_value[4]          = "0000rpm";
-
     capture_overflow = 0;
     u32CaptureCounter = 0;
     u64TimeCaptured = 0;
+
+    u16SetpointValueold = 0;
+    u16SetpointValue = 0;
 
 }

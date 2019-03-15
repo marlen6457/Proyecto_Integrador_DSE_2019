@@ -1,7 +1,7 @@
 #include "pwm_thread.h"
 #include "Ram.h"
 #include "sf_message_payloads.h"
-#include <stdio.h>
+
 
 /* PWM Thread entry function */
 void pwm_thread_entry(void)
@@ -14,8 +14,7 @@ void pwm_thread_entry(void)
     {
         u8DutyCycleReal = (uint8_t)(u16ADC_FilterdData * 100/4095);
         //u8DutyCycleReal = 100;
-        u8DutyCycleInst = (uint8_t) (100) - u8DutyCycleReal;
-        snprintf(g_dutycycle_value, sizeof(g_dutycycle_value), "%d", u8DutyCycleReal);
+        u8DutyCycleInst = (uint8_t) ((100) - u8DutyCycleReal);
         SR_Dutycycle_message();
         g_timer.p_api->dutyCycleSet(g_timer.p_ctrl, u8DutyCycleInst, TIMER_PWM_UNIT_PERCENT, 0);
         tx_thread_sleep (1);

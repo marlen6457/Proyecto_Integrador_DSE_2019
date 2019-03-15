@@ -1,7 +1,6 @@
 #include "rpm_thread.h"
 #include "Ram.h"
 #include "sf_message_payloads.h"
-#include <stdio.h>
 
 /*****************************************************************************
  Name:          rpm_thread_entry
@@ -20,7 +19,6 @@ void rpm_thread_entry(void)
     SR_InitFilter (u16SpeedInst);
     while (1)
     {
-        snprintf(g_rpm_value, sizeof(g_rpm_value), "%d", u16RPMvalueAvg);
         SR_RPMSignal_message();
         tx_thread_sleep (1);
     }

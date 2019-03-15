@@ -10,26 +10,11 @@
 
 #include "main_thread.h"
 
+
 //--------------------------------------------------------------------
 //             Structure Definitions
 //--------------------------------------------------------------------
 
-struct  Ubit_def
-  {
-    uint8_t  b0:1;
-    uint8_t  b1:1;
-    uint8_t  b2:1;
-    uint8_t  b3:1;
-    uint8_t  b4:1;
-    uint8_t  b5:1;
-    uint8_t  b6:1;
-    uint8_t  b7:1;
-  };
-union   Ubyte_def
-  {
-    struct  Ubit_def Ubit;
-    uint8_t      Ubyte;
-  };
 
 
 //--------------------------------------------------------------------
@@ -42,6 +27,10 @@ union   Ubyte_def
 #define C_TICK_PER_SEC  500
 
 #define C_FILTER_ORDER      15
+
+/* Definition Setpoint */
+#define C_STEP_SETPOINT_DESIRED      (50)
+#define C_STEP_ADC_DESIRED           (64)
 
 /* Definition Input Capture*/
 #define BIT_32 (0x100000000U)                   // MAX COUNTS
@@ -69,10 +58,7 @@ extern uint8_t u8DutyCycleInst;
 extern uint8_t u8DutyCycleReal;
 
 extern uint16_t u16SetpointValue;
-
-extern char g_dutycycle_value[4];
-extern char g_rpm_value[4];
-extern char g_setpoint_value[4];
+extern uint16_t u16SetpointValueold;
 
 extern uint64_t capture_overflow;
 extern uint32_t u32CaptureCounter;
@@ -101,23 +87,27 @@ extern volatile union Ubyte_def        u8FlagsVar;
 #define    u8Flags              u8FlagsVar.Ubyte
 #define    bf_SystemTickTrue     u8FlagsVar.Ubit.b0
 
-
-//--------------------------------------------------------------------
-//             Functions
-//--------------------------------------------------------------------
-
-extern void SR_InitRam(void);
-extern void SR_FilterRPM(uint16_t* lpu16Data, uint32_t* lpu32ShiftAdd, uint16_t* lpu16Result);
-extern void SR_InitFilter(uint16_t lu16InputData);
-
 //--------------------------------------------------------------------
 //             Post message
 //--------------------------------------------------------------------
 extern const sf_message_post_cfg_t g_post_cfg;
 extern const sf_message_acquire_cfg_t g_acquire_cfg;
 
+
+//--------------------------------------------------------------------
+//             Functions
+//--------------------------------------------------------------------
+
+extern void SR_InitRam(void);
+extern void SR_GetSetpoit(void);
+
+extern void SR_FilterRPM(uint16_t* lpu16Data, uint32_t* lpu32ShiftAdd, uint16_t* lpu16Result);
+extern void SR_InitFilter(uint16_t lu16InputData);
+
+
 extern void SR_RPMSignal_message(void);
 extern void SR_Dutycycle_message(void);
 extern void SR_SetpointADC_message(void);
+extern uint8_t FN_GetSetpoitValue (uint16_t lu16ADCRaw);
 
 #endif /* RAM_H_ */
