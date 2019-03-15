@@ -12,7 +12,7 @@ void pwm_thread_entry(void)
     /* TODO: add your own code here */
     while (1)
     {
-        u8DutyCycleReal = (uint8_t)(u16ADC_FilterdData * 100/4095);
+        u8DutyCycleReal = (uint8_t)(u16ADC_FilterdData * 100/255);
         //u8DutyCycleReal = 100;
         u8DutyCycleInst = (uint8_t) ((100) - u8DutyCycleReal);
         SR_Dutycycle_message();

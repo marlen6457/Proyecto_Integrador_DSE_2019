@@ -14,9 +14,9 @@ void adc_thread_entry(void)
     while (1)
     {
         g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);     //Reading ADC pin - Potentiometer
-        //u16ADC_FilterdData = (uint16_t)(u16ADC_Data + ((uint16_t)(C_FILTER_ORDER) - 1) * u16ADC_FilterdData) / (uint16_t)(C_FILTER_ORDER);
+        u16ADC_FilterdData = (uint16_t)(u16ADC_Data + ((uint16_t)(C_FILTER_ORDER) - 1) * u16ADC_FilterdData) / (uint16_t)(C_FILTER_ORDER);
         //u16SetpointValue = (uint16_t)(((uint16_t)(3200)*(u16ADC_FilterdData))/((uint16_t)(4095)));
-        u16SetpointValue = FN_GetSetpoitValue(u16ADC_Data);
+        u16SetpointValue = FN_GetSetpoitValue(u16ADC_FilterdData);
         if(u16SetpointValue != u16SetpointValueold)
         {
 
@@ -36,20 +36,21 @@ Calls:         none
 Description:   Get the Setpoint desired by user
 
 ******************************************************************************/
-uint8_t FN_GetSetpoitValue (uint16_t lu16ADCRaw)
+uint16_t FN_GetSetpoitValue (uint16_t lu16ADCRaw)
 {
-    uint8_t lu8Setpointvalue = 1;
+    uint16_t lu16Setpointvalue = 1;
     uint8_t lu8Counter = 0;
     uint16_t lu16ADCLvL = 0;
 
     do{
           lu16ADCLvL = (uint16_t)(lu16ADCLvL + C_STEP_ADC_DESIRED);                                                                    // Increment Table Index
           lu8Counter = (uint8_t)(lu8Counter + 1);
-          lu8Setpointvalue = (uint8_t)(C_STEP_SETPOINT_DESIRED*lu8Counter);
         }
         while(lu16ADCRaw > lu16ADCLvL);
 
-    return lu8Setpointvalue;
+    lu16Setpointvalue = (uint16_t)(C_STEP_SETPOINT_DESIRED*lu8Counter);
+
+    return lu16Setpointvalue;
 }
 /*******************************************************************************************************************//**
  * @brief   Posts RPM signal message to messaging framework.

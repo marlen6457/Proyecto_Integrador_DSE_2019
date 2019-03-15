@@ -679,7 +679,7 @@ Synergy Configuration
     Instance "g_adc0 ADC Driver on r_adc"
       Name: g_adc0
       Unit: 0
-      Resolution (resolution varies by MCU): 12-Bit
+      Resolution (resolution varies by MCU): 8-Bit
       Alignment: Right
       Clear after read: On
       Mode: Continuous Scan

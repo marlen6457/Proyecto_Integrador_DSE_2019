@@ -29,8 +29,8 @@
 #define C_FILTER_ORDER      15
 
 /* Definition Setpoint */
-#define C_STEP_SETPOINT_DESIRED      (50)
-#define C_STEP_ADC_DESIRED           (64)
+#define C_STEP_SETPOINT_DESIRED      (100)
+#define C_STEP_ADC_DESIRED           (8)
 
 /* Definition Input Capture*/
 #define BIT_32 (0x100000000U)                   // MAX COUNTS
@@ -108,6 +108,6 @@ extern void SR_InitFilter(uint16_t lu16InputData);
 extern void SR_RPMSignal_message(void);
 extern void SR_Dutycycle_message(void);
 extern void SR_SetpointADC_message(void);
-extern uint8_t FN_GetSetpoitValue (uint16_t lu16ADCRaw);
+extern uint16_t FN_GetSetpoitValue (uint16_t lu16ADCRaw);
 
 #endif /* RAM_H_ */
