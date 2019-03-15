@@ -14,7 +14,7 @@ void adc_thread_entry(void)
     while (1)
     {
         g_adc0.p_api->read(g_adc0.p_ctrl, ADC_REG_CHANNEL_0, &u16ADC_Data);     //Reading ADC pin - Potentiometer
-        u16ADC_FilterdData = (uint16_t)(u16ADC_Data + ((uint16_t)(C_FILTER_ORDER) - 1) * u16ADC_FilterdData) / (uint16_t)(C_FILTER_ORDER);
+        u16ADC_FilterdData = (uint16_t)(u16ADC_Data + ((uint16_t)(FILTER_ORDER) - 1) * u16ADC_FilterdData) / (uint16_t)(FILTER_ORDER);
         //u16SetpointValue = (uint16_t)(((uint16_t)(3200)*(u16ADC_FilterdData))/((uint16_t)(4095)));
         u16SetpointValue = FN_GetSetpoitValue(u16ADC_FilterdData);
         if(u16SetpointValue != u16SetpointValueold)
@@ -43,12 +43,12 @@ uint16_t FN_GetSetpoitValue (uint16_t lu16ADCRaw)
     uint16_t lu16ADCLvL = 0;
 
     do{
-          lu16ADCLvL = (uint16_t)(lu16ADCLvL + C_STEP_ADC_DESIRED);                                                                    // Increment Table Index
+          lu16ADCLvL = (uint16_t)(lu16ADCLvL + STEP_ADC_DESIRED);                                                                    // Increment Table Index
           lu8Counter = (uint8_t)(lu8Counter + 1);
         }
         while(lu16ADCRaw > lu16ADCLvL);
 
-    lu16Setpointvalue = (uint16_t)(C_STEP_SETPOINT_DESIRED*lu8Counter);
+    lu16Setpointvalue = (uint16_t)(STEP_SETPOINT_DESIRED*lu8Counter);
 
     return lu16Setpointvalue;
 }

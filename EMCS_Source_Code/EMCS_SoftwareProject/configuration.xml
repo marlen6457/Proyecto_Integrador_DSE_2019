@@ -792,7 +792,7 @@
       <property id="_symbol" value="rpm_thread"/>
       <property id="rtos.threadx.thread.name" value="RPM Thread"/>
       <property id="rtos.threadx.thread.stack" value="1024"/>
-      <property id="rtos.threadx.thread.priority" value="9"/>
+      <property id="rtos.threadx.thread.priority" value="2"/>
       <property id="rtos.threadx.thread.autostart" value="rtos.threadx.thread.autostart.enabled"/>
       <property id="rtos.threadx.thread.timeslice" value="1"/>
       <stack module="module.driver.input_capture_on_gpt.1401549105"/>

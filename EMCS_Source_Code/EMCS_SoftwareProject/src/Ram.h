@@ -15,7 +15,16 @@
 //             Structure Definitions
 //--------------------------------------------------------------------
 
+  struct SPIParameters
+    {
+      uint16_t u16Kp;
+      uint16_t u16Ki;
+    };
 
+  //--------------------------------------------------------------------
+  //             TABLES
+  //--------------------------------------------------------------------
+ extern const struct SPIParameters T_S_PI_PARAMETERS[];
 
 //--------------------------------------------------------------------
 //            Global Definitions
@@ -26,11 +35,11 @@
 
 #define C_TICK_PER_SEC  500
 
-#define C_FILTER_ORDER      15
+#define FILTER_ORDER      15
 
 /* Definition Setpoint */
-#define C_STEP_SETPOINT_DESIRED      (100)
-#define C_STEP_ADC_DESIRED           (8)
+#define STEP_SETPOINT_DESIRED      (100)
+#define STEP_ADC_DESIRED           (8)
 
 /* Definition Input Capture*/
 #define BIT_32 (0x100000000U)                   // MAX COUNTS
@@ -82,10 +91,32 @@ extern uint16_t u16RPMvalueAvg;
 extern uint16_t u16InputValue;
 
 //--------------------------------------------------------------------
+//             PI Control Variable
+//--------------------------------------------------------------------
+extern int32_t    i32SpeedError2;
+extern int32_t    i32SpeedError1;
+extern int32_t    i32SpeedError0;
 
-extern volatile union Ubyte_def        u8FlagsVar;
-#define    u8Flags              u8FlagsVar.Ubyte
-#define    bf_SystemTickTrue     u8FlagsVar.Ubit.b0
+extern int64_t    i64Proporcial;
+extern int64_t    i64Integral;
+
+extern int64_t    i64CalcPI;
+
+extern int64_t i64Calculation;
+
+#define MAX_K_PARAMETERS    (8)
+
+#define KP_LOW_31_220         ( 140)      // 0.140
+#define KP_MID_31_220         ( 183)      // 0.183
+#define KP_HIGH_31_220        ( 240)      // 0.240
+#define KP_EXTRA_HIGH_31_220  (2000)      // 2.000
+
+#define KI_LOW                (   3)      // 0.003
+#define KI_MID                (   9)      // 0.009
+#define KI_HIGH               (  12)      // 0.015
+
+#define CONST_SCALE           (1000)
+
 
 //--------------------------------------------------------------------
 //             Post message
@@ -109,5 +140,7 @@ extern void SR_RPMSignal_message(void);
 extern void SR_Dutycycle_message(void);
 extern void SR_SetpointADC_message(void);
 extern uint16_t FN_GetSetpoitValue (uint16_t lu16ADCRaw);
+
+extern void SR_ControlPI(uint32_t lu32TargetSpeed, uint8_t lu8Index);
 
 #endif /* RAM_H_ */
