@@ -77,8 +77,7 @@ UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
             result = gx_window_event_process(widget, event_ptr);
             break;
     }
-    update_text_id(widget->gx_widget_parent, ID_FAN_TEXT2, GX_STRING_ID_STATUS_OFF);
-    update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
+
     update_text(widget->gx_widget_parent, ID_TEXT_DUTYCYCLE, g_dutycycle_value);
     update_text(widget->gx_widget_parent, ID_TEXT_RPM, g_rpm_value);
     update_text(widget->gx_widget_parent, ID_TEXT_SETPOINT, g_setpoint_value);

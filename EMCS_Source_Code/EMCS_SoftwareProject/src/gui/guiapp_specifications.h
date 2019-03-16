@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy): 15. 3.2019   Time (hh:mm): 16:34                        */
+/*  Date (dd.mm.yyyy): 15. 3.2019   Time (hh:mm): 19:30                        */
 /*******************************************************************************/
 
 
@@ -25,8 +25,8 @@ extern   "C" {
 #define ID_BACK_CREDITS 1
 #define ID_MAIN_PAGE 2
 #define ID_BACK_BTN 3
-#define ID_FAN_STATUS 4
-#define ID_BTN_ON 5
+#define ID_BTN_ON 4
+#define ID_FAN_STATUS 5
 #define ID_FAN_TEXT 6
 #define ID_BTN_OFF 7
 #define ID_FAN_STATUS_OFF 8
@@ -109,12 +109,12 @@ typedef struct MAIN_PAGE_CONTROL_BLOCK_STRUCT
 {
     GX_WINDOW_MEMBERS_DECLARE
     GX_ICON main_page_icon_1;
-    GX_PIXELMAP_BUTTON main_page_pixelmap_button;
     GX_BUTTON main_page_button;
-    GX_PROMPT main_page_prompt;
+    GX_PIXELMAP_BUTTON main_page_pixelmap_button_2;
+    GX_PROMPT main_page_prompt_2;
     GX_BUTTON main_page_button_1;
-    GX_PIXELMAP_BUTTON main_page_pixelmap_button_1;
-    GX_PROMPT main_page_prompt_1;
+    GX_PIXELMAP_BUTTON main_page_pixelmap_button_3;
+    GX_PROMPT main_page_prompt_3;
     GX_PROMPT main_page_Dutycycle_text;
     GX_PROMPT main_page_Setpoint_text;
     GX_PROMPT main_page_PRM_text;
