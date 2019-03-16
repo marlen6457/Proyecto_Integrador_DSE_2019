@@ -19,7 +19,6 @@ void adc_thread_entry(void)
         u16SetpointValue = FN_GetSetpoitValue(u16ADC_FilterdData);
         if(u16SetpointValue != u16SetpointValueold)
         {
-
             SR_SetpointADC_message();
             u16SetpointValueold = u16SetpointValue;
         }

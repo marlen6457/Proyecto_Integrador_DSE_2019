@@ -2,6 +2,25 @@
 #include "Ram.h"
 #include "sf_message_payloads.h"
 
+/***********************************************************************
+ Name:          SR_StartStopMotor
+ Returns:       None
+ Called by:     pwm_thread_entry()
+ Calls:         None
+ Description:   RUN and STOP the Motor control through Pin 203 output
+
+***********************************************************************/
+void SR_StartStopMotor(void)
+{
+    if(bMotor)
+    {
+        g_ioport.p_api->pinWrite(IOPORT_PORT_02_PIN_03, IOPORT_LEVEL_HIGH);
+    }
+    else
+    {
+        g_ioport.p_api->pinWrite(IOPORT_PORT_02_PIN_03, IOPORT_LEVEL_LOW);
+    }
+}
 
 /***********************************************************************
  Name:          SR_ControlPI
@@ -21,30 +40,13 @@ void SR_ControlPI(uint32_t lu32TargetSpeed, uint8_t lu8Index )
     uint16_t lu16Kp;
     uint16_t lu16Ki;
 
-
-
-
     i32SpeedError2 = i32SpeedError1;
     i32SpeedError1 = i32SpeedError0;
     i32SpeedError0 = ((uint32_t) lu32TargetSpeed - (uint32_t) u16RPMvalueAvg)*(uint32_t) (CONST_SCALE);
 
+    lu16Kp = T_S_PI_PARAMETERS[lu8Index].u16Kp;
+    lu16Ki = T_S_PI_PARAMETERS[lu8Index].u16Ki;
 
-
-//    if(u8OOBDetected_HighSpeedFlag == C_TRUE)
-//      {
-//        lu8Index = u8ProtectKpKiIndex;
-//      }
-
-    if ( lu8Index < MAX_K_PARAMETERS)
-      {
-        lu16Kp = T_S_PI_PARAMETERS[lu8Index].u16Kp;
-        lu16Ki = T_S_PI_PARAMETERS[lu8Index].u16Ki;
-      }
-    else
-      {
-        lu16Kp = T_S_PI_PARAMETERS[1].u16Kp;
-        lu16Ki = T_S_PI_PARAMETERS[1].u16Ki;
-      }
 
     //i64Proporcial = (uint64_t)((uint64_t) lu16Kp * ((uint64_t) i32SpeedError0 - (uint64_t) i32SpeedError1));
     i64Proporcial = (uint64_t) (lu16Kp) * ((uint64_t) (i32SpeedError0)- (uint64_t) (i32SpeedError1));
@@ -131,9 +133,8 @@ void pwm_thread_entry(void)
     /* TODO: add your own code here */
     while (1)
     {
+        SR_StartStopMotor();
         SR_ControlPI(u16SetpointValue,2);
-        //u8DutyCycleReal = (uint8_t)(u16ADC_FilterdData * 100/255);
-        //u8DutyCycleReal = 100;
         u8DutyCycleInst = (uint8_t) ((100) - u8DutyCycleReal);
         SR_Dutycycle_message();
         g_timer.p_api->dutyCycleSet(g_timer.p_ctrl, u8DutyCycleInst, TIMER_PWM_UNIT_PERCENT, 0);

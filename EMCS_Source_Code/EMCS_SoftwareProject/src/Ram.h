@@ -30,8 +30,11 @@
 //            Global Definitions
 //--------------------------------------------------------------------
 
-#define C_TRUE      1
-#define C_FALSE     0
+#define TRUE      1
+#define FALSE     0
+
+#define ON      1
+#define OFF     0
 
 #define C_TICK_PER_SEC  500
 
@@ -57,6 +60,7 @@
 //--------------------------------------------------------------------
 //             Global Variable
 //--------------------------------------------------------------------
+extern volatile bool bMotor;
 
 extern uint16_t  u16TimeSec;
 extern uint16_t  u16TimePerSec1ms;
@@ -140,6 +144,8 @@ extern void SR_RPMSignal_message(void);
 extern void SR_Dutycycle_message(void);
 extern void SR_SetpointADC_message(void);
 extern uint16_t FN_GetSetpoitValue (uint16_t lu16ADCRaw);
+
+extern void SR_StartStopMotor(void);
 
 extern void SR_ControlPI(uint32_t lu32TargetSpeed, uint8_t lu8Index);
 

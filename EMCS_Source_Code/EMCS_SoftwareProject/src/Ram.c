@@ -7,6 +7,11 @@
 
 #include "Ram.h"
 
+//--------------------------------------------------------------------
+//             Global Variable
+//--------------------------------------------------------------------
+ volatile bool bMotor;
+
 uint16_t  u16TimeSec;
 uint16_t  u16TimePerSec1ms;
 
@@ -77,6 +82,7 @@ const struct SPIParameters T_S_PI_PARAMETERS[MAX_K_PARAMETERS]=
 
 void SR_InitRam(void)
 {
+    bMotor = OFF;
     capture_overflow = 0;
     u32CaptureCounter = 0;
     u64TimeCaptured = 0;

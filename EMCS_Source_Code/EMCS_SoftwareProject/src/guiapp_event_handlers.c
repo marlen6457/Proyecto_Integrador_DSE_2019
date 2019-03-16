@@ -69,6 +69,7 @@ UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
                 update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS_OFF, GX_PIXELMAP_ID_GRAY_STATUS);
                 update_text_id(widget->gx_widget_parent, ID_FAN_TEXT2, GX_STRING_ID_STATUS_OFF);
                 update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
+                bMotor = ON;
                 break;
 
         case GX_SIGNAL(ID_BTN_OFF, GX_EVENT_CLICKED):
@@ -76,18 +77,13 @@ UINT Mainpage_handler(GX_WINDOW *widget, GX_EVENT *event_ptr)
                 update_pixelmap_button_id((GX_WIDGET *) p_widget, ID_FAN_STATUS, GX_PIXELMAP_ID_GRAY_STATUS);
                 update_text_id(widget->gx_widget_parent, ID_FAN_TEXT2, GX_STRING_ID_STATUS_OFF);
                 update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
+                bMotor = OFF;
                 break;
-
         default:
             result = gx_window_event_process(widget, event_ptr);
             break;
     }
-<<<<<<< HEAD
     snprintf(g_dutycycle_value, sizeof(g_dutycycle_value), "%d", u8DutyCycleReal);
-=======
-    update_text_id(widget->gx_widget_parent, ID_FAN_TEXT2, GX_STRING_ID_STATUS_OFF);
-    update_text_id(widget->gx_widget_parent, ID_FAN_TEXT, GX_STRING_ID_STATUS_ON);
->>>>>>> Dex_fix_buttons
     update_text(widget->gx_widget_parent, ID_TEXT_DUTYCYCLE, g_dutycycle_value);
     snprintf(g_rpm_value, sizeof(g_rpm_value), "%d", u16RPMvalueAvg);
     update_text(widget->gx_widget_parent, ID_TEXT_RPM, g_rpm_value);
