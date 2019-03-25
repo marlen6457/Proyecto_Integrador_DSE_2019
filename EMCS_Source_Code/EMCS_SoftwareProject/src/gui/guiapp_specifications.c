@@ -6,7 +6,7 @@
 /*  www.expresslogic.com.                                                      */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy): 13. 3.2019   Time (hh:mm): 22:08                        */
+/*  Date (dd.mm.yyyy): 15. 3.2019   Time (hh:mm): 16:34                        */
 /*******************************************************************************/
 
 
@@ -145,7 +145,7 @@ GX_CONST GX_STUDIO_WIDGET credits_page_define =
 };
 GX_WINDOW_PROPERTIES main_page_properties =
 {
-    GX_PIXELMAP_ID_P_MAINPAGE_V2             /* wallpaper pixelmap id          */
+    GX_PIXELMAP_ID_P_MAINPAGE_V3             /* wallpaper pixelmap id          */
 };
 GX_ICON_PROPERTIES main_page_icon_1_properties =
 {
@@ -160,10 +160,10 @@ GX_PIXELMAP_BUTTON_PROPERTIES main_page_pixelmap_button_properties =
 };
 GX_PROMPT_PROPERTIES main_page_prompt_properties =
 {
-    0,                                       /* string id                      */
+    GX_STRING_ID_STATUS_ON,                  /* string id                      */
     GX_FONT_ID_PROMPT,                       /* font id                        */
-    GX_COLOR_ID_TEXT_INPUT_FILL,             /* normal text color              */
-    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+    GX_COLOR_ID_BTN_TEXT,                    /* normal text color              */
+    GX_COLOR_ID_BTN_TEXT                     /* selected text color            */
 };
 GX_PIXELMAP_BUTTON_PROPERTIES main_page_pixelmap_button_1_properties =
 {
@@ -173,31 +173,31 @@ GX_PIXELMAP_BUTTON_PROPERTIES main_page_pixelmap_button_1_properties =
 };
 GX_PROMPT_PROPERTIES main_page_prompt_1_properties =
 {
-    0,                                       /* string id                      */
+    GX_STRING_ID_STATUS_OFF,                 /* string id                      */
     GX_FONT_ID_PROMPT,                       /* font id                        */
-    GX_COLOR_ID_TEXT_INPUT_FILL,             /* normal text color              */
+    GX_COLOR_ID_BTN_TEXT,                    /* normal text color              */
     GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
 };
 GX_PROMPT_PROPERTIES main_page_Dutycycle_text_properties =
 {
     0,                                       /* string id                      */
     GX_FONT_ID_PROMPT,                       /* font id                        */
-    GX_COLOR_ID_TEXT,                        /* normal text color              */
-    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+    GX_COLOR_ID_BTN_UPPER,                   /* normal text color              */
+    GX_COLOR_ID_BTN_UPPER                    /* selected text color            */
 };
 GX_PROMPT_PROPERTIES main_page_Setpoint_text_properties =
 {
     0,                                       /* string id                      */
     GX_FONT_ID_PROMPT,                       /* font id                        */
-    GX_COLOR_ID_TEXT,                        /* normal text color              */
-    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+    GX_COLOR_ID_BTN_UPPER,                   /* normal text color              */
+    GX_COLOR_ID_BTN_UPPER                    /* selected text color            */
 };
 GX_PROMPT_PROPERTIES main_page_PRM_text_properties =
 {
     0,                                       /* string id                      */
     GX_FONT_ID_PROMPT,                       /* font id                        */
-    GX_COLOR_ID_TEXT,                        /* normal text color              */
-    GX_COLOR_ID_SELECTED_TEXT                /* selected text color            */
+    GX_COLOR_ID_BTN_UPPER,                   /* normal text color              */
+    GX_COLOR_ID_BTN_UPPER                    /* selected text color            */
 };
 
 GX_CONST GX_STUDIO_WIDGET main_page_PRM_text_define =
@@ -216,7 +216,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_PRM_text_define =
     gx_studio_prompt_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {119, 124, 232, 147},                    /* widget size                    */
+    {119, 128, 232, 151},                    /* widget size                    */
     GX_NULL,                                 /* no next widget                 */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_PRM_text), /* control block    */
@@ -239,7 +239,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_Setpoint_text_define =
     gx_studio_prompt_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {117, 42, 231, 65},                      /* widget size                    */
+    {117, 46, 231, 69},                      /* widget size                    */
     &main_page_PRM_text_define,              /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_Setpoint_text), /* control block */
@@ -262,7 +262,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_Dutycycle_text_define =
     gx_studio_prompt_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {119, 83, 231, 105},                     /* widget size                    */
+    {119, 87, 231, 109},                     /* widget size                    */
     &main_page_Setpoint_text_define,         /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_Dutycycle_text), /* control block */
@@ -280,12 +280,12 @@ GX_CONST GX_STUDIO_WIDGET main_page_prompt_1_define =
     GX_STYLE_BORDER_NONE|GX_STYLE_TRANSPARENT|GX_STYLE_ENABLED|GX_STYLE_TEXT_CENTER,   /* style flags */
     GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
     sizeof(GX_PROMPT),                       /* control block size             */
-    GX_COLOR_ID_TEXT_INPUT_TEXT,             /* normal color id                */
+    GX_COLOR_ID_SELECTED_FILL,               /* normal color id                */
     GX_COLOR_ID_SELECTED_FILL,               /* selected color id              */
     gx_studio_prompt_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {114, 222, 161, 245},                    /* widget size                    */
+    {138, 221, 185, 244},                    /* widget size                    */
     &main_page_Dutycycle_text_define,        /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt_1), /* control block    */
@@ -303,12 +303,12 @@ GX_CONST GX_STUDIO_WIDGET main_page_pixelmap_button_1_define =
     GX_STYLE_BORDER_NONE|GX_STYLE_ENABLED,   /* style flags                    */
     GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
     sizeof(GX_PIXELMAP_BUTTON),              /* control block size             */
-    GX_COLOR_ID_BTN_LOWER,                   /* normal color id                */
+    GX_COLOR_ID_SHINE,                       /* normal color id                */
     GX_COLOR_ID_BTN_UPPER,                   /* selected color id              */
     gx_studio_pixelmap_button_create,        /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {105, 217, 169, 253},                    /* widget size                    */
+    {139, 220, 190, 246},                    /* widget size                    */
     &main_page_prompt_1_define,              /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_pixelmap_button_1), /* control block */
@@ -331,7 +331,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_button_1_define =
     gx_studio_button_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {98, 197, 175, 264},                     /* widget size                    */
+    {120, 192, 219, 263},                    /* widget size                    */
     &main_page_pixelmap_button_1_define,     /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_button_1), /* control block    */
@@ -349,12 +349,12 @@ GX_CONST GX_STUDIO_WIDGET main_page_prompt_define =
     GX_STYLE_BORDER_NONE|GX_STYLE_TRANSPARENT|GX_STYLE_ENABLED|GX_STYLE_TEXT_CENTER,   /* style flags */
     GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
     sizeof(GX_PROMPT),                       /* control block size             */
-    GX_COLOR_ID_TEXT_INPUT_TEXT,             /* normal color id                */
-    GX_COLOR_ID_SELECTED_FILL,               /* selected color id              */
+    GX_COLOR_ID_SELECTED_FILL,               /* normal color id                */
+    GX_COLOR_ID_SELECTED_TEXT,               /* selected color id              */
     gx_studio_prompt_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {23, 222, 70, 245},                      /* widget size                    */
+    {29, 221, 76, 244},                      /* widget size                    */
     &main_page_button_1_define,              /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_prompt), /* control block      */
@@ -372,12 +372,12 @@ GX_CONST GX_STUDIO_WIDGET main_page_button_define =
     GX_STYLE_BORDER_NONE|GX_STYLE_TRANSPARENT|GX_STYLE_DRAW_SELECTED|GX_STYLE_ENABLED,   /* style flags */
     GX_STATUS_ACCEPTS_FOCUS,                 /* status flags                   */
     sizeof(GX_BUTTON),                       /* control block size             */
-    GX_COLOR_ID_BTN_LOWER,                   /* normal color id                */
-    GX_COLOR_ID_BTN_UPPER,                   /* selected color id              */
+    GX_COLOR_ID_SHINE,                       /* normal color id                */
+    GX_COLOR_ID_SHINE,                       /* selected color id              */
     gx_studio_button_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {8, 197, 85, 264},                       /* widget size                    */
+    {12, 194, 97, 275},                      /* widget size                    */
     &main_page_prompt_define,                /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_button), /* control block      */
@@ -395,12 +395,12 @@ GX_CONST GX_STUDIO_WIDGET main_page_pixelmap_button_define =
     GX_STYLE_BORDER_NONE|GX_STYLE_ENABLED,   /* style flags                    */
     0,                                       /* status flags                   */
     sizeof(GX_PIXELMAP_BUTTON),              /* control block size             */
-    GX_COLOR_ID_BTN_LOWER,                   /* normal color id                */
+    GX_COLOR_ID_SHINE,                       /* normal color id                */
     GX_COLOR_ID_BTN_UPPER,                   /* selected color id              */
     gx_studio_pixelmap_button_create,        /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {18, 217, 75, 253},                      /* widget size                    */
+    {28, 221, 75, 245},                      /* widget size                    */
     &main_page_button_define,                /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_pixelmap_button), /* control block */
@@ -423,7 +423,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_icon_1_define =
     gx_studio_icon_create,                   /* create function                */
     GX_NULL,                                 /* drawing function override      */
     GX_NULL,                                 /* event function override        */
-    {172, 255, 235, 318},                    /* widget size                    */
+    {172, 259, 235, 322},                    /* widget size                    */
     &main_page_pixelmap_button_define,       /* next widget definition         */
     GX_NULL,                                 /* no child widgets               */ 
     offsetof(MAIN_PAGE_CONTROL_BLOCK, main_page_icon_1), /* control block      */
@@ -446,7 +446,7 @@ GX_CONST GX_STUDIO_WIDGET main_page_define =
     gx_studio_window_create,                 /* create function                */
     GX_NULL,                                 /* drawing function override      */
     (UINT (*)(GX_WIDGET *, GX_EVENT *)) Mainpage_handler, /* event function override */
-    {-4, -1, 235, 318},                      /* widget size                    */
+    {-4, 3, 235, 322},                       /* widget size                    */
     GX_NULL,                                 /* next widget                    */
     &main_page_icon_1_define,                /* child widget                   */
     0,                                       /* control block                  */

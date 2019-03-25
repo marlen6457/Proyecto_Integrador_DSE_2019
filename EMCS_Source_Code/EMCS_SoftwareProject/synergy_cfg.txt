@@ -679,7 +679,7 @@ Synergy Configuration
     Instance "g_adc0 ADC Driver on r_adc"
       Name: g_adc0
       Unit: 0
-      Resolution (resolution varies by MCU): 12-Bit
+      Resolution (resolution varies by MCU): 8-Bit
       Alignment: Right
       Clear after read: On
       Mode: Continuous Scan
@@ -788,7 +788,7 @@ Synergy Configuration
     Symbol: rpm_thread
     Name: RPM Thread
     Stack size (bytes): 1024
-    Priority: 9
+    Priority: 2
     Auto start: Enabled
     Time slicing interval (ticks): 1
     

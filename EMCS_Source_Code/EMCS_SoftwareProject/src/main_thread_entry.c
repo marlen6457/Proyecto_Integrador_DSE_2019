@@ -12,11 +12,12 @@
 #if defined(BSP_BOARD_S7G2_SK)
 #include "hardware/lcd.h"
 #endif
+
 static system_payload_t             message_to_gx;
 static dutycycle_payload_t*         p_dutycycle_message;
 static setpoint_payload_t*          p_setpoint_message;
 static rpmsignal_payload_t*         p_rpmsignal_message;
-static sf_touch_panel_payload_t*    p_touch_payload;
+
 
 static void send_hmi_message(gx_event_message_t event);
 
@@ -233,8 +234,6 @@ void main_thread_entry(void) {
 
 static void send_hmi_message(gx_event_message_t event)
 {
-    UINT gx_err;
-
 
     /** Get mutex lock before accessing the pointer to the state data sent from the
      *  system thread, then save a local copy of the state data to be used by the GUI. **/
@@ -247,11 +246,7 @@ static void send_hmi_message(gx_event_message_t event)
     message_to_gx.gx_event.gx_event_payload.gx_event_ulongdata = (ULONG) &message_to_gx;
 
     /** Post message. */
-    gx_err = gx_system_event_send (&message_to_gx.gx_event);
-//    if (GX_SUCCESS != gx_err)
-//    {
-//        while(1);
-//    }
+    gx_system_event_send (&message_to_gx.gx_event);
     tx_mutex_put(&g_state_data_mutex);
 
 }
