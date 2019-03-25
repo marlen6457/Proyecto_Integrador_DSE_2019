@@ -99,7 +99,7 @@ Synergy Configuration
       P200 69 - - - - Disabled - - "IRQ0: NMI" 
       P201 68 - - - - Disabled - - - 
       P202 54 SCI2_SCK SCI2_SCK2 Low None "Peripheral mode" CMOS None "BUS0: WR1_BC1; CAN0: CRX; GLCDC0: LCD_TCON3; GPT5: GTIOCB; IRQ0: IRQ03; SCI2: SCK; SCI9: RXD_MISO; SCI9: SCL; SDHI0: DAT6; SPI1: MISO" 
-      P203 53 GPIO GPIO21 - None "Input mode" - None "BUS0: A19; CAN0: CTX; CTSU0: TSCAP; GPT5: GTIOCA; IRQ0: IRQ02; SCI2: CTS_RTS_SS; SCI9: SDA; SCI9: TXD_MOSI; SDHI0: DAT5; SPI1: MOSI" 
+      P203 53 GPIO GPIO21 Low None "Output mode (Initial High)" CMOS None "BUS0: A19; CAN0: CTX; CTSU0: TSCAP; GPT5: GTIOCA; IRQ0: IRQ02; SCI2: CTS_RTS_SS; SCI9: SDA; SCI9: TXD_MOSI; SDHI0: DAT5; SPI1: MOSI" 
       P204 52 CTSU0_TS00 Cap_Touch_Sensing_Unit_TS00 Low - "Peripheral mode" CMOS None "AGT1: AGTIO; BUS0: A18; CAC0: CACREF; CTSU0: TS00; GPT4: GTIOCB; IIC0: SCL; OPS0: GTIW; SCI4: SCK; SCI9: SCK; SDHI0: DAT4; SPI1: RSPCK; SSI1: SSISCK; USBFS0: OVRCURB" 
       P205 51 CTSU0_TSCAP Cap_Touch_Sensing_Unit_TSCAP Low None "Peripheral mode" CMOS None "AGT1: AGTO; BUS0: A16; CGC0: CLKOUT; CTSU0: TSCAP; ETHERC0: WOL; GPT4: GTIOCA; IIC1: SCL; IRQ0: IRQ01; OPS0: GTIV; SCI4: SDA; SCI4: TXD_MOSI; SCI9: CTS_RTS_SS; SDHI0: DAT3; SPI1: SSL0; SSI1: SSIWS; USBFS0: OVRCURA" 
       P206 50 CTSU0_TS01 Cap_Touch_Sensing_Unit_TS01 Low None "Peripheral mode" CMOS None "BUS0: WAIT; CTSU0: TS01; ETHERC0: LINKSTA; IIC1: SDA; IRQ0: IRQ00; OPS0: GTIU; SCI4: RXD_MISO; SCI4: SCL; SDHI0: DAT2; SPI1: SSL1; SSI1: SSIDATA; USBFS0: VBUSEN" 
@@ -657,18 +657,29 @@ Synergy Configuration
       Symbol: g_main_semaphore_lcdc
       Initial count: 0
       
+    Object "g_state_data_mutex Mutex"
+      Name: State Data Mutex
+      Symbol: g_state_data_mutex
+      Priority inheritance: Disabled
+      
+    Object "g_system_queue Queue"
+      Name: System Queue
+      Symbol: g_system_queue
+      Message Size (Words): 1
+      Queue Size (Bytes): 80
+      
   Thread "ADC Thread"
     Symbol: adc_thread
     Name: ADC Thread
     Stack size (bytes): 1024
     Priority: 9
     Auto start: Enabled
-    Time slicing interval (ticks): 1
+    Time slicing interval (ticks): 10
     
     Instance "g_adc0 ADC Driver on r_adc"
       Name: g_adc0
       Unit: 0
-      Resolution (resolution varies by MCU): 12-Bit
+      Resolution (resolution varies by MCU): 8-Bit
       Alignment: Right
       Clear after read: On
       Mode: Continuous Scan
@@ -761,7 +772,7 @@ Synergy Configuration
       Channel: 1
       Mode: PWM
       Duty Cycle Range (only applicable in PWM mode): Shortest: 2 PCLK, Longest: (Period - 1) PCLK
-      Period Value: 100
+      Period Value: 10
       Period Unit: Milliseconds
       Duty Cycle Value: 50
       Duty Cycle Unit: Unit Raw Counts
@@ -777,7 +788,7 @@ Synergy Configuration
     Symbol: rpm_thread
     Name: RPM Thread
     Stack size (bytes): 1024
-    Priority: 9
+    Priority: 2
     Auto start: Enabled
     Time slicing interval (ticks): 1
     
@@ -798,6 +809,42 @@ Synergy Configuration
       Overflow Interrupt Priority: Priority 2
       
   Messaging
+    Event "Update Duty Cycle"
+      Symbol: SF_MESSAGE_EVENT_UPDATE_DUTY_CYCLE
+      Name: Update Duty Cycle
+      
+    Event "Setpoint Value"
+      Symbol: SF_MESSAGE_EVENT_SETPOINT_VALUE
+      Name: Setpoint Value
+      
+    Event "RPM Read"
+      Symbol: SF_MESSAGE_EVENT_RPM_READ
+      Name: RPM Read
+      
+    Event Class "DutyCycle"
+      Symbol: SF_MESSAGE_EVENT_CLASS_DUTYCYCLE
+      Name: DutyCycle
+      Payload header file: dutycycle_api.h
+      Payload: dutycycle_payload
+      Payload type: dutycycle_payload_t
+      
+    Event Class "Setpoint"
+      Symbol: SF_MESSAGE_EVENT_CLASS_SETPOINT
+      Name: Setpoint
+      Payload header file: setpoint_api.h
+      Payload: setpoint_payload
+      Payload type: setpoint_payload_t
+      
+    Event Class "RPMsignal"
+      Symbol: SF_MESSAGE_EVENT_CLASS_RPMSIGNAL
+      Name: RPMsignal
+      Payload header file: rpmsignal_api.h
+      Payload: rpmsignal_payload
+      Payload type: rpmsignal_payload_t
+      
     Subscriber "Main Thread" 0 0
       Event Class "Touch"
+      Event Class "DutyCycle"
+      Event Class "Setpoint"
+      Event Class "RPMsignal"
       

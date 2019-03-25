@@ -6,7 +6,7 @@
 /*  site at www.expresslogic.com.                                              */
 /*                                                                             */
 /*  GUIX Studio Revision 5.4.1.1                                               */
-/*  Date (dd.mm.yyyy):  6. 2.2019   Time (hh:mm): 15:21                        */
+/*  Date (dd.mm.yyyy): 15. 3.2019   Time (hh:mm): 16:34                        */
 /*******************************************************************************/
 
 
@@ -74,15 +74,24 @@
 #define GX_PIXELMAP_ID_CHECKBOX_OFF 4
 #define GX_PIXELMAP_ID_BACKBUTTON 5
 #define GX_PIXELMAP_ID_BLACKUPARROW 6
-#define GX_PIXELMAP_ID_ICON_MORE5 7
-#define GX_PIXELMAP_ID_MENU2 8
-#define GX_PIXELMAP_ID_REFRESH 9
-#define GX_PIXELMAP_ID_RES7 10
-#define GX_PIXELMAP_ID_WINDOW3 11
-#define GX_PIXELMAP_ID_WINDOW4 12
-#define GX_PIXELMAP_ID_WINDOW5 13
-#define GX_PIXELMAP_ID_WINDOW6 14
-#define DISPLAY_1_PIXELMAP_TABLE_SIZE 15
+#define GX_PIXELMAP_ID_GRAY_STATUS 7
+#define GX_PIXELMAP_ID_GREEN_STATUS 8
+#define GX_PIXELMAP_ID_ICON_CREDITS_WINDOW 9
+#define GX_PIXELMAP_ID_ICON_MORE5 10
+#define GX_PIXELMAP_ID_ICON_SETTING_WINDOW 11
+#define GX_PIXELMAP_ID_MENU2 12
+#define GX_PIXELMAP_ID_P_CREDITS_SCREEN 13
+#define GX_PIXELMAP_ID_P_MAINPAGE_ 14
+#define GX_PIXELMAP_ID_P_MAINPAGE_V2 15
+#define GX_PIXELMAP_ID_P_MAINPAGE_V3 16
+#define GX_PIXELMAP_ID_P_MAIN_SCREEN 17
+#define GX_PIXELMAP_ID_RED_STATUS 18
+#define GX_PIXELMAP_ID_REFRESH 19
+#define GX_PIXELMAP_ID_RES7 20
+#define GX_PIXELMAP_ID_WINDOW3 21
+#define GX_PIXELMAP_ID_WINDOW5 22
+#define GX_PIXELMAP_ID_WINDOW6 23
+#define DISPLAY_1_PIXELMAP_TABLE_SIZE 24
 
 /* String Ids                                                                  */
 
@@ -130,6 +139,11 @@
 #define GX_STRING_ID_EIGHT 42
 #define GX_STRING_ID_NINE 43
 #define GX_STRING_ID_ZERO 44
-#define DISPLAY_1_STRING_TABLE_SIZE 45
+#define GX_STRING_ID_STATUS_ON 45
+#define GX_STRING_ID_NO_STATUS 46
+#define GX_STRING_ID_STATUS_OFF 47
+#define GX_STRING_ID_STRING_13 48
+#define GX_STRING_ID_STRING_14 49
+#define DISPLAY_1_STRING_TABLE_SIZE 50
 
 #endif                                       /* sentry                         */

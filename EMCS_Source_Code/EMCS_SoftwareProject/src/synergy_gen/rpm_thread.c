@@ -40,7 +40,7 @@ void rpm_thread_create(void)
 
     UINT err;
     err = tx_thread_create (&rpm_thread, (CHAR *) "RPM Thread", rpm_thread_func, (ULONG) NULL, &rpm_thread_stack, 1024,
-                            9, 9, 1, TX_AUTO_START);
+                            2, 2, 1, TX_AUTO_START);
     if (TX_SUCCESS != err)
     {
         tx_startup_err_callback (&rpm_thread, 0);

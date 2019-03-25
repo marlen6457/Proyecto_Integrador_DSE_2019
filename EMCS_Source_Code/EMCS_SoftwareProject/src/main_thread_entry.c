@@ -1,13 +1,47 @@
 /* Main Thread entry function */
+#include <dutycycle_api.h>
+#include <setpoint_api.h>
+#include <rpmsignal_api.h>
 #include "main_thread.h"
 #include "bsp_api.h"
 #include "gx_api.h"
 #include "gui/guiapp_specifications.h"
 #include "gui/guiapp_resources.h"
+#include "system_api.h"
 
 #if defined(BSP_BOARD_S7G2_SK)
 #include "hardware/lcd.h"
 #endif
+
+static system_payload_t             message_to_gx;
+static dutycycle_payload_t*         p_dutycycle_message;
+static setpoint_payload_t*          p_setpoint_message;
+static rpmsignal_payload_t*         p_rpmsignal_message;
+
+
+static void send_hmi_message(gx_event_message_t event);
+
+/** Post options are generally the same in this project, so store them once. */
+const sf_message_post_cfg_t g_post_cfg =
+{
+    .priority = SF_MESSAGE_PRIORITY_NORMAL,
+    .p_callback = NULL,
+};
+
+/** Acquire options are generally the same in this project, so store them once. */
+const sf_message_acquire_cfg_t g_acquire_cfg =
+{
+    .buffer_keep = false,
+};
+
+static system_state_t g_system_state =
+{
+    .dutycycle_t           = 0,
+    .setpoint_t            = 0,
+    .rpmsignal_t           = 0
+
+};
+
 
 /***********************************************************************************************************************
     Private function prototypes
@@ -70,7 +104,7 @@ void main_thread_entry(void) {
         // We must first create the widgets according the data generated in GUIX Studio.
 
         // Once we are working on the widget we want to see first, save the pointer for later.
-        if (0 == strcmp("window1", (char*)(*pp_studio_widget)->widget_name))
+        if (0 == strcmp("splash_page", (char*)(*pp_studio_widget)->widget_name))
         {
             gx_studio_named_widget_create((*pp_studio_widget)->widget_name, (GX_WIDGET *)p_window_root, GX_NULL);
         } else {
@@ -127,19 +161,58 @@ void main_thread_entry(void) {
 		switch (p_message->event_b.class_code)
 		{
 		case SF_MESSAGE_EVENT_CLASS_TOUCH:
-		{
+
 			switch (p_message->event_b.code)
 			{
-			case SF_MESSAGE_EVENT_NEW_DATA:
-			{
-				/** Translate an SSP touch event into a GUIX event */
-				new_gui_event = ssp_touch_to_guix((sf_touch_panel_payload_t*)p_message, &g_gx_event);
-			}
-			default:
-				break;
+                case SF_MESSAGE_EVENT_NEW_DATA:
+                    /** Translate an SSP touch event into a GUIX event */
+                    new_gui_event = ssp_touch_to_guix((sf_touch_panel_payload_t*)p_message, &g_gx_event);
+                    break;
+
+                default:
+                    break;
 			}
 			break;
-		}
+
+		case SF_MESSAGE_EVENT_CLASS_DUTYCYCLE:
+		    switch (p_message->event_b.code)
+		    {
+		        case SF_MESSAGE_EVENT_UPDATE_DUTY_CYCLE:
+		            p_dutycycle_message = (dutycycle_payload_t *) p_message +1;
+		            g_system_state.dutycycle_t = p_dutycycle_message->dutycycle;
+	                send_hmi_message (GXEVENT_MSG_UPDATE_DUTY_CYCLE);
+		            break;
+
+		        default:
+                    break;
+            }
+            break;
+        case SF_MESSAGE_EVENT_CLASS_SETPOINT:
+            switch (p_message->event_b.code)
+            {
+                case SF_MESSAGE_EVENT_SETPOINT_VALUE:
+                    p_setpoint_message = (setpoint_payload_t *) p_message +1;
+                    g_system_state.setpoint_t = p_setpoint_message->setpoint;
+                    send_hmi_message (GXEVENT_MSG_UPDATE_SETPOINT_VALUE);
+                    break;
+
+                default:
+                    break;
+            }
+            break;
+        case SF_MESSAGE_EVENT_CLASS_RPMSIGNAL:
+            switch (p_message->event_b.code)
+            {
+                case SF_MESSAGE_EVENT_RPM_READ:
+                    p_rpmsignal_message = (rpmsignal_payload_t *) p_message +1;
+                    g_system_state.rpmsignal_t = p_rpmsignal_message->rpmsignal;
+                    send_hmi_message (GXEVENT_MSG_UPDATE_RPM_READ);
+                    break;
+                default:
+                    break;
+            }
+            break;
+
 		default:
 			break;
 		}
@@ -157,6 +230,25 @@ void main_thread_entry(void) {
 			gx_system_event_send(&g_gx_event);
 		}
 	}
+}
+
+static void send_hmi_message(gx_event_message_t event)
+{
+
+    /** Get mutex lock before accessing the pointer to the state data sent from the
+     *  system thread, then save a local copy of the state data to be used by the GUI. **/
+    tx_mutex_get(&g_state_data_mutex,TX_WAIT_FOREVER);
+
+    /** Create message. */
+    message_to_gx.gx_event.gx_event_type = event;
+    //message_to_gx.state = g_system_state;
+    message_to_gx.gx_event.gx_event_target = GX_NULL;
+    message_to_gx.gx_event.gx_event_payload.gx_event_ulongdata = (ULONG) &message_to_gx;
+
+    /** Post message. */
+    gx_system_event_send (&message_to_gx.gx_event);
+    tx_mutex_put(&g_state_data_mutex);
+
 }
 
 static bool ssp_touch_to_guix(sf_touch_panel_payload_t * p_touch_payload, GX_EVENT * gx_event)

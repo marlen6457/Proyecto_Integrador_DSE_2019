@@ -1,5 +1,12 @@
 src/main_thread_entry.o: ../src/main_thread_entry.c \
- D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/main_thread.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/dutycycle_api.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/setpoint_api.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_api.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_api.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_port.h \
+ d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\inc\framework\el\cm4_gcc\tx_port.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/tx_user.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_cmsis.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\bsp/bsp_api.h \
  d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\inc\ssp_common_api.h \
  d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\inc\ssp_version.h \
@@ -44,11 +51,11 @@ src/main_thread_entry.o: ../src/main_thread_entry.c \
  d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\src\bsp\mcu\all\bsp_feature.h \
  d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\src\bsp\mcu\all\bsp_mcu_api.h \
  d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\src\bsp\mcu\all\bsp_error_checking.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_port.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/gx_user.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/rpmsignal_api.h \
+ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/main_thread.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_api.h \
- D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_port.h \
- d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\inc\framework\el\cm4_gcc\tx_port.h \
- D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/tx_user.h \
- D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_cmsis.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/hal_data.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/common_data.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\instances/sf_message.h \
@@ -66,10 +73,6 @@ src/main_thread_entry.o: ../src/main_thread_entry.c \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\api/r_display_api.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\instances/sf_el_gx.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\api/sf_el_gx_api.h \
- D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_api.h \
- D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_api.h \
- D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_port.h \
- D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/gx_user.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_display.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\instances/r_elc.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\driver/r_elc_cfg.h \
@@ -95,9 +98,23 @@ src/main_thread_entry.o: ../src/main_thread_entry.c \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\instances/r_sci_spi.h \
  D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\driver\api/r_spi_api.h \
  ../src/gui/guiapp_specifications.h ../src/gui/guiapp_resources.h \
- ../src/hardware/lcd.h
+ ../src/system_api.h ../src/hardware/lcd.h
 
-D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/main_thread.h:
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/dutycycle_api.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/setpoint_api.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_api.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_api.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_port.h:
+
+d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\inc\framework\el\cm4_gcc\tx_port.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/tx_user.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_cmsis.h:
 
 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\bsp/bsp_api.h:
 
@@ -187,15 +204,15 @@ d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject
 
 d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\src\bsp\mcu\all\bsp_error_checking.h:
 
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_port.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/gx_user.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src/rpmsignal_api.h:
+
+D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/main_thread.h:
+
 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_api.h:
-
-D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_port.h:
-
-d:\documentos\proyecto_integrador_dse_2019\emcs_source_code\emcs_softwareproject\synergy\ssp\inc\framework\el\cm4_gcc\tx_port.h:
-
-D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/tx_user.h:
-
-D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_cmsis.h:
 
 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\src\synergy_gen/hal_data.h:
 
@@ -230,14 +247,6 @@ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject
 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\instances/sf_el_gx.h:
 
 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\api/sf_el_gx_api.h:
-
-D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_api.h:
-
-D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/tx_api.h:
-
-D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_port.h:
-
-D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy_cfg\ssp_cfg\framework\el/gx_user.h:
 
 D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject\synergy\ssp\inc\framework\el/gx_display.h:
 
@@ -290,5 +299,7 @@ D:\Documentos\Proyecto_Integrador_DSE_2019\EMCS_Source_Code\EMCS_SoftwareProject
 ../src/gui/guiapp_specifications.h:
 
 ../src/gui/guiapp_resources.h:
+
+../src/system_api.h:
 
 ../src/hardware/lcd.h:

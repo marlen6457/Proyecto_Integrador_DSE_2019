@@ -213,8 +213,17 @@
   </synergyComponentSelection>
   <synergyIcuConfiguration/>
   <synergyMessagingConfiguration>
+    <event display="Update Duty Cycle" value="SF_MESSAGE_EVENT_UPDATE_DUTY_CYCLE"/>
+    <event display="Setpoint Value" value="SF_MESSAGE_EVENT_SETPOINT_VALUE"/>
+    <event display="RPM Read" value="SF_MESSAGE_EVENT_RPM_READ"/>
+    <eventClass display="DutyCycle" header="dutycycle_api.h" id="eventClass.2030014007" payload="dutycycle_payload" payloadType="dutycycle_payload_t" value="SF_MESSAGE_EVENT_CLASS_DUTYCYCLE"/>
+    <eventClass display="Setpoint" header="setpoint_api.h" id="eventClass.765908387" payload="setpoint_payload" payloadType="setpoint_payload_t" value="SF_MESSAGE_EVENT_CLASS_SETPOINT"/>
+    <eventClass display="RPMsignal" header="rpmsignal_api.h" id="eventClass.1408250433" payload="rpmsignal_payload" payloadType="rpmsignal_payload_t" value="SF_MESSAGE_EVENT_CLASS_RPMSIGNAL"/>
     <subscriber context="rtos.threadx.thread.239426899" end="0" id="subscriber.859390088" start="0">
       <subscribe eventClass="module.framework.sf_touch_panel.eventClass.eventClassTouch"/>
+      <subscribe eventClass="eventClass.2030014007"/>
+      <subscribe eventClass="eventClass.765908387"/>
+      <subscribe eventClass="eventClass.1408250433"/>
     </subscriber>
   </synergyMessagingConfiguration>
   <synergyModuleConfiguration>
@@ -593,7 +602,7 @@
     <module id="module.driver.adc_on_adc.598171747">
       <property id="module.driver.adc.name" value="g_adc0"/>
       <property id="module.driver.adc.unit" value="0"/>
-      <property id="module.driver.adc.resolution" value="module.driver.adc.resolution.resolution_12_bit"/>
+      <property id="module.driver.adc.resolution" value="module.driver.adc.resolution.resolution_8_bit"/>
       <property id="module.driver.adc.alignment" value="module.driver.adc.alignment.alignment_right"/>
       <property id="module.driver.adc.clearing" value="module.driver.adc.clearing.clear_after_read_on"/>
       <property id="module.driver.adc.mode" value="module.driver.adc.mode.mode_continuous_scan"/>
@@ -678,7 +687,7 @@
       <property id="module.driver.timer.channel" value="1"/>
       <property id="module.driver.timer.mode" value="module.driver.timer.mode.mode_pwm"/>
       <property id="module.driver.timer.shortest_pwm_signal" value="module.driver.timer.mode.shortest_pwm_signal_disabled"/>
-      <property id="module.driver.timer.period" value="100"/>
+      <property id="module.driver.timer.period" value="10"/>
       <property id="module.driver.timer.unit" value="module.driver.timer.unit.unit_period_msec"/>
       <property id="module.driver.timer.duty_cycle" value="50"/>
       <property id="module.driver.timer.duty_cycle_unit" value="module.driver.timer.duty_cycle_unit.unit_percent"/>
@@ -749,6 +758,17 @@
         <property id="rtos.threadx.object.semaphore.symbol" value="g_main_semaphore_lcdc"/>
         <property id="rtos.threadx.object.semaphore.count" value="0"/>
       </object>
+      <object id="rtos.threadx.object.mutex.298436616">
+        <property id="rtos.threadx.object.mutex.name" value="State Data Mutex"/>
+        <property id="rtos.threadx.object.mutex.symbol" value="g_state_data_mutex"/>
+        <property id="rtos.threadx.object.mutex.inherit" value="rtos.threadx.object.mutex.inherit.disabled"/>
+      </object>
+      <object id="rtos.threadx.object.queue.1525192366">
+        <property id="rtos.threadx.object.queue.name" value="System Queue"/>
+        <property id="rtos.threadx.object.queue.symbol" value="g_system_queue"/>
+        <property id="rtos.threadx.object.queue.msg_size" value="1"/>
+        <property id="rtos.threadx.object.queue.queue_size" value="80"/>
+      </object>
     </context>
     <context id="rtos.threadx.thread.1197824639">
       <property id="_symbol" value="adc_thread"/>
@@ -756,7 +776,7 @@
       <property id="rtos.threadx.thread.stack" value="1024"/>
       <property id="rtos.threadx.thread.priority" value="9"/>
       <property id="rtos.threadx.thread.autostart" value="rtos.threadx.thread.autostart.enabled"/>
-      <property id="rtos.threadx.thread.timeslice" value="1"/>
+      <property id="rtos.threadx.thread.timeslice" value="10"/>
       <stack module="module.driver.adc_on_adc.598171747"/>
     </context>
     <context id="rtos.threadx.thread.1888968853">
@@ -772,7 +792,7 @@
       <property id="_symbol" value="rpm_thread"/>
       <property id="rtos.threadx.thread.name" value="RPM Thread"/>
       <property id="rtos.threadx.thread.stack" value="1024"/>
-      <property id="rtos.threadx.thread.priority" value="9"/>
+      <property id="rtos.threadx.thread.priority" value="2"/>
       <property id="rtos.threadx.thread.autostart" value="rtos.threadx.thread.autostart.enabled"/>
       <property id="rtos.threadx.thread.timeslice" value="1"/>
       <stack module="module.driver.input_capture_on_gpt.1401549105"/>

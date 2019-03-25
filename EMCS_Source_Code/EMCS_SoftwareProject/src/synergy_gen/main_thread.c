@@ -205,6 +205,9 @@ const spi_cfg_t g_spi_lcdc_cfg =
 const spi_instance_t g_spi_lcdc =
 { .p_ctrl = &g_spi_lcdc_ctrl, .p_cfg = &g_spi_lcdc_cfg, .p_api = &g_spi_on_sci };
 TX_SEMAPHORE g_main_semaphore_lcdc;
+TX_MUTEX g_state_data_mutex;
+TX_QUEUE g_system_queue;
+static uint8_t queue_memory_g_system_queue[80];
 extern bool g_ssp_common_initialized;
 extern uint32_t g_ssp_common_thread_count;
 extern TX_SEMAPHORE g_ssp_common_initialized_semaphore;
@@ -220,6 +223,19 @@ void main_thread_create(void)
     if (TX_SUCCESS != err_g_main_semaphore_lcdc)
     {
         tx_startup_err_callback (&g_main_semaphore_lcdc, 0);
+    }
+    UINT err_g_state_data_mutex;
+    err_g_state_data_mutex = tx_mutex_create (&g_state_data_mutex, (CHAR *) "State Data Mutex", TX_NO_INHERIT);
+    if (TX_SUCCESS != err_g_state_data_mutex)
+    {
+        tx_startup_err_callback (&g_state_data_mutex, 0);
+    }
+    UINT err_g_system_queue;
+    err_g_system_queue = tx_queue_create (&g_system_queue, (CHAR *) "System Queue", 1, &queue_memory_g_system_queue,
+                                          sizeof(queue_memory_g_system_queue));
+    if (TX_SUCCESS != err_g_system_queue)
+    {
+        tx_startup_err_callback (&g_system_queue, 0);
     }
 
     UINT err;
